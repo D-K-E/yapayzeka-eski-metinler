@@ -1,0 +1,4 @@
+Sitemap: https://github.com/D-K-E/yapayzekanotlari/sitemapindex.xml
+
+User-Agent: *
+Host: github.com
