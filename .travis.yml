@@ -19,6 +19,8 @@ before_install:
 - git config --global user.name 'Travis CI'
 - git config --global user.email 'travis@invalid'
 - git config --global push.default 'simple'
+- git fetch origin master
+- git branch master FETCH_HEAD
 - pip install --upgrade pip wheel
 install:
 - pip install 'Nikola[extras]'
