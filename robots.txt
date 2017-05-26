@@ -1,4 +1,4 @@
-Sitemap: https://github.com/D-K-E/yapayzekanotlari/sitemapindex.xml
+Sitemap: https://d-k-e.github.io/yapayzeka-eski-metinler/sitemapindex.xml
 
 User-Agent: *
-Host: github.com
+Host: d-k-e.github.io
