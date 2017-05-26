@@ -7,7 +7,11 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://github.com/D-K-E/yapayzekanotlari/authors/dogu-kaan-eraslan.xml</loc>
-  <lastmod>2017-05-26T00:27:00Z</lastmod>
+  <lastmod>2017-05-26T03:30:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://github.com/D-K-E/yapayzekanotlari/authors/kaan-eraslan.xml</loc>
+  <lastmod>2017-05-26T03:12:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://github.com/D-K-E/yapayzekanotlari/authors/roberto-alsina.xml</loc>
@@ -23,7 +27,7 @@
  </sitemap>
  <sitemap>
   <loc>https://github.com/D-K-E/yapayzekanotlari/categories/cat_yapay-zeka.xml</loc>
-  <lastmod>2017-05-26T00:27:00Z</lastmod>
+  <lastmod>2017-05-26T03:30:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://github.com/D-K-E/yapayzekanotlari/categories/demo.xml</loc>
@@ -31,11 +35,11 @@
  </sitemap>
  <sitemap>
   <loc>https://github.com/D-K-E/yapayzekanotlari/categories/derin-ogrenim.xml</loc>
-  <lastmod>2017-05-26T00:27:00Z</lastmod>
+  <lastmod>2017-05-26T03:30:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://github.com/D-K-E/yapayzekanotlari/categories/makine-ogrenimi.xml</loc>
-  <lastmod>2017-05-26T00:27:00Z</lastmod>
+  <lastmod>2017-05-26T03:30:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://github.com/D-K-E/yapayzekanotlari/categories/nikola.xml</loc>
@@ -47,22 +51,22 @@
  </sitemap>
  <sitemap>
   <loc>https://github.com/D-K-E/yapayzekanotlari/categories/yapay-zeka.xml</loc>
-  <lastmod>2017-05-26T00:27:00Z</lastmod>
+  <lastmod>2017-05-26T03:30:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://github.com/D-K-E/yapayzekanotlari/galleries/demo/rss.xml</loc>
-  <lastmod>2017-05-26T00:27:00Z</lastmod>
+  <lastmod>2017-05-26T03:30:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://github.com/D-K-E/yapayzekanotlari/galleries/rss.xml</loc>
-  <lastmod>2017-05-26T00:27:00Z</lastmod>
+  <lastmod>2017-05-26T03:30:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://github.com/D-K-E/yapayzekanotlari/rss.xml</loc>
-  <lastmod>2017-05-26T00:27:00Z</lastmod>
+  <lastmod>2017-05-26T03:30:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://github.com/D-K-E/yapayzekanotlari/sitemap.xml</loc>
-  <lastmod>2017-05-26T00:30:00Z</lastmod>
+  <lastmod>2017-05-26T03:30:00Z</lastmod>
  </sitemap>
 </sitemapindex>

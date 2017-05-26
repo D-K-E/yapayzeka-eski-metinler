@@ -1,4 +1,4 @@
-.. title: Yapay Zeka ve Derin Öğrenime Giriş - 1
+.. title: Yapay Zeka ve Derin Öğrenime Giriş - 1.1
 .. author: Doğu Kaan Eraslan
 .. slug: yapay-zeka-ve-derin-ogrenime-giris-1
 .. date: 2017-05-26 02:13:15 UTC+02:00
@@ -8,8 +8,8 @@
 .. description: 
 .. type: text
 
-Yapay Zeka ve Derin Öğrenime Giriş - 1
-#######################################
+Yapay Zeka ve Derin Öğrenime Giriş - 1.1
+########################################
 
 Merhaba arkadaşlar,
 
@@ -28,16 +28,25 @@ Bilgisayarlar genel olarak, soyut kuralları takip etme işinde bizden daha iyil
 Ancak bilgisayarlar 5 duyu gerektiren işlerde açık ara kötüler. Örneğin soru sorana cevap verme, karşıdan karşıya geçerken gelen arabayı görüp durma vs gibi işleri beceremiyorlar, zira bu işler çok fazla farklı türden veriyi birbiriyle ilişkilendirmiş olarak zihnimizde barındırmamız sayesinde mümkün oluyor. Biz bu işleri otomatik yapıyoruz ve aslında ne kadar karmaşık bir ilişkiler ağının ürünü olduğunun genelde farkında değiliz. Çok fark etmeye başladığımız zaman da deliriyoruz zaten, ancak şu da bir gerçek ki bilgisayarın günlük hayatımızı gerçekten kolaylaştırabilmesi, büyük oranda bu cins işleri yapabilmesine bağlı. Yani siz dizi izlerken makinenin, akşam yemeği, ev temizliği, hatta ofis işlerinizin belirli bir bölümü gibi işlevleri gerçekleştirebilmesi için, bu 5 duyu gerektiren işlerde de sonuç alabilmeleri gerekiyor.
 
 İşte yapay zeka çalışmaları makinenin bu işleri yapabilmesini sağlayacak yöntemleri araştırıyor.
-Denen yöntemlerden biri, makinenin dünyaya ilişkin bilmesi gereken her şeyi kodlamaya çalışmak, ki buna yapay zekaya * `bilgi temelli yaklaşım`_ * deniyor. Siz bilgileri anlamsal içerikten yoksun bir dille ifade etmeye çalışıyorsunuz. Bilgisayarda genel mantık çerçevesinde dizayn edilmiş çıkarım kurallarını kullanarak, kendisine gelen bilgiden çıkarımlar yapıyor. Bu çok tutmadı, zira varolanı anlamdan yoksun bir dille ifade etmek hem bizim çok iyi yapamadığımız bir şey, hem de çok ağır işleyen bir süreç.
+Denen yöntemlerden biri, makinenin dünyaya ilişkin bilmesi gereken her şeyi kodlamaya çalışmak, ki buna yapay zekaya bilgi temelli yaklaşım [1]_ deniyor. Siz bilgileri anlamsal içerikten yoksun bir dille ifade etmeye çalışıyorsunuz. Bilgisayarda genel mantık çerçevesinde dizayn edilmiş çıkarım kurallarını kullanarak, kendisine gelen bilgiden çıkarımlar yapıyor. Bu çok tutmadı, zira varolanı anlamdan yoksun bir dille ifade etmek hem bizim çok iyi yapamadığımız bir şey, hem de çok ağır işleyen bir süreç.
 
-Her şeyin el ile kodlanması gerektiği sistemlerde karşılaşılan güçlükler,bizi makinelerin ham haldeki veriden kendilerinin tekrar eden kalıpları çıkarsamasını sağlayacak sistemler yaratmaya yöneltti. Bu minvalden gelen çalışmalara da genel adıyla `makine öğrenimi`_ alanında yapılan çalışmalar deniyor. Bu alanda yürütülen çalışmaların günlük hayattaki etkileri daha gözlemlenebilir durumda. Örneğin Naive Bayes algoritmasını kullanarak sahte e-postaları ayırt edebiliyoruz, ya da Doğrusal Bağlanımları kullanarak elimizdeki malzeme stoklarını ne zaman yenilememiz gerektiğine dair akıl yürütmeler yapabiliyoruz, veya Netflix gibi büyük şirketler çok basit K-Ortalamalar Kümesi gibi gruplama algoritmalarıyla sizin hangi filmlerden hoşlanabileceğiniz size sunuyorlar [Algoritmalar]_. 
+Her şeyin el ile kodlanması gerektiği sistemlerde karşılaşılan güçlükler,bizi makinelerin ham haldeki veriden kendilerinin tekrar eden kalıpları çıkarsamasını sağlayacak sistemler yaratmaya yöneltti. Bu minvalden gelen çalışmalara da genel adıyla makine öğrenimi [2]_ alanında yapılan çalışmalar deniyor. Bu alanda yürütülen çalışmaların günlük hayattaki etkileri daha gözlemlenebilir durumda. Örneğin Naive Bayes algoritmasını kullanarak sahte e-postaları ayırt edebiliyoruz, ya da Doğrusal Bağlanımları kullanarak elimizdeki malzeme stoklarını ne zaman yenilememiz gerektiğine dair akıl yürütmeler yapabiliyoruz, veya Netflix gibi büyük şirketler çok basit K-Ortalamalar Kümesi gibi gruplama algoritmalarıyla sizin hangi filmlerden hoşlanabileceğiniz size sunuyorlar [Algoritmalar]_. 
 
-Bu yaklaşım iyi hoş ama önemli bir sorunu var, o da verinin *temsil* edilmesi gerekliliği. Yukarıda bahsettiğim algoritmaların işleyebilmesi için, verinin belirli işlemlerden geçmesi gerekiyor. Bu çok basit bir biçimde bir metni boşlukları kullanarak, kelimelere ayırmak olabileceği gibi, kelimelerin belge içindeki sıklığı kere kelimelerin içinde görüldüğü belge sayısının kesri, boyutlarından oluşan uzunluğu standartlaştırılmış belge yöneyleriyle kosünüs benzerliği hesapları yapmak gibi görece daha karmaşık işlemleri de kapsayabiliyor [TF-IDF]_. İşlem görmüş ham veri içerisinde dikkate alınan her bir parçaya *nitelik* deniyor. Yani ham veriye dair makinenin çıkarımlar yapabilmesini istiyorsanız onu bir nitelikler bütününe dönüştürmeniz lazım.
+Bu yaklaşım iyi hoş ama önemli bir sorunu var, o da verinin temsil [3]_ edilmesi gerekliliği. Yukarıda bahsettiğim algoritmaların işleyebilmesi için, verinin belirli işlemlerden geçmesi gerekiyor. Bu çok basit bir biçimde bir metni boşlukları kullanarak, kelimelere ayırmak olabileceği gibi, kelimelerin belge içindeki sıklığı kere kelimelerin içinde görüldüğü belge sayısının kesri, boyutlarından oluşan uzunluğu standartlaştırılmış belge yöneyleriyle kosünüs benzerliği hesapları yapmak gibi görece daha karmaşık işlemleri de kapsayabiliyor [TF-IDF]_. İşlem görmüş ham veri içerisinde dikkate alınan her bir parçaya nitelik [4]_ deniyor. Yani ham veriye dair makinenin çıkarımlar yapabilmesini istiyorsanız onu bir nitelikler bütününe dönüştürmeniz lazım.
 
-.. Sayfa 3 son paragrafta kaldın, niteliklerle ilgili mevzunun ne olduğunu açıklaman niye yavaş niye el oyalayan bir şey olduğunu anlatman lazım
+Üzerinde çalıştığınız problemin gerektirdiği verilerin hangi özelliğinin çözüme ilişkin olduğunu ve bu özelliğin ne şekilde bir niteliğe dönüştürebileceğini saptamanız gerekiyor. Bu bir hayli meşakatli bir iş. Örneğin, elinizde 100 bin tane kırmızı ışıkta geçen araba resmi var. Bu arabalara ceza kesilebilmesi için, plakalarının fotoğraflarda ayrıştırılabilmesi gerekiyor. Bilgisayar için arabanın tamponu ile plakası arasında bir fark yok. İkisi de imgecik. Örneği ilgili terimlerle ifade edersek::
 
+- Problem: Işıktan geçen araba resminden plaka alma
+- Özellik: Plaka: Beyaz bir dikdörtgen, üstünde siyahla yazılmış rakamlar ve sayılar var, bazılarında tire işareti de oluyor.
+- Temsil: İmgecikler.
 
+Çözüm ne peki ? Temsilden özelliği türetmemizi sağlayacak nitelikleri ayrıştırmakta. Bunu nasıl yapacağız ? İşte makine öğreniminin temel sıkıntısı burada yatıyor. 
 
+Bu yazıyı burada noktalıyorum, zira ara vermek için güzel bir nokta. Daha sonrasında *Temsil Öğrenimi* ya da diğer bir adıyla *Nitelik Öğrenimini* açıklamaya çalışacağım. Çok katmanlı temsil gruplamalarından, değişiklik unsurlarından ve bunların öğrenimdeki rollerinden bahsedeceğim. Daha sonrasında *Derin Öğrenimin* bu bahsettiğim kavramlarla olan ilişkisine, ve *derinliğin* nereden geldiğine değineceğim.
+
+Sağlıcakla,
+
+Kaan
 
 
 
@@ -46,11 +55,13 @@ Terimler
 =========
  
 
-.. _`Bilgi Temelli Yaklaşım`: Makinenin dünyaya ilişkin bilmesi gereken her şeyi elle kodlamaya çalışmak.
+.. [1] Bilgi Temelli Yaklaşım: Makinenin dünyaya ilişkin bilmesi gereken her şeyi elle kodlamaya çalışmak.
 
+.. [2] Makine Öğrenimi: Makinenin ham veriden tekrar eden kalıplar çıkarsaması.
 
-.. _`Makine Öğrenimi`: Makinenin ham veriden tekrar eden kalıplar çıkarsaması.
+.. [3] Temsil: Verinin sayısal ortamdaki hali.
 
+.. [4] Nitelik: Temsilde bir özelliği ayrıştırmaya yarayan ölçülebilir yapı.
 
 ============
 Notlar

@@ -37,10 +37,38 @@
             <article class="format-standard libretto-long-form"><div class="title-block post-format-icon-pin">
                     <div class="entry-meta">
                         <span class="posted-on">
+                            Posted on <a href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/" rel="bookmark">Mayıs 26, 2017</a>
+                        </span>
+                    </div>
+                    <h1><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/">Yapay Zeka ve Derin Öğrenime Giriş 1.2</a></h1>
+                </div>
+                <div class="entry-content">
+                        <div>
+<p>Merhaba Arkadaşlar,</p>
+<p>Daha önceki yazımda, yapay zeka çalışmalarında Derin Öğrenime gelene kadar kullanılagelmiş yöntem ve yaklaşımların kısa bir özetini yapmıştım. En son gelinen noktada, makine öğrenimi için gereken temsilde nitelik oluşturma zorunluluğuna kırmızı ışıkta geçen arabaların plakasını yakalamak problemi üzerinden değinmiştim.</p>
+<p>Nitelikleri üretmenin/ayrıştırmanın <em>en doğru</em> veya <em>en geçerli</em> yolu yok. Ne özelliği yakalamanızı sağlıyorsa o geçerli, doğru yol, ancak şu var, el ile bu nitelikleri yaratmak çok vakit isteyen bir şey. Elimizdeki örnek için elle ilgili niteliği kurgulamaya çalışsak, plakayı oluşturması muhtemel imgecik serilerini, kameranın aracı resmin kaçta kaçına taşıdığına göre, plakanın büyüklüğünün sabit olduğu düşünülürse, plakanın resimde olabileceği alanlarda, eşleştirmeye çalışırdık. Böyle deyince çok zor duyulmuyor olabilir, özellikle bilgisayarla görüş alanındaki kütüphanelerin çokluğu düşünülürse, ancak şunu belirtmek zorundayım 'plakayı oluşturması muhtemel imgecik serileri' ifadesini el ile oluşturmak mümkün değil, zira temsilinizi değiştiren çok fazla özellik dışı etmen var. Örneğin, yazın güneş tam kameranın arkasından vurdu, plakanın beyazı parladı bazı harfler silüet gibi görünüyor, veya kırsal alan, araba çamura girmiş plakanın bir kısmına çamur bulaşmış, veya kamyonun kasası plakaya gölge ediyor, bu yüzden plaka tam beyaz gibi gözükmüyor, vs gibi özelliğe dair olmayan bir sürü etmen özelliği değiştiriyor. Dolayısıyla, özelliğin temsili de beklenen değerlerde olmuyor.</p>
+<ul class="simple">
+<li>
+<a class="reference internal" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#temsil-ogrenimi">Temsil Öğrenimi</a> * ya da diğer adıyla <em>Nitelik Öğrenimi</em> denen yaklaşım, bu soruna çare bulmaya çalışıyor. Bu yaklaşımı temsilin temsillerini üretmek gibi de düşünebilirsiniz. Örneğin, elimizdeki ışıkta geçen araba resmine bakalım. Resim, bir imgecikler bütün dedik. Bu imgecikler bütününü örneğin aynı değere sahip olanların koordinat düzlemindeki pozisyonları kümesi olarak da temsil edebiliriz. Bu bir çeşit veri çerçevesi olacaktır. Çerçevenin sütunları imgecik değerleri, satırları da bir koordinat noktaları olacaktır. Kullanılan imgecik değerlerinin yayılma aralığını verir. Tek başına bu bile resmin içinde bulunduğu şartlara dair önemli tiyolar barındıracaktır. Resim daha sonrasında koordinatlar sütun, imgecik değerleri satır olarak temsil edilebilir. Bu sütunlar plakanın standard büyüklüğüne göre gruplanıp, benzer değerlerde seyreden satırların uzunluğuna bakılarak, plakanın bulunduğu koordinatlar saptanabilir, zira plakanın beyaz başladığı düşünülürse, koordinatlar değişse bile imgeciklerin değerleri belirli bir aralıkta seyredecektir. Yani bu olması beklenen şey. Yukarıda belirttiğim gibi özellik dışı etmenler, işlerin bu kadar düzgün yürümemesi sağlayacaktır, ancak şu önemli, buraya kadar tarif ettiğim her şey bir makine tarafından yapılabilir. Yapması gereken tek şey, ham maddeyi çeşitli temsillere dönüştürmek ve bu temsillerde tekrar eden kalıpları yakalamak. Bu çok katmanlı bir temsil grubu olarak kurgulanabilir.</li>
+</ul>
+<p>Bu çok katmanlı temsil grubunu oluşturmakta kullanılan tipik algoritma, otomatik kodlayıcılardır.</p>
+<!-- Sayfa 4 autoencoder bölümünde kaldın devam et oradan -->
+<div class="section" id="terimler">
+<h2>Terimler</h2>
+<span class="target" id="temsil-ogrenimi"></span>
+</div>
+</div>
+                </div>
+            </article>
+</div>
+        <div class="site-content">
+            <article class="format-standard libretto-long-form"><div class="title-block post-format-icon-pin">
+                    <div class="entry-meta">
+                        <span class="posted-on">
                             Posted on <a href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/" rel="bookmark">Mayıs 26, 2017</a>
                         </span>
                     </div>
-                    <h1><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/">Yapay Zeka ve Derin Öğrenime Giriş - 1</a></h1>
+                    <h1><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/">Yapay Zeka ve Derin Öğrenime Giriş - 1.1</a></h1>
                 </div>
                 <div class="entry-content">
                         <div>
@@ -56,12 +84,61 @@
 <p>Bilgisayarlar genel olarak, soyut kuralları takip etme işinde bizden daha iyiler. Bunun güzel bir örneği, bizden daha hızlı matematik işlemi yapabiliyor olmalarında, bir başka örneği yine bizden daha iyi satranç oynuyor olmalarında. Counter Strike vs gibi oyunlarla ilgilenen arkadaşların, internet kafede hedef botu kullanan adamı dövmesindeki sebepte yine bilgisayarın verili kuralları bizden daha iyi uygulayabiliyor olmasında.</p>
 <p>Ancak bilgisayarlar 5 duyu gerektiren işlerde açık ara kötüler. Örneğin soru sorana cevap verme, karşıdan karşıya geçerken gelen arabayı görüp durma vs gibi işleri beceremiyorlar, zira bu işler çok fazla farklı türden veriyi birbiriyle ilişkilendirmiş olarak zihnimizde barındırmamız sayesinde mümkün oluyor. Biz bu işleri otomatik yapıyoruz ve aslında ne kadar karmaşık bir ilişkiler ağının ürünü olduğunun genelde farkında değiliz. Çok fark etmeye başladığımız zaman da deliriyoruz zaten, ancak şu da bir gerçek ki bilgisayarın günlük hayatımızı gerçekten kolaylaştırabilmesi, büyük oranda bu cins işleri yapabilmesine bağlı. Yani siz dizi izlerken makinenin, akşam yemeği, ev temizliği, hatta ofis işlerinizin belirli bir bölümü gibi işlevleri gerçekleştirebilmesi için, bu 5 duyu gerektiren işlerde de sonuç alabilmeleri gerekiyor.</p>
 <p>İşte yapay zeka çalışmaları makinenin bu işleri yapabilmesini sağlayacak yöntemleri araştırıyor.
-Denen yöntemlerden biri, makinenin dünyaya ilişkin bilmesi gereken her şeyi kodlamaya çalışmak, ki buna yapay zekaya * <a class="reference external" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/Makinenind%C3%BCnyayaili%C5%9Fkinbilmesigerekenher%C5%9Feyiellekodlamaya%C3%A7al%C4%B1%C5%9Fmak.">bilgi temelli yaklaşım</a> * deniyor. Siz bilgileri anlamsal içerikten yoksun bir dille ifade etmeye çalışıyorsunuz. Bilgisayarda genel mantık çerçevesinde dizayn edilmiş çıkarım kurallarını kullanarak, kendisine gelen bilgiden çıkarımlar yapıyor. Bu çok tutmadı, zira varolanı anlamdan yoksun bir dille ifade etmek hem bizim çok iyi yapamadığımız bir şey, hem de çok ağır işleyen bir süreç.</p>
-<p>Her şeyin el ile kodlanması gerektiği sistemlerde karşılaşılan güçlükler,bizi makinelerin ham haldeki veriden kendilerinin tekrar eden kalıpları çıkarsamasını sağlayacak sistemler yaratmaya yöneltti. Bu minvalden gelen çalışmalara da genel adıyla <a class="reference external" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/Makineninhamveridentekraredenkal%C4%B1plar%C3%A7%C4%B1karsamas%C4%B1.">makine öğrenimi</a> alanında yapılan çalışmalar deniyor. Bu alanda yürütülen çalışmaların günlük hayattaki etkileri daha gözlemlenebilir durumda. Örneğin Naive Bayes algoritmasını kullanarak sahte e-postaları ayırt edebiliyoruz, ya da Doğrusal Bağlanımları kullanarak elimizdeki malzeme stoklarını ne zaman yenilememiz gerektiğine dair akıl yürütmeler yapabiliyoruz, veya Netflix gibi büyük şirketler çok basit K-Ortalamalar Kümesi gibi gruplama algoritmalarıyla sizin hangi filmlerden hoşlanabileceğiniz size sunuyorlar <a class="citation-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#algoritmalar" id="id2">[Algoritmalar]</a>.</p>
-<p>Bu yaklaşım iyi hoş ama önemli bir sorunu var, o da verinin <em>temsil</em> edilmesi gerekliliği. Yukarıda bahsettiğim algoritmaların işleyebilmesi için, verinin belirli işlemlerden geçmesi gerekiyor. Bu çok basit bir biçimde bir metni boşlukları kullanarak, kelimelere ayırmak olabileceği gibi, kelimelerin belge içindeki sıklığı kere kelimelerin içinde görüldüğü belge sayısının kesri, boyutlarından oluşan uzunluğu standartlaştırılmış belge yöneyleriyle kosünüs benzerliği hesapları yapmak gibi görece daha karmaşık işlemleri de kapsayabiliyor <a class="citation-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#tf-idf" id="id3">[TF-IDF]</a>. İşlem görmüş ham veri içerisinde dikkate alınan her bir parçaya <em>nitelik</em> deniyor. Yani ham veriye dair makinenin çıkarımlar yapabilmesini istiyorsanız onu bir nitelikler bütününe dönüştürmeniz lazım.</p>
-<!-- Sayfa 3 son paragrafta kaldın, niteliklerle ilgili mevzunun ne olduğunu açıklaman niye yavaş niye el oyalayan bir şey olduğunu anlatman lazım -->
+Denen yöntemlerden biri, makinenin dünyaya ilişkin bilmesi gereken her şeyi kodlamaya çalışmak, ki buna yapay zekaya bilgi temelli yaklaşım <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id8" id="id2">[1]</a> deniyor. Siz bilgileri anlamsal içerikten yoksun bir dille ifade etmeye çalışıyorsunuz. Bilgisayarda genel mantık çerçevesinde dizayn edilmiş çıkarım kurallarını kullanarak, kendisine gelen bilgiden çıkarımlar yapıyor. Bu çok tutmadı, zira varolanı anlamdan yoksun bir dille ifade etmek hem bizim çok iyi yapamadığımız bir şey, hem de çok ağır işleyen bir süreç.</p>
+<p>Her şeyin el ile kodlanması gerektiği sistemlerde karşılaşılan güçlükler,bizi makinelerin ham haldeki veriden kendilerinin tekrar eden kalıpları çıkarsamasını sağlayacak sistemler yaratmaya yöneltti. Bu minvalden gelen çalışmalara da genel adıyla makine öğrenimi <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id9" id="id3">[2]</a> alanında yapılan çalışmalar deniyor. Bu alanda yürütülen çalışmaların günlük hayattaki etkileri daha gözlemlenebilir durumda. Örneğin Naive Bayes algoritmasını kullanarak sahte e-postaları ayırt edebiliyoruz, ya da Doğrusal Bağlanımları kullanarak elimizdeki malzeme stoklarını ne zaman yenilememiz gerektiğine dair akıl yürütmeler yapabiliyoruz, veya Netflix gibi büyük şirketler çok basit K-Ortalamalar Kümesi gibi gruplama algoritmalarıyla sizin hangi filmlerden hoşlanabileceğiniz size sunuyorlar <a class="citation-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#algoritmalar" id="id4">[Algoritmalar]</a>.</p>
+<p>Bu yaklaşım iyi hoş ama önemli bir sorunu var, o da verinin temsil <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id10" id="id5">[3]</a> edilmesi gerekliliği. Yukarıda bahsettiğim algoritmaların işleyebilmesi için, verinin belirli işlemlerden geçmesi gerekiyor. Bu çok basit bir biçimde bir metni boşlukları kullanarak, kelimelere ayırmak olabileceği gibi, kelimelerin belge içindeki sıklığı kere kelimelerin içinde görüldüğü belge sayısının kesri, boyutlarından oluşan uzunluğu standartlaştırılmış belge yöneyleriyle kosünüs benzerliği hesapları yapmak gibi görece daha karmaşık işlemleri de kapsayabiliyor <a class="citation-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#tf-idf" id="id6">[TF-IDF]</a>. İşlem görmüş ham veri içerisinde dikkate alınan her bir parçaya nitelik <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id11" id="id7">[4]</a> deniyor. Yani ham veriye dair makinenin çıkarımlar yapabilmesini istiyorsanız onu bir nitelikler bütününe dönüştürmeniz lazım.</p>
+<p>Üzerinde çalıştığınız problemin gerektirdiği verilerin hangi özelliğinin çözüme ilişkin olduğunu ve bu özelliğin ne şekilde bir niteliğe dönüştürebileceğini saptamanız gerekiyor. Bu bir hayli meşakatli bir iş. Örneğin, elinizde 100 bin tane kırmızı ışıkta geçen araba resmi var. Bu arabalara ceza kesilebilmesi için, plakalarının fotoğraflarda ayrıştırılabilmesi gerekiyor. Bilgisayar için arabanın tamponu ile plakası arasında bir fark yok. İkisi de imgecik. Örneği ilgili terimlerle ifade edersek:</p>
+<pre class="literal-block">
+- Problem: Işıktan geçen araba resminden plaka alma
+- Özellik: Plaka: Beyaz bir dikdörtgen, üstünde siyahla yazılmış rakamlar ve sayılar var, bazılarında tire işareti de oluyor.
+- Temsil: İmgecikler.
+</pre>
+<p>Çözüm ne peki ? Temsilden özelliği türetmemizi sağlayacak nitelikleri ayrıştırmakta. Bunu nasıl yapacağız ? İşte makine öğreniminin temel sıkıntısı burada yatıyor.</p>
+<p>Bu yazıyı burada noktalıyorum, zira ara vermek için güzel bir nokta. Daha sonrasında <em>Temsil Öğrenimi</em> ya da diğer bir adıyla <em>Nitelik Öğrenimini</em> açıklamaya çalışacağım. Çok katmanlı temsil gruplamalarından, değişiklik unsurlarından ve bunların öğrenimdeki rollerinden bahsedeceğim. Daha sonrasında <em>Derin Öğrenimin</em> bu bahsettiğim kavramlarla olan ilişkisine, ve <em>derinliğin</em> nereden geldiğine değineceğim.</p>
+<p>Sağlıcakla,</p>
+<p>Kaan</p>
 <div class="section" id="terimler">
 <h2>Terimler</h2>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id2">[1]</a></td>
+<td>Bilgi Temelli Yaklaşım: Makinenin dünyaya ilişkin bilmesi gereken her şeyi elle kodlamaya çalışmak.</td>
+</tr></tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id3">[2]</a></td>
+<td>Makine Öğrenimi: Makinenin ham veriden tekrar eden kalıplar çıkarsaması.</td>
+</tr></tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id5">[3]</a></td>
+<td>Temsil: Verinin sayısal ortamdaki hali.</td>
+</tr></tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id11" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id7">[4]</a></td>
+<td>Nitelik: Temsilde bir özelliği ayrıştırmaya yarayan ölçülebilir yapı.</td>
+</tr></tbody>
+</table>
 </div>
 <div class="section" id="notlar">
 <h2>Notlar</h2>
@@ -81,7 +158,7 @@ Denen yöntemlerden biri, makinenin dünyaya ilişkin bilmesi gereken her şeyi 
 <col>
 </colgroup>
 <tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id2">[Algoritmalar]</a></td>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id4">[Algoritmalar]</a></td>
 <td>Bahsettiğim algoritmaları açıklayan yazılar da yayımlayacağım.</td>
 </tr></tbody>
 </table>
@@ -91,7 +168,7 @@ Denen yöntemlerden biri, makinenin dünyaya ilişkin bilmesi gereken her şeyi 
 <col>
 </colgroup>
 <tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id3">[TF-IDF]</a></td>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id6">[TF-IDF]</a></td>
 <td>Kabaca tarifini yaptığım algoritmanın adı genellikle arama motorlarında kullanılan bir sıralama algoritması. İlk bölümü ts-tbs, açılımı, terim sıklığı-ters belge sıklığı algoritması (ingilizcesi t(erm) f(requency)-i(nverse) d(ocument) f(requency)), ikinci bölümüyse, kosünüs benzerliği. Bu ikisi arama motorlarındaki 'buna benzer sayfaları göster' gibi işlemlerin gerçekleşmesini sağlıyor. Bu algoritmayı açıklayan yazıları da ileride paylaşacağım.</td>
 </tr></tbody>
 </table>
