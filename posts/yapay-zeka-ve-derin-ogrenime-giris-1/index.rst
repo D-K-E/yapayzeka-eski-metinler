@@ -42,7 +42,9 @@ Bu yaklaşım iyi hoş ama önemli bir sorunu var, o da verinin temsil [3]_ edil
 
 Çözüm ne peki ? Temsilden özelliği türetmemizi sağlayacak nitelikleri ayrıştırmakta. Bunu nasıl yapacağız ? İşte makine öğreniminin temel sıkıntısı burada yatıyor. 
 
-Bu yazıyı burada noktalıyorum, zira ara vermek için güzel bir nokta. Daha sonrasında *Temsil Öğrenimi* ya da diğer bir adıyla *Nitelik Öğrenimini* açıklamaya çalışacağım. Çok katmanlı temsil gruplamalarından, değişiklik unsurlarından ve bunların öğrenimdeki rollerinden bahsedeceğim. Üçüncü yazımdaysa *Derin Öğrenimin* bu bahsettiğim kavramlarla olan ilişkisine, ve *derinliğin* nereden geldiğine değineceğim.
+Bu yazıyı burada noktalıyorum, zira ara vermek için güzel bir nokta.
+Bir `sonraki yazımda <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-2/>`_ *Temsil Öğrenimi* ya da diğer bir adıyla *Nitelik Öğrenimini* açıklamaya çalışacağım.
+Çok katmanlı temsil gruplamalarından, değişiklik unsurlarından ve bunların öğrenimdeki rollerinden bahsedeceğim. Üçüncü yazımdaysa *Derin Öğrenimin* bu bahsettiğim kavramlarla olan ilişkisine, ve *derinliğin* nereden geldiğine değineceğim.
 
 Sağlıcakla,
 
