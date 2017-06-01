@@ -54,7 +54,7 @@ Masanın üstüne vuran ışık örneğinden gidecek olursak, mevcut durumda mas
 Örnek izole edildiğinde yapılabilir gözükse de, gerçek dünyadaki, masanın üstünde duran başka şeyler olabileceği, ışığın örneğin doğrudan değilde başka bir objeye vurarak masaya yansıdığı vs gibi durumlar düşünüldüğünde nitelik öğreniminin unsurlar arasında bir hiyerarşi kurmaksızın, bahsettiğim soruna çözüm getirebilmesi mümkün gözükmüyor.
 
 
-Bu yazıyı burada noktalıyorum. Bir sonraki yazı giriş bölümünün son yazısı olacak. O yazıda *Derin Öğrenimin* bahsettiğim kavramlarla olan ilişkisine, ve *derinliğin* nereden geldiğine değineceğim. Son olarak da model derinliğinin ölçülmesinde kullanılan yöntemlerden kısaca bahsedeceğim.
+Bu yazıyı burada noktalıyorum. Bir `sonraki yazı <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-13/>`_ giriş bölümünün son yazısı olacak. O yazıda *Derin Öğrenimin* bahsettiğim kavramlarla olan ilişkisine, ve *derinliğin* nereden geldiğine değineceğim. Son olarak da model derinliğinin ölçülmesinde kullanılan yöntemlerden kısaca bahsedeceğim.
 
 Sağlıcakla,
 
