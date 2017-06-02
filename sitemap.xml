@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/archive.html</loc>
-  <lastmod>2017-06-01T02:02:00Z</lastmod>
+  <lastmod>2017-06-02T02:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/authors/</loc>
@@ -31,7 +31,7 @@
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/</loc>
-  <lastmod>2017-06-01T01:54:00Z</lastmod>
+  <lastmod>2017-06-02T02:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/cat_yapay-zeka/</loc>
@@ -42,12 +42,32 @@
   <lastmod>2017-05-26T00:37:00Z</lastmod>
  </url>
  <url>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/dizey/</loc>
+  <lastmod>2017-06-02T02:06:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/gerey/</loc>
+  <lastmod>2017-06-02T02:06:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/makine-ogrenimi/</loc>
   <lastmod>2017-05-26T00:37:00Z</lastmod>
  </url>
  <url>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/mathjax/</loc>
+  <lastmod>2017-06-02T02:06:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/sayil/</loc>
+  <lastmod>2017-06-02T02:06:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/yapay-zeka/</loc>
   <lastmod>2017-05-26T00:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/yoney/</loc>
+  <lastmod>2017-06-02T02:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/galleries/</loc>
@@ -67,7 +87,7 @@
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/listings/hello.py.html</loc>
-  <lastmod>2017-06-01T02:02:00Z</lastmod>
+  <lastmod>2017-06-02T02:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/pages/about-nikola/</loc>
@@ -128,6 +148,10 @@
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/pages/theming/</loc>
   <lastmod>2017-05-26T00:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/</loc>
+  <lastmod>2017-06-02T02:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/</loc>

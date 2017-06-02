@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://d-k-e.github.io/yapayzeka-eski-metinler/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/yapay-zeka-ve-derin-ogrenime-giris-13/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/" type="text/html">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">Ana içeriğe geç</a>
@@ -45,7 +45,140 @@
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-13/" class="u-url">Yapay Zeka ve Derin Öğrenime Giriş 1.3</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/" class="u-url">Makine Öğrenimine Hazırlık 2.1: Doğrusal Cebir- 1.1: Terimler</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Kaan Eraslan</span></p>
+            <p class="dateline"><a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-05-30T01:53:12+02:00" title="2017-05-30 01:53">2017-05-30 01:53</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#disqus_thread" data-disqus-identifier="cache/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Merhaba arkadaşlar,</p>
+<p>Bundan önceki, Derin Öğrenime Giriş <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/">yazı dizisinde</a>, çok kabaca derin öğrenimin ne olduğundan, ne tip modeller kullandığından, ilgilendiği problemlerden ve bu problemlere sunduğu çözümlerden bahsettim.
+Bu yazı dizisini ise Derin Öğrenim algoritmalarını açıklarken kullanacağım matematiksel alt yapıya ayırdım.
+Bu alt yapının ilk ayağı hiç kuşkusuz doğrusal cebir. Doğrusal cebiri üniversitede görmeseler de liseden hatırlayanlar olacaktır.
+Koordinat sistemi x,y filan deyince aklınıza gelen şey.
+Bu yazı tabi ki doğrusal cebir ilgili bilinen her şeyi anlatmaya filan çalışmayacak, derin öğrenim ve daha genel anlamda makine öğreniminde kullanıldığı kadarını sizlerle paylaşmaya çalışacağım.</p>
+<p>Şimdi ağırlıklı olarak kullanacağımız terimler şunlar: sayıllar, dizeyler, yöneyler, gereyler.
+Bu terimlerin her birini en ufak detayına kadar uzun uzun anlatacağım, zira ne ifade ettiklerini tam olarak bilmek şart.</p>
+<div class="section" id="sayillar">
+<h2>Sayıllar</h2>
+<p>Sayıl, bir adet sayıdır. Böyle deyince garip duyuluyor, ancak bunun dışında göreceğimiz diğer terimler genellikle daha karmaşık kümelerden oluşuyorlar.
+Sayıl öyle değil, bildiğimiz normal 3,4,7 filan gibi bir sayı.
+Genellikle hangi sayı kümesine ait olduğu da belirtilir.
+Örneğin Sayıl "a" <span class="math">\(s \in \mathbb{N}\)</span> yani s elemanıdır doğal sayılar kümesinin.
+Nerede işimize yarıyacak ?
+Yöneylerin arasındaki açı ilişkilerini incelerken, bir dizeyi bir başka dizeye dönüştürürken, vs.
+Özellikle temel bileşen analizi gibi algoritmalarda özyöneyleri incelerken bu sayıl terimi anahtar kavramlardan biri olacak.
+Daha doğrusu ben bu terimi bildiğinizi varsayarak algoritmayı açıklayacağım.</p>
+</div>
+<div class="section" id="yoneyler">
+<h2>Yöneyler</h2>
+<p>Yöneyler, adının da belirttiği gibi, yönü ve büyüklüğü olanlar.
+Bunlar genellikle <em>belirli bir referans noktasına göre</em>, ki bu genelde kolaylık olsun diye (0,0) kabul edilir, başka bir noktada olan noktalardır.
+Referans noktasıyla, tayin ettikleri nokta arasındaki mesafe onların büyüklüğünü oluşturur.
+Yöneyin, yönünüyse eksenlerle yaptıkları açılara göre söylenir. Örnek verecek olursak:</p>
+<img alt="/images/MÖ-Hazırlık-21/yöneyÖrneği.png" src="images/M%C3%96-Haz%C4%B1rl%C4%B1k-21/y%C3%B6ney%C3%96rne%C4%9Fi.png"><p><a class="footnote-reference" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#id4" id="id1">[2]</a>
+Resimdeki "a" yöneyimizin <em>vardığı</em> dolayısıyla onu tayin eden noktayı belirtiyor.
+63° olarak belirtilen yöneyin yönü.
+Doğru olarak çizilen alansa yöneyin büyüklüğünü temsil ediyor.</p>
+<p>Yöneyler açık olarak ifade edildiklerinde genelde şu şekilde yazılırlar.
+Diyelim ki elimizde bir "a" yöneyi olsun <span class="math">\(a = [a_1, a_2, a_3,{\dots}, a_n ]\)</span>.
+"a"'nın altına yazılanlar elemanların numarası, yani a yöneyinin birinci elemanı, ikinci elemanı, gibi.
+Bazı kitaplarda A noktasından B noktasına doğru olan bir yöney için <span class="math">\(\vec{AB}\)</span> gibi ifadeler de kullanılıyor.
+Bazen yöneyi dikine yazdıklarını da gördüm. Örneğin:</p>
+<div class="math">
+\begin{equation*}
+a = \left[
+\begin{array}{r}
+ a_1 \\
+ a_2 \\
+ a_3 \\
+ \vdots \\
+ a_n
+ \end{array}
+\right]
+\end{equation*}
+</div>
+<p>Yöneylerin dizinlenmesinde kullanılan bir takım uzlaşımlar var.
+Örneğin, yöneyin ikinci, beşinci ve yirmi sekizinci elemanlarını ayırmak istersek, bunun için başta bu eleman numaralarının olduğu bir küme oluşturuyoruz.
+Örneğin "k" kümesi, yani <span class="math">\(k = { 2, 5, 28 }\)</span>.
+Sonrasında da bu kümenin adını tıpkı diğer elemanları ifade ederken kullandığımız gibi yöneyin adının altına koyuyoruz, yani <span class="math">\(a_k\)</span>.
+Hariç olan elemanları kast ettiğimizde eksi işaretini kullanıyoruz.
+Örneğin ikinci elemanlar hariç, yöneyin bütün elemanları gibi bir ifade, şöyle oluyor <span class="math">\(a_{-2}\)</span>.
+"k" kümesine dahil olmayan elemanların hepsi gibi ifadeler de yine benzer bir şekilde <span class="math">\(a_{-k}\)</span> ifade ediliyor.</p>
+<!-- yöneylerin dizinlenmesi sayfa 32, resmi küçült renklerini değiştir -->
+</div>
+<div class="section" id="dizeyler">
+<h2>Dizeyler</h2>
+<p>Dizeyler bayağı meşhur, filmini bile çektiler. İsminden anlaşılacağı üzere yatay ve dikey dizilerden oluşan, dolayısıyla iki boyutlu, sayı dizinidir.
+Genellikle boyutları y x d ifadesiyle verilir.
+Bu ifade y, satıra, d sütun olarak okunur <a class="footnote-reference" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#id3" id="id2">[1]</a>.
+Örneğin 23 satırlı ve 4 sütunlu bir K dizeyi için kullanılan ifade şudur: <span class="math">\(K^{23x4}\)</span></p>
+<p>Dizeyler ve onlarla ilgili işlemler Makine Öğreniminde çok sık kullanılıyor, bundan dolayıdır ki numpy, scipy filan gibi kütüphaneler, dizey işlemlerini eniyilemek için bir hayli uğraşıyorlar.
+Dizeydeki bir elemanı ifade etmek istediğimizde onun satır ve sütun numarasını veririz</p>
+<ul class="simple">
+<li>Örneğin <span class="math">\(K_{12,2}\)</span> ifadesi K dizeyinin 12. satırı üzerinde 3. sütunun altına denk gelen elemanı ifade etmektedir.</li>
+</ul>
+<p>Bir <strong>satırdaki</strong> elemanların tamamını ifade etmek istediğimiz zaman sütun numarası yerine ":" koyulur.</p>
+<ul class="simple">
+<li>Örneğin <span class="math">\(K_{3,:}\)</span> ifadesi K dizeyinin 3. satırındaki bütün elemanları ifade eder.</li>
+</ul>
+<p>Bir <strong>sütundaki</strong> elemanların tamamını ifade etmek istediğimiz zaman satır numarası yerine ":" koyulur.</p>
+<ul class="simple">
+<li>Örneğin <span class="math">\(K_{:,3}\)</span> ifadesi K dizeyinin 3. sütunundaki bütün elemanları ifade eder.</li>
+</ul>
+<p>Bazı durumlarda dizeyde erişmek istediğimiz elemanlar bir ifadenin sonucudurlar.
+İfadeden kastım, 3'ün katı olan satırların 2.sinden 3. sütuna tekabül eden eleman gibi şeyler.
+Bunlar genelde <span class="math">\(f(K)_{y,d}\)</span> şeklinde temsil edilir.
+Bu ifade şu şekilde okunur, K dizeyine f işlemini yap, oradaki satır ve sütunu al.
+f işleminden kastım, yukarıdaki 3'ün katı filan muhabbeti gibi olan ifadeler.
+Tam öyle olmak zorunda değil tabi ama ona benzer dizey değerlendirmesi yapan ifadeler.</p>
+<p>Sıklıkla bahsedeceğimiz dizey işlemleri şunlar: dizey toplamı, sayıl çarpımı, dizey çaprazlama, dizey çarpımı.</p>
+</div>
+<div class="section" id="gereyler">
+<h2>Gereyler</h2>
+<p>Gereyler aslında dizeyler gibi, sadece çok boyutlular.
+Nasıl K dizeyindeki bir elemanı tayin etmek için eksenler üzerindeki konumunu K'nin altına yazıyorduk, gereylerde de benzer bir sistem var.
+Örneğin 7 boyutlu, yani eksenli bir G gereyindeki elemanı belirtmek için şöyle bir ifade kullanırız <span class="math">\(G_{j,o,r,m,v,r,x}\)</span>, tabi burada j, o, r, m, v, ve x'in, sayma sayıları kümesinin elemanı olduğunu kabul ediyoruz.</p>
+<p>Bu yazıyı burada bitiriyorum.
+Gördüğümüz matematiksel kavramlar bundan sonrası için temel teşkil ediyor.
+Bir sonraki yazıda bunlarla yapılan işlemleri anlatmaya çalışacağım.
+Anlaşılmayan bir şey varsa, ya da eklemek istediğiniz bir şey varsa lütfen yorumlarda belirtin.</p>
+<p>Sağlıcakla,</p>
+<p>Kaan</p>
+<div class="section" id="notlar">
+<h3>Notlar</h3>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#id2">[1]</a></td>
+<td>y, yi yatay, d'yi dikey gibi de okuyabilirsiniz, yani yataya dikey.</td>
+</tr></tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#id1">[2]</a></td>
+<td>Resimin temeli Jakob Scholbach'a aittir, üzerindeki değişiklikler bana ait, <a class="reference external" href="https://en.wikipedia.org/wiki/Vector_space#/media/File:Vector_components.svg">orjinali</a>.</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-13/" class="u-url">Yapay Zeka ve Derin Öğrenime Giriş 1.3</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Kaan Eraslan</span></p>
             <p class="dateline"><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-13/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-05-28T03:52:32+02:00" title="2017-05-28 03:52">2017-05-28 03:52</time></a></p>
@@ -329,7 +462,9 @@ Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-m
 
 
         
-       <script>var disqus_shortname="yapayzeka-eski-metinler";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2017         <a href="mailto:kaaneraslan@gmail.com">Kaan Eraslan</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+       <script>var disqus_shortname="yapayzeka-eski-metinler";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-yYfngbEKv4RENfGDvNUqJTqGFcKf31NJEe9OTnnMH3Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script><footer id="footer"><p>Contents © 2017         <a href="mailto:kaaneraslan@gmail.com">Kaan Eraslan</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
             
         </footer>
 </div>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (yöney ile ilgili yazılar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link type="application/rss+xml" href="https://d-k-e.github.io/yapayzeka-eski-metinler/categories/yoney.xml" rel="self"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Fri, 02 Jun 2017 02:06:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1: Doğrusal Cebir- 1.1: Terimler</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba arkadaşlar,&lt;/p&gt;
+&lt;p&gt;Bundan önceki, Derin Öğrenime Giriş &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/"&gt;yazı dizisinde&lt;/a&gt;, çok kabaca derin öğrenimin ne olduğundan, ne tip modeller kullandığından, ilgilendiği problemlerden ve bu problemlere sunduğu çözümlerden bahsettim.
+Bu yazı dizisini ise Derin Öğrenim algoritmalarını açıklarken kullanacağım matematiksel alt yapıya ayırdım.
+Bu alt yapının ilk ayağı hiç kuşkusuz doğrusal cebir. Doğrusal cebiri üniversitede görmeseler de liseden hatırlayanlar olacaktır.
+Koordinat sistemi x,y filan deyince aklınıza gelen şey.
+Bu yazı tabi ki doğrusal cebir ilgili bilinen her şeyi anlatmaya filan çalışmayacak, derin öğrenim ve daha genel anlamda makine öğreniminde kullanıldığı kadarını sizlerle paylaşmaya çalışacağım.&lt;/p&gt;
+&lt;p&gt;Şimdi ağırlıklı olarak kullanacağımız terimler şunlar: sayıllar, dizeyler, yöneyler, gereyler.
+Bu terimlerin her birini en ufak detayına kadar uzun uzun anlatacağım, zira ne ifade ettiklerini tam olarak bilmek şart.&lt;/p&gt;
+&lt;div class="section" id="sayillar"&gt;
+&lt;h2&gt;Sayıllar&lt;/h2&gt;
+&lt;p&gt;Sayıl, bir adet sayıdır. Böyle deyince garip duyuluyor, ancak bunun dışında göreceğimiz diğer terimler genellikle daha karmaşık kümelerden oluşuyorlar.
+Sayıl öyle değil, bildiğimiz normal 3,4,7 filan gibi bir sayı.
+Genellikle hangi sayı kümesine ait olduğu da belirtilir.
+Örneğin Sayıl "a" &lt;span class="math"&gt;\(s \in \mathbb{N}\)&lt;/span&gt; yani s elemanıdır doğal sayılar kümesinin.
+Nerede işimize yarıyacak ?
+Yöneylerin arasındaki açı ilişkilerini incelerken, bir dizeyi bir başka dizeye dönüştürürken, vs.
+Özellikle temel bileşen analizi gibi algoritmalarda özyöneyleri incelerken bu sayıl terimi anahtar kavramlardan biri olacak.
+Daha doğrusu ben bu terimi bildiğinizi varsayarak algoritmayı açıklayacağım.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="yoneyler"&gt;
+&lt;h2&gt;Yöneyler&lt;/h2&gt;
+&lt;p&gt;Yöneyler, adının da belirttiği gibi, yönü ve büyüklüğü olanlar.
+Bunlar genellikle &lt;em&gt;belirli bir referans noktasına göre&lt;/em&gt;, ki bu genelde kolaylık olsun diye (0,0) kabul edilir, başka bir noktada olan noktalardır.
+Referans noktasıyla, tayin ettikleri nokta arasındaki mesafe onların büyüklüğünü oluşturur.
+Yöneyin, yönünüyse eksenlerle yaptıkları açılara göre söylenir. Örnek verecek olursak:&lt;/p&gt;
+&lt;img alt="/images/MÖ-Hazırlık-21/yöneyÖrneği.png" src="https://d-k-e.github.io/yapayzeka-eski-metinler/images/M%C3%96-Haz%C4%B1rl%C4%B1k-21/y%C3%B6ney%C3%96rne%C4%9Fi.png"&gt;
+&lt;p&gt;&lt;a class="footnote-reference" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#id4" id="id1"&gt;[2]&lt;/a&gt;
+Resimdeki "a" yöneyimizin &lt;em&gt;vardığı&lt;/em&gt; dolayısıyla onu tayin eden noktayı belirtiyor.
+63° olarak belirtilen yöneyin yönü.
+Doğru olarak çizilen alansa yöneyin büyüklüğünü temsil ediyor.&lt;/p&gt;
+&lt;p&gt;Yöneyler açık olarak ifade edildiklerinde genelde şu şekilde yazılırlar.
+Diyelim ki elimizde bir "a" yöneyi olsun &lt;span class="math"&gt;\(a = [a_1, a_2, a_3,{\dots}, a_n ]\)&lt;/span&gt;.
+"a"'nın altına yazılanlar elemanların numarası, yani a yöneyinin birinci elemanı, ikinci elemanı, gibi.
+Bazı kitaplarda A noktasından B noktasına doğru olan bir yöney için &lt;span class="math"&gt;\(\vec{AB}\)&lt;/span&gt; gibi ifadeler de kullanılıyor.
+Bazen yöneyi dikine yazdıklarını da gördüm. Örneğin:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+a = \left[
+\begin{array}{r}
+ a_1 \\
+ a_2 \\
+ a_3 \\
+ \vdots \\
+ a_n
+ \end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Yöneylerin dizinlenmesinde kullanılan bir takım uzlaşımlar var.
+Örneğin, yöneyin ikinci, beşinci ve yirmi sekizinci elemanlarını ayırmak istersek, bunun için başta bu eleman numaralarının olduğu bir küme oluşturuyoruz.
+Örneğin "k" kümesi, yani &lt;span class="math"&gt;\(k = { 2, 5, 28 }\)&lt;/span&gt;.
+Sonrasında da bu kümenin adını tıpkı diğer elemanları ifade ederken kullandığımız gibi yöneyin adının altına koyuyoruz, yani &lt;span class="math"&gt;\(a_k\)&lt;/span&gt;.
+Hariç olan elemanları kast ettiğimizde eksi işaretini kullanıyoruz.
+Örneğin ikinci elemanlar hariç, yöneyin bütün elemanları gibi bir ifade, şöyle oluyor &lt;span class="math"&gt;\(a_{-2}\)&lt;/span&gt;.
+"k" kümesine dahil olmayan elemanların hepsi gibi ifadeler de yine benzer bir şekilde &lt;span class="math"&gt;\(a_{-k}\)&lt;/span&gt; ifade ediliyor.&lt;/p&gt;
+&lt;!-- yöneylerin dizinlenmesi sayfa 32, resmi küçült renklerini değiştir --&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dizeyler"&gt;
+&lt;h2&gt;Dizeyler&lt;/h2&gt;
+&lt;p&gt;Dizeyler bayağı meşhur, filmini bile çektiler. İsminden anlaşılacağı üzere yatay ve dikey dizilerden oluşan, dolayısıyla iki boyutlu, sayı dizinidir.
+Genellikle boyutları y x d ifadesiyle verilir.
+Bu ifade y, satıra, d sütun olarak okunur &lt;a class="footnote-reference" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#id3" id="id2"&gt;[1]&lt;/a&gt;.
+Örneğin 23 satırlı ve 4 sütunlu bir K dizeyi için kullanılan ifade şudur: &lt;span class="math"&gt;\(K^{23x4}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Dizeyler ve onlarla ilgili işlemler Makine Öğreniminde çok sık kullanılıyor, bundan dolayıdır ki numpy, scipy filan gibi kütüphaneler, dizey işlemlerini eniyilemek için bir hayli uğraşıyorlar.
+Dizeydeki bir elemanı ifade etmek istediğimizde onun satır ve sütun numarasını veririz&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Örneğin &lt;span class="math"&gt;\(K_{12,2}\)&lt;/span&gt; ifadesi K dizeyinin 12. satırı üzerinde 3. sütunun altına denk gelen elemanı ifade etmektedir.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bir &lt;strong&gt;satırdaki&lt;/strong&gt; elemanların tamamını ifade etmek istediğimiz zaman sütun numarası yerine ":" koyulur.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Örneğin &lt;span class="math"&gt;\(K_{3,:}\)&lt;/span&gt; ifadesi K dizeyinin 3. satırındaki bütün elemanları ifade eder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bir &lt;strong&gt;sütundaki&lt;/strong&gt; elemanların tamamını ifade etmek istediğimiz zaman satır numarası yerine ":" koyulur.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Örneğin &lt;span class="math"&gt;\(K_{:,3}\)&lt;/span&gt; ifadesi K dizeyinin 3. sütunundaki bütün elemanları ifade eder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bazı durumlarda dizeyde erişmek istediğimiz elemanlar bir ifadenin sonucudurlar.
+İfadeden kastım, 3'ün katı olan satırların 2.sinden 3. sütuna tekabül eden eleman gibi şeyler.
+Bunlar genelde &lt;span class="math"&gt;\(f(K)_{y,d}\)&lt;/span&gt; şeklinde temsil edilir.
+Bu ifade şu şekilde okunur, K dizeyine f işlemini yap, oradaki satır ve sütunu al.
+f işleminden kastım, yukarıdaki 3'ün katı filan muhabbeti gibi olan ifadeler.
+Tam öyle olmak zorunda değil tabi ama ona benzer dizey değerlendirmesi yapan ifadeler.&lt;/p&gt;
+&lt;p&gt;Sıklıkla bahsedeceğimiz dizey işlemleri şunlar: dizey toplamı, sayıl çarpımı, dizey çaprazlama, dizey çarpımı.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="gereyler"&gt;
+&lt;h2&gt;Gereyler&lt;/h2&gt;
+&lt;p&gt;Gereyler aslında dizeyler gibi, sadece çok boyutlular.
+Nasıl K dizeyindeki bir elemanı tayin etmek için eksenler üzerindeki konumunu K'nin altına yazıyorduk, gereylerde de benzer bir sistem var.
+Örneğin 7 boyutlu, yani eksenli bir G gereyindeki elemanı belirtmek için şöyle bir ifade kullanırız &lt;span class="math"&gt;\(G_{j,o,r,m,v,r,x}\)&lt;/span&gt;, tabi burada j, o, r, m, v, ve x'in, sayma sayıları kümesinin elemanı olduğunu kabul ediyoruz.&lt;/p&gt;
+&lt;p&gt;Bu yazıyı burada bitiriyorum.
+Gördüğümüz matematiksel kavramlar bundan sonrası için temel teşkil ediyor.
+Bir sonraki yazıda bunlarla yapılan işlemleri anlatmaya çalışacağım.
+Anlaşılmayan bir şey varsa, ya da eklemek istediğiniz bir şey varsa lütfen yorumlarda belirtin.&lt;/p&gt;
+&lt;p&gt;Sağlıcakla,&lt;/p&gt;
+&lt;p&gt;Kaan&lt;/p&gt;
+&lt;div class="section" id="notlar"&gt;
+&lt;h3&gt;Notlar&lt;/h3&gt;
+&lt;table class="docutils footnote" frame="void" id="id3" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#id2"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;y, yi yatay, d'yi dikey gibi de okuyabilirsiniz, yani yataya dikey.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id4" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#id1"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Resimin temeli Jakob Scholbach'a aittir, üzerindeki değişiklikler bana ait, &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Vector_space#/media/File:Vector_components.svg"&gt;orjinali&lt;/a&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>dizey</category><category>gerey</category><category>makine öğrenimi</category><category>mathjax</category><category>sayıl</category><category>yöney</category><guid>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/</guid><pubDate>Mon, 29 May 2017 23:53:12 GMT</pubDate></item></channel></rss>
