@@ -7,62 +7,98 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/authors/dogu-kaan-eraslan.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/authors/kaan-eraslan.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/cat_eski-metinler.xml</loc>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/cat_yapay-zeka.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/ceviri.xml</loc>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/daiva.xml</loc>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/derin-ogrenim.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/dizey.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/eski-farsca.xml</loc>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/eski-iran-imparatorlugu.xml</loc>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/eski-metinler.xml</loc>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/gerey.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/harf-cevirisi.xml</loc>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/khsayarsa.xml</loc>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/makine-ogrenimi.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/mathjax.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/sayil.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/xerxes.xml</loc>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/yapay-zeka.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/yoney.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/galleries/demo/rss.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/galleries/rss.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/rss.xml</loc>
-  <lastmod>2017-06-02T03:23:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/sitemap.xml</loc>
-  <lastmod>2017-06-02T03:27:00Z</lastmod>
+  <lastmod>2017-06-04T01:33:00Z</lastmod>
  </sitemap>
 </sitemapindex>

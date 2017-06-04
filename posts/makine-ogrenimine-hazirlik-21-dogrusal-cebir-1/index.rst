@@ -68,7 +68,7 @@ Bazen yöneyi dikine yazdıklarını da gördüm. Örneğin:
 
 Yöneylerin dizinlenmesinde kullanılan bir takım uzlaşımlar var.
 Örneğin, yöneyin ikinci, beşinci ve yirmi sekizinci elemanlarını ayırmak istersek, bunun için başta bu eleman numaralarının olduğu bir küme oluşturuyoruz.
-Örneğin "k" kümesi, yani :math:`k = \{{2, 5, 28\}}`.
+Örneğin "k" kümesi, yani :math:`k = \{2, 5, 28\}`.
 Sonrasında da bu kümenin adını tıpkı diğer elemanları ifade ederken kullandığımız gibi yöneyin adının altına koyuyoruz, yani :math:`a_k`.
 Hariç olan elemanları kast ettiğimizde eksi işaretini kullanıyoruz.
 Örneğin ikinci elemanlar hariç, yöneyin bütün elemanları gibi bir ifade, şöyle oluyor :math:`a_{-2}`.
