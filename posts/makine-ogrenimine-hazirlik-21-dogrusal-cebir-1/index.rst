@@ -18,9 +18,9 @@ Bu yazı tabi ki doğrusal cebir ilgili bilinen her şeyi anlatmaya filan çalı
 Şimdi ağırlıklı olarak kullanacağımız terimler şunlar: sayıllar, dizeyler, yöneyler, gereyler.
 Bu terimlerin her birini en ufak detayına kadar uzun uzun anlatacağım, zira ne ifade ettiklerini tam olarak bilmek şart.
 
-========
-Sayıllar
-========
+=========
+Sayıllar_
+=========
 
 Sayıl, bir adet sayıdır. Böyle deyince garip duyuluyor, ancak bunun dışında göreceğimiz diğer terimler genellikle daha karmaşık kümelerden oluşuyorlar.
 Sayıl öyle değil, bildiğimiz normal 3,4,7 filan gibi bir sayı.
@@ -32,7 +32,7 @@ Yöneylerin arasındaki açı ilişkilerini incelerken, bir dizeyi bir başka di
 Daha doğrusu ben bu terimi bildiğinizi varsayarak algoritmayı açıklayacağım.
 
 =========
-Yöneyler
+Yöneyler_
 =========
 
 Yöneyler, adının da belirttiği gibi, yönü ve büyüklüğü olanlar.
@@ -77,7 +77,7 @@ Hariç olan elemanları kast ettiğimizde eksi işaretini kullanıyoruz.
 .. yöneylerin dizinlenmesi sayfa 32, resmi küçült renklerini değiştir
 
 =========
-Dizeyler
+Dizeyler_
 =========
 
 Dizeyler bayağı meşhur, filmini bile çektiler. İsminden anlaşılacağı üzere yatay ve dikey dizilerden oluşan, dolayısıyla iki boyutlu, sayı dizinidir.
@@ -109,7 +109,7 @@ Sıklıkla bahsedeceğimiz dizey işlemleri şunlar: dizey toplamı, sayıl çar
 
 
 =========
-Gereyler
+Gereyler_
 =========
 
 Gereyler aslında dizeyler gibi, sadece çok boyutlular.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (Kaan Eraslan tarafından yazılanlar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://d-k-e.github.io/yapayzeka-eski-metinler/authors/kaan-eraslan.xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Sun, 04 Jun 2017 02:00:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Xph Daiva Yazıtı</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/xph-daiva-yaziti/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Bu yazı &lt;a class="reference external" href="http://antikdillerdenbazilari.blogspot.fr/2015/10/xph-turkce-daiva-yazt.html"&gt;eski blogumdan&lt;/a&gt; alıntıdır. Ufak tefek formatla ilgili düzenlemeler dışında içeriğe hiç dokunulmamıştır.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (Kaan Eraslan tarafından yazılanlar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://d-k-e.github.io/yapayzeka-eski-metinler/authors/kaan-eraslan.xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Mon, 05 Jun 2017 02:23:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Xph Daiva Yazıtı</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/xph-daiva-yaziti/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Bu yazı &lt;a class="reference external" href="http://antikdillerdenbazilari.blogspot.fr/2015/10/xph-turkce-daiva-yazt.html"&gt;eski blogumdan&lt;/a&gt; alıntıdır. Ufak tefek formatla ilgili düzenlemeler dışında içeriğe hiç dokunulmamıştır.&lt;/p&gt;
 &lt;div class="section" id="giris"&gt;
 &lt;h2&gt;Giriş&lt;/h2&gt;
 &lt;p&gt;Aşağıda çevirisini bulacağınız Kşayãrşa adlı Eski İran kralının (MÖ 5. yy) Persepolis ve Pasargad'da bulunan bir metni. 3 farklı dilde kopyalanmış. Biz aşağıda Eski Farsça'sının Türkçe'sini sunuyoruz. Kşayãrşa Eski Yunan literatüründe sıkça bahsedilen bir figür, yunanlılar onları kendi kaynaklarında hybris'in ayaklı hali olarak görüyor olmalarına rağmen, tahmin edilebileceği gibi Eski Farsça kaynaklarda böylesi bir tasvir görülmüyor.&lt;/p&gt;
@@ -469,7 +469,7 @@ Bu yazı tabi ki doğrusal cebir ilgili bilinen her şeyi anlatmaya filan çalı
 &lt;p&gt;Şimdi ağırlıklı olarak kullanacağımız terimler şunlar: sayıllar, dizeyler, yöneyler, gereyler.
 Bu terimlerin her birini en ufak detayına kadar uzun uzun anlatacağım, zira ne ifade ettiklerini tam olarak bilmek şart.&lt;/p&gt;
 &lt;div class="section" id="sayillar"&gt;
-&lt;h2&gt;Sayıllar&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#sayillar"&gt;Sayıllar&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Sayıl, bir adet sayıdır. Böyle deyince garip duyuluyor, ancak bunun dışında göreceğimiz diğer terimler genellikle daha karmaşık kümelerden oluşuyorlar.
 Sayıl öyle değil, bildiğimiz normal 3,4,7 filan gibi bir sayı.
 Genellikle hangi sayı kümesine ait olduğu da belirtilir.
@@ -480,7 +480,7 @@ Yöneylerin arasındaki açı ilişkilerini incelerken, bir dizeyi bir başka di
 Daha doğrusu ben bu terimi bildiğinizi varsayarak algoritmayı açıklayacağım.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="yoneyler"&gt;
-&lt;h2&gt;Yöneyler&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler"&gt;Yöneyler&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Yöneyler, adının da belirttiği gibi, yönü ve büyüklüğü olanlar.
 Bunlar genellikle &lt;em&gt;belirli bir referans noktasına göre&lt;/em&gt;, ki bu genelde kolaylık olsun diye (0,0) kabul edilir, başka bir noktada olan noktalardır.
 Referans noktasıyla, tayin ettikleri nokta arasındaki mesafe onların büyüklüğünü oluşturur.
@@ -518,7 +518,7 @@ Hariç olan elemanları kast ettiğimizde eksi işaretini kullanıyoruz.
 &lt;!-- yöneylerin dizinlenmesi sayfa 32, resmi küçült renklerini değiştir --&gt;
 &lt;/div&gt;
 &lt;div class="section" id="dizeyler"&gt;
-&lt;h2&gt;Dizeyler&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler"&gt;Dizeyler&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Dizeyler bayağı meşhur, filmini bile çektiler. İsminden anlaşılacağı üzere yatay ve dikey dizilerden oluşan, dolayısıyla iki boyutlu, sayı dizinidir.
 Genellikle boyutları y x d ifadesiyle verilir.
 Bu ifade y, satıra, d sütun olarak okunur &lt;a class="footnote-reference" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#id3" id="id2"&gt;[1]&lt;/a&gt;.
@@ -545,7 +545,7 @@ Tam öyle olmak zorunda değil tabi ama ona benzer dizey değerlendirmesi yapan 
 &lt;p&gt;Sıklıkla bahsedeceğimiz dizey işlemleri şunlar: dizey toplamı, sayıl çarpımı, dizey çaprazlama, dizey çarpımı.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="gereyler"&gt;
-&lt;h2&gt;Gereyler&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#gereyler"&gt;Gereyler&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Gereyler aslında dizeyler gibi, sadece çok boyutlular.
 Nasıl K dizeyindeki bir elemanı tayin etmek için eksenler üzerindeki konumunu K'nin altına yazıyorduk, gereylerde de benzer bir sistem var.
 Örneğin 7 boyutlu, yani eksenli bir G gereyindeki elemanı belirtmek için şöyle bir ifade kullanırız &lt;span class="math"&gt;\(G_{j,o,r,m,v,r,x}\)&lt;/span&gt;, tabi burada j, o, r, m, v, ve x'in, sayma sayıları kümesinin elemanı olduğunu kabul ediyoruz.&lt;/p&gt;
