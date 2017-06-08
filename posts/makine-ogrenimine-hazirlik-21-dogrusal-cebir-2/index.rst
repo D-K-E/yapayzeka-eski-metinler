@@ -37,7 +37,7 @@ Onunda formülü basit, x ve p iki yöney olsun:
 
 .. math::
 
-   p {\cdot} x = {\sum_{j=1}^{n} p_1 {\times} x_1 + p_2 {\times} x_2 + {\dots} p_n {\times} x_n}
+   p {\cdot} x = {\sum_{j=1}^{n} p_j {\times} x_j = p_1 {\times} x_1 + p_2 {\times} x_2 + {\dots} + p_n {\times} x_n}
 
 Yani işlemin sonucu bir `sayıl <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#sayillar>`_.
 Bir örnek verecek olursak:
