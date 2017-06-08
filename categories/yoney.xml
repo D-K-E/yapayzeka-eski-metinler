@@ -1,5 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (yöney ile ilgili yazılar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://d-k-e.github.io/yapayzeka-eski-metinler/categories/yoney.xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Mon, 05 Jun 2017 02:23:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1: Doğrusal Cebir- 1.1: Terimler</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba arkadaşlar,&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (yöney ile ilgili yazılar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link rel="self" href="https://d-k-e.github.io/yapayzeka-eski-metinler/categories/yoney.xml" type="application/rss+xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Thu, 08 Jun 2017 02:43:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 2: Sık Kullanılan İşlemler</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar,&lt;/p&gt;
+&lt;p&gt;Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/"&gt;önceki yazımda&lt;/a&gt;, makine öğrenimi ve derin öğrenimde sık kullanılan algoritmalarda geçen matematiksel kavramların kısa bir özetini vermiştim.
+Yine o yazıda belirttiğim gibi, bu yazıyı o kavramlarla yapılan işlemlere ayıracağım. Örnekleri bol tutmaya özen göstereceğim.&lt;/p&gt;
+&lt;div class="section" id="yoney-islemleri"&gt;
+&lt;h2&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#yoney-islemleri"&gt;Yöney İşlemleri&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="yoney-caprazlama"&gt;
+&lt;h3&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#yoney-caprazlama"&gt;Yöney Çaprazlama&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Çaprazlama işlemi, dizeyler için daha kullanışlı bir yapı olsa da yöneyleri temsil ederken de yer yer kullanılır.
+Yöneyler tek sütunlu dizeyler olarak görülebildiklerinden, bir yöneyin çaprazlanmış hali de tek sütunlu bir dizeydir.
+Bu bağlamda şu ifadeyle yer yer karşılaşırız &lt;span class="math"&gt;\(x = [x_1, x_2, x_3]^T\)&lt;/span&gt;.
+Dizeyler için geçerli olan işlemlerin hemen hepsi yöneyler içinde yapılabilir.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="yoney-carpimi"&gt;
+&lt;h3&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#yoney-carpimi"&gt;Yöney Çarpımı&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Bu işlemin iki türü var:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Nokta çarpımı&lt;/li&gt;
+&lt;li&gt;Çapraz çarpım.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Derin Öğrenim ve makine öğrenimi bağlamında gereken doğrusal cebir için bunlardan bilmemiz gereken &lt;strong&gt;nokta çarpımı&lt;/strong&gt;
+Onunda formülü basit, x ve p iki yöney olsun:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+p {\cdot} x = {\sum_{j=1}^{n} p_1 {\times} x_1 + p_2 {\times} x_2 + {\dots} p_n {\times} x_n}
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Yani işlemin sonucu bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#sayillar"&gt;sayıl&lt;/a&gt;.
+Bir örnek verecek olursak:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+p = [1,3]
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+x = [3,4]
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+p {\cdot} x = 1 {\times} 3 + 3 {\times} 4 = 15
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Bu değer ne ifade ediyor. Elde edilen sayılın ifade ettiği şey, yöneylerin arasındaki açı ilişkisi.
+Bunu biraz açmadan önce nokta çarpımının ne yaptığını anlamaya çalışalım, yani bizden iki yöney arasında ne ilişkisi kurmamızı istediğini anlamaya çalılaşım.&lt;/p&gt;
+&lt;p&gt;Öncelikle neden bu işlem bize bir yöney değilde bir sayıl veriyor ? Bunun sebebi yöneylerin dizeyler düzeyinde bir soyutlaması yapıldığında yani yöneyler dizeyler cinsinden ifade edildiğinde, yapılan dizey çarpımının sonucunun 1 satırlı ve 1 sütunlu olmak durumunda kalmasından ileri geliyor.
+Dizey çarpımlarının matematiksel ifadesini birazdan daha dikkatle detaylı inceleyeceğim ama kısadan şunu koyayım: &lt;span class="math"&gt;\(\vec{p}^T = p^{1x0}\)&lt;/span&gt; ve &lt;span class="math"&gt;\(\vec{x} = x^{0x1}\)&lt;/span&gt; dizey çarpımlarında &lt;span class="math"&gt;\(H^{mxq} = K^{mxn} {\times} R^{jxq}\)&lt;/span&gt; olduğundan dolayı yani çarpım sonucu oluşan dizey çarpılandan satır sayısı, çarpandan da sütun sayısı aldığından dolayı &lt;span class="math"&gt;\(z^{1x1} = p^{1x0} {\times} x^{0x1}\)&lt;/span&gt; olur, yani iki yöneyden devşirme dizey arasındaki çarpımın ancak ve ancak 1 satırı ve 1 sütunu olabilir. Bir satırı ve bir sütunu olan dizeyde zaten bir sayıldır.&lt;/p&gt;
+&lt;p&gt;Bu sayıl yöneylere dair ne söylüyor ?
+Bu sayılın değerlerine göre yöneylerin arasındaki açıya dair şunlar söylenebilir:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Eğer sayılın değeri &amp;gt; 0 ise iki yöney arasındaki açı 90 dereceden küçüktür.&lt;/li&gt;
+&lt;li&gt;Eğer sayılın değeri = 0 ise iki yöney arasındaki açı 90 derecedir.&lt;/li&gt;
+&lt;li&gt;Eğer sayılın değeri &amp;lt; 0 ise iki yöney arasındaki açı 90 dereceden büyüktür.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Akla gelen en makul soru şu tabi, neden ?
+Bunu hissettirmeye çalışacağım, zira matematiksel ispatını tek başına vermemin çok bir anlamı yok.
+İlgili formül şu &lt;span class="math"&gt;\(\vec{p} {\cdot} \vec{x} = |{\vec{p}}| {\times} |{\vec{x}}| {\times}{\cos}{\theta}\)&lt;/span&gt;.
+Yani Öklid düzlemindeki iki yöneyin nokta çarpımı, onların büyüklüklerinin ve aralarındaki açının kosünüsünün çarpımına eşittir.
+&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Dot_product"&gt;Wikipedia'nın ilgili sayfasına&lt;/a&gt; baktığınızda verdiğim iki formülün birbirine denk olduğunu göreceksiniz.
+Oradaki ispat anlaşılır olmakla beraber konuya yabancı olanların terimlerde zorlanma ihtimali muhtemel.&lt;/p&gt;
+&lt;p&gt;Şunu hissederseniz nokta çarpımının neyi ifade ettiğini anlarsınız.
+Normal çarpım, sizi aynı sayı doğrusu üzerinde ilerletiyor, yani örneğin sadece koordinat düzleminin "x" ya da "y" ekseni üzerinde oynuyorsunuz.
+Nokta çarpımında ise her iki eksen üzerinde de kendisini gösteren varlıkların birbirine teması söz konusu.
+Somut bir örnek verecek olursak.
+Sahilde havlunuzun üstünde oturuyorsunuz, arkanızda da plajın şemsiyesi duruyor. Güneşte tam tepeden vuruyor.
+Şemsiyenin üstünüze vuran gölgesinin başlayıp bittiği bir yer var.
+Örneğin şemsiyenin gölgesi, başınızda başlıyor, göbeğinizde bitiyor.
+Bu gölge, şemsiyenin sizle yaptığı açı değiştikçe değişecektir.
+Nokta çarpımının bize sonuç olarak sunduğu sayıl, işte bu gölgenin bedeniniz üzerinde nerede bittiği.
+Bu yüzdendir ki nokta çarpımı aynı zamanda bir yöneyin diğer yöneye öklid düzleminde geometrik izdüşümünü verir.&lt;/p&gt;
+&lt;p&gt;Peki çarpım diye ifade edilen bir işlem niye tutup bize geometrik izdüşümünü veriyor, iki yöney arasındaki ?
+Niye bu işlem toplamanın tekrar edilmesi cinsinden tanımlanan çarpım işleminin adını taşıyor, onunla hiçbir alakası yok gibi gözükürken ?
+Bunlar makul sorular.
+Nokta çarpımında bir eklemenin potansiyeli var, yani bu çarpım sonucu şunu diyoruz, bir yöney eğer diğer yöney üzerinde olsaydı ona şu kadar eklerdi.
+Diğer yöneye eklenecek yöneyin ne kadar diğer yöneyle farazi bir çakışmaya elverişli olduğunu da aralarındaki açı belirliyor.
+Tıpkı şemsiye örneğinde olduğu gibi. Genel olarak sezdirme yönü kuvvetli bir açıklamaya &lt;a class="reference external" href="https://betterexplained.com/articles/vector-calculus-understanding-the-dot-product/"&gt;şuradan&lt;/a&gt; erişebilirsiniz. Daha anlaşılmayan noktalar varsa yorumlara yazın ben açıklamaya çalışırım.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dizey-islemleri"&gt;
+&lt;h2&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#dizey-islemleri"&gt;Dizey İşlemleri&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="section" id="dizey-toplami"&gt;
+&lt;h3&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#dizey-toplami"&gt;Dizey Toplamı&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Dizey toplamı, iki aynı sayıda satıra ve sütuna sahip olan dizeyler arasında gerçekleşir.
+İki dizeyinde aynı şekilde olması önemli, zira toplama işlemi eleman başına yapılır, yani
+D ve M iki dizey olsun &lt;span class="math"&gt;\(D^{2x3} + M^{2x3} = H^{2x3}\)&lt;/span&gt; aslında şunu ifade eder.&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+D + M = \left[
+\begin{array}{r,r,r}
+D_{1,1} + M_{1,1}, &amp;amp; D_{1,2} + M_{1,2}, &amp;amp; D_{1,3} + M_{1,3} \\
+D_{2,1} + M_{2,1}, &amp;amp; D_{2,2} + M_{2,2}, &amp;amp; D_{2,3} + M_{2,3} \\
+\end{array}
+\right] = H
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Görüldüğü üzere iki dizeyde aynı yerde bulunan elemanlar birbirleriyle toplanırlar.
+Oldukça basit bir işlem kısaca.&lt;/p&gt;
+&lt;p&gt;Eğer toplananlar bir dizey ve bir yöney olsaydı. Örneğin D dizeyi ile p yöneyini toplasaydık, yani durum &lt;span class="math"&gt;\(R = D + p\)&lt;/span&gt; olsaydı.
+Ortaya "p"nin &lt;em&gt;yayımlanması&lt;/em&gt; denilen olay ortaya çıkardı. Bu da şu demek:
+&lt;span class="math"&gt;\(R = D + p\)&lt;/span&gt; aslında &lt;span class="math"&gt;\(R_{i,j} = D_{i,j} + p_j\)&lt;/span&gt; demek olduğundan, yani diyelim ki &lt;span class="math"&gt;\(p = [1, 4]^T\)&lt;/span&gt; ve D'de yukarıdaki gibi &lt;span class="math"&gt;\(D^{2x3}\)&lt;/span&gt;, dolayısıyla toplama işleminin ifade ettiği şey şu:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+D = \left[
+\begin{array}{r,r,r}
+D_{1,1} + 1,  &amp;amp; D_{1,2} + 1, &amp;amp; D_{1,3} + 1 \\
+D_{2,1} + 4, &amp;amp; D_{2,2} + 4, &amp;amp; D_{2,3} + 4 \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Yani yöneyin elemanları dizeyin denk gelen satırlarına ekleniyor.
+Buna derin öğrenim jargonunda &lt;em&gt;yayımlama&lt;/em&gt; deniyor.
+Kanımca, Türkçe'de gerçekleşen durumu çok iyi tarif etmeyen bir sözcük.
+Durumu daha iyi ifade eden sözcük bence &lt;em&gt;sirayet etmek&lt;/em&gt;, zira gerçekleşen işlemde yöneyin elemanları dizeyin satırlarına sirayet ediyor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dizey-caprazlama"&gt;
+&lt;h3&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#dizey-caprazlama"&gt;Dizey Çaprazlama&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Bir dizeyin ana çaprazından geçtiği var sayılan çizgi üzerinden elemanların yerini bu çizgiye olan mesafeyi koruyacak şekilde çizginin öteki tarafındaki noktaya geçmesi, yani simetrik görüntüsünün alınmasıyla yeni bir dizey oluşturur.
+Matematiksel ifadesi şudur &lt;span class="math"&gt;\((A^T)_{i,j} = A_{i,j}\)&lt;/span&gt; T işareti ilgili dizeyin çaprazlanma sonucu ortaya çıktığını gösteriyor.
+Akılda kalıcı olması açısından T'nin İngilizce, 'transpose' teriminin yerini tuttuğunu düşünebiliriz.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(A^{2x3}\)&lt;/span&gt; dizeyi için açık bir örnek verecek olursak,&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A = \left[
+\begin{array}{r,r,r}
+A_{1,1},  &amp;amp; A_{1,2}, &amp;amp; A_{1,3} \\
+A_{2,1}, &amp;amp; A_{2,2}, &amp;amp; A_{2,3} \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A^T = \left[
+\begin{array}{r,r}
+A_{1,1}, &amp;amp; A_{1,2} \\
+A_{2,1}, &amp;amp; A_{2,2} \\
+A_{3,1}, &amp;amp; A_{3,2} \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Yine aynı ışıkla baktığımızda &lt;span class="math"&gt;\((A^T)^T = A\)&lt;/span&gt; oldğunu da görebiliriz.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dizey-carpimi"&gt;
+&lt;h3&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#dizey-carpimi"&gt;Dizey Çarpımı&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Bu temelde yöneylerde yaptığımız nokta çarpımı işlemi gibi işliyor. İki dizey çarpıldığında ortaya bir yeni bir dizey çıkıyor. Bu yeni dizey, çarpılandan satır, çarpandan sütun alıyor.
+Örneğin &lt;span class="math"&gt;\(A^{2x3}\)&lt;/span&gt;, &lt;span class="math"&gt;\(E^{3x4}\)&lt;/span&gt; dizeyleri çarpıldığında, ortaya çıkan sonuç  &lt;span class="math"&gt;\(AE = Y^{2x4}\)&lt;/span&gt; şekline sahip oluyor.
+Dikkat edilmesi gereken bir başka nokta da A dizeyinin &lt;strong&gt;sütun&lt;/strong&gt; sayısının E dizeyinin &lt;strong&gt;satır&lt;/strong&gt; sayısına eşit olduğu.
+Bu dizeyler arası çarpım işlemi yapılabilmesi için temel şart. Çarpma işleminin tam formülü ise şu:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+Y_{i,j} = {\sum_{k} A_{i,k}E_{k,j}}
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Örnek bir çarpma işlemi yapalım:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A^{2x3} = \left[
+\begin{array}{r,r,r}
+2, &amp;amp; 3, &amp;amp; 1 \\
+1, &amp;amp; 0, &amp;amp; 4 \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+E^{3x4} = \left[
+\begin{array}{r,r,r,r}
+3, &amp;amp; 1, &amp;amp; 0, &amp;amp; 2 \\
+1, &amp;amp; 0, &amp;amp; 4, &amp;amp; 1 \\
+2, &amp;amp; 3, &amp;amp; 1, &amp;amp; 0 \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+AE = Y^{2x4} = \left[
+\begin{array}{r,r,r,r}
+11 = 3{\times}2 + 1{\times}3 + 2{\times}1, &amp;amp; 5 = 2{\times}1 + 0{\times}3 + 3{\times}1, &amp;amp; 13 = 0{\times}2 + 4{\times}3 + 1{\times}1, &amp;amp; 7=2{\times}2 + 1{\times}3 + 0{\times}1 \\
+11, &amp;amp; 13, &amp;amp; 4, &amp;amp; 2 \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Dizeyler sayıllarla da çarpılabilirler. Böyle bir durumda dizeyin her elemanı sayılla çarpılır. Örneğin&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A^{2x3} = \left[
+\begin{array}{r,r,r}
+2, &amp;amp; 3, &amp;amp; 1 \\
+1, &amp;amp; 0, &amp;amp; 4 \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A {\times} 2 = \left[
+\begin{array}{r,r,r}
+2{\times} 2, &amp;amp; 3{\times} 2, &amp;amp; 1{\times} 2 \\
+1{\times} 2, &amp;amp; 0{\times} 2, &amp;amp; 4{\times} 2 \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Dizey çarpımlarında şu özellikler bulunur:&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;Dağılma Özelliği&lt;/dt&gt;
+&lt;dd&gt;&lt;span class="math"&gt;\(R (A + C) = RA + RC\)&lt;/span&gt;&lt;/dd&gt;
+&lt;dt&gt;Birleşme Özelliği&lt;/dt&gt;
+&lt;dd&gt;&lt;span class="math"&gt;\(R(AC) = (RA)C\)&lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Normal çarpmanın aksine dizey çarpımında değişme özelliği yoktur, yani &lt;span class="math"&gt;\(RA{\not =}AR\)&lt;/span&gt;
+Dizey çarpımının çaprazlanması ise şunu verir &lt;span class="math"&gt;\((AR)^T=A^TR^T\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Şimdilik bu kadar yeter.
+Bundan sonraki yazımda, şu denklemin çözülmesi için gereken işlemleri inceleyeceğim &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt;.
+Denklemde &lt;span class="math"&gt;\(A{\in}{\mathbb{R}}^{mxp}\)&lt;/span&gt;, A bir dizey; &lt;span class="math"&gt;\(k{\in}{\mathbb{R}^m}\)&lt;/span&gt;, k &lt;em&gt;bilinmeyen&lt;/em&gt; bir yöney; &lt;span class="math"&gt;\(u{\in}{\mathbb{R}^p}\)&lt;/span&gt;, u &lt;em&gt;bilinen&lt;/em&gt; bir yöneydir.
+Neden bu denklemle uğraşacağız sorusunun cevabı ise basit.
+Bu denklem aslında doğrusal sınıflandırıcının kullandığı ana şemayı oluşturur.
+Doğrusal sınıflandırıcı da makine öğreniminde, ve özellikle derin öğrenimde bir hayli kullanılan bir algoritma.
+Anlaşılmayan bir şey varsa veya belirtmek istediğiniz bir şey varsa, yorumlarda belirtin lütfen.&lt;/p&gt;
+&lt;p&gt;Sağlıcakla,&lt;/p&gt;
+&lt;p&gt;Kaan&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>dizey</category><category>gerey</category><category>makine öğrenimi</category><category>mathjax</category><category>sayıl</category><category>yöney</category><guid>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/</guid><pubDate>Sat, 03 Jun 2017 00:06:51 GMT</pubDate></item><item><title>Makine Öğrenimine Hazırlık 2.1: Doğrusal Cebir- 1.1: Terimler</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba arkadaşlar,&lt;/p&gt;
 &lt;p&gt;Bundan önceki, Derin Öğrenime Giriş &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/"&gt;yazı dizisinde&lt;/a&gt;, çok kabaca derin öğrenimin ne olduğundan, ne tip modeller kullandığından, ilgilendiği problemlerden ve bu problemlere sunduğu çözümlerden bahsettim.
 Bu yazı dizisini ise Derin Öğrenim algoritmalarını açıklarken kullanacağım matematiksel alt yapıya ayırdım.
 Bu alt yapının ilk ayağı hiç kuşkusuz doğrusal cebir. Doğrusal cebiri üniversitede görmeseler de liseden hatırlayanlar olacaktır.
