@@ -1,5 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (yapay-zeka ile ilgili yazılar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://d-k-e.github.io/yapayzeka-eski-metinler/categories/cat_yapay-zeka.xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Mon, 05 Jun 2017 02:23:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1: Doğrusal Cebir- 1.1: Terimler</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba arkadaşlar,&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (yapay-zeka ile ilgili yazılar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link href="https://d-k-e.github.io/yapayzeka-eski-metinler/categories/cat_yapay-zeka.xml" type="application/rss+xml" rel="self"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Mon, 12 Jun 2017 21:54:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 3: Birim Dizeyi Ters Dizey</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar,&lt;/p&gt;
+&lt;p&gt;Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısıyla karşınızdayım.
+Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
+Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/"&gt;önceki yazımda&lt;/a&gt; makine öğrenimi algoritmalarının sıklıkla kullandığı işlemleri dile getirmiştim.
+Eğer makine öğrenimine yeni başlıyorsanız, bu yazı dizisinin &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/"&gt;ilk bölümünden&lt;/a&gt; başlamanızı tavsiye ederim.
+Eğer çok çok yeniyseniz ve "Makine Öğrenimi Nedir, Derin Öğrenim Nedir ?", gibi sorulara cevap bulmaya geldiyseniz, bunun için üç bölümlük bu konulara değinen &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/"&gt;ilk yazı dizisini&lt;/a&gt; tavsiye ederim.&lt;/p&gt;
+&lt;p&gt;Bu yazımda aslında bir önceki yazıda vermiş olduğum &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; denklemine değineceğim.
+Denklemde &lt;span class="math"&gt;\(A{\in}{\mathbb{R}}^{mxp}\)&lt;/span&gt;, A bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler"&gt;dizey&lt;/a&gt;; &lt;span class="math"&gt;\(k{\in}{\mathbb{R}^m}\)&lt;/span&gt;, k &lt;em&gt;bilinmeyen&lt;/em&gt; bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler"&gt;yöney&lt;/a&gt;; &lt;span class="math"&gt;\(u{\in}{\mathbb{R}^p}\)&lt;/span&gt;, u &lt;em&gt;bilinen&lt;/em&gt; bir yöneydir.&lt;/p&gt;
+&lt;p&gt;Bu denklemin çözümü için inceleyeceğimiz konu başlıkları şunlar:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Birim Dizeyi&lt;/li&gt;
+&lt;li&gt;Ters Dizey&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="birim-dizeyi"&gt;
+&lt;h2&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#birim-dizeyi"&gt;Birim Dizeyi&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Kabaca Birim Dizeyi bir yöneyle çarpıldığında o yöneyde bir değişiklik yaratmayan dizeydir. Bunu daha matematiksel bir biçimde ifade etmek istersek:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+\forall x \in \mathbb{R}^n, I_n x = x
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Yani her gerçek sayılar kümesi elemanı olan x değeri, n boyutlu birim dizeyi ile çarpıldığında sonuç olarak kendisini verir.
+Neye benziyor ? Örneğin, &lt;span class="math"&gt;\(I_4\)&lt;/span&gt;, yani normal dizey gibi yazarsak &lt;span class="math"&gt;\(I_{4x4}\)&lt;/span&gt; birim dizeyi şuna benziyor:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+\left[
+\begin{array}{r,r,r,r}
+1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
+0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\
+0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Dikkat edilmesi gereken noktalar şunlar:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Yalnızca ana çapraz üzerinde 1 değeri var gerisi 0.&lt;/li&gt;
+&lt;li&gt;Şekil olarak bir kare, yani &lt;strong&gt;satır sayısı sütun sayısına eşit&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ters-dizey"&gt;
+&lt;h2&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#ters-dizey"&gt;Ters Dizey&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Birim dizeyini gördükten sonra ters dizeyi anlamak çok kolay.
+Herhangi bir Y dizeyinin ters dizeyi, kendisiyle çarpıldığında &lt;a class="footnote-reference" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id4" id="id1"&gt;[1]&lt;/a&gt; birim dizeyi verendir.
+Matematiksel ifadesi şu:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+Y^{-1} {\times} Y = I_n
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Burada gördüğümüz &lt;span class="math"&gt;\(Y^{-1}\)&lt;/span&gt; ifadesi ters dizeyi gösteriyor, yani Y dizeyinin ters dizeyini gösteriyor.
+Örnek verecek olursak &lt;a class="footnote-reference" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id5" id="id2"&gt;[2]&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A = \left[
+\begin{array}{r,r}
+4 &amp;amp; 3 \\
+3 &amp;amp; 2 \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A^{-1} = \left[
+\begin{array}{r,r}
+-2 &amp;amp; 3 \\
+3 &amp;amp; -4 \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+AA^{-1} = \left[
+\begin{array}{r,r}
+4 &amp;amp; 3 \\
+3 &amp;amp; 2 \\
+\end{array}
+\right]
+\left[
+\begin{array}{r,r}
+-2 &amp;amp; 3 \\
+3 &amp;amp; -4 \\
+\end{array}
+\right] = \left[
+\begin{array}{r,r}
+1 &amp;amp; 0 \\
+0 &amp;amp; 1 \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Dikkat edilmesi gereken noktalar şunlar:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Sonucunda birim dizey elde ettiğimize göre hem Y hem de &lt;span class="math"&gt;\(Y^{-1}\)&lt;/span&gt; kare şeklinde, yani satır sayıları sütun sayılarına eşit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Şu an ki bilgilerimizle yazının başındaki denklemi çözmeye muktediriz.&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+Ak=u
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A^{-1}Ak = uA^{-1}
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+I_nk=uA^{-1}
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+k=uA^{-1}
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Adım adım açıklayacak olursak:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Denklemin kendisi.&lt;/li&gt;
+&lt;li&gt;Denklemin iki tarafını da A dizeyinin tersiyle çarptık.&lt;/li&gt;
+&lt;li&gt;A dizeyini tersiyle çarpınca sol tarafta birim dizeyi elde ettik.&lt;/li&gt;
+&lt;li&gt;Birim dizeyin yöneyle çarpımı yöneyin kendisini verdi, yani bilinmeyen k yöneyinin, bilinen u yöneyinin A'nın ters dizeyi ile çarpımına eşit olduğunu gördük.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Burada şu soru açığa çıktı ? &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt; hesaplanabilir bir dizey mi ?
+İzlediğim kitap &lt;a class="footnote-reference" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id6" id="id3"&gt;[3]&lt;/a&gt; burada &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt; aslen teorik işlevi olduğunu ve pratik hesaplamalar için "u" üzerinden işleyen algoritmaların daha isabetli sonuçlar aldığını belirtiyor.
+Bunun sebebiyse bilgisayarların dizeyleri temsil etme konusunda bazen yeterince isabetli temsiller üretemediklerini vurguluyor.&lt;/p&gt;
+&lt;p&gt;Bu yazıyı burada bitiriyorum. Farkındayım biraz kısa oldu, ancak bundan sonra değineceğim doğrusal bağımlılık konusu biraz meşakatli.
+Kendi başına bir yazı olmayı hayli hayli hak ediyor.
+Eklemek istediğiniz bir şey varsa, ya da anlamadığınız bir şey varsa, yorumlarda belirtmekten çekinmeyin lütfen.&lt;/p&gt;
+&lt;p&gt;Sağlıcakla,&lt;/p&gt;
+&lt;p&gt;Kaan&lt;/p&gt;
+&lt;div class="section" id="notlar"&gt;
+&lt;h3&gt;Notlar&lt;/h3&gt;
+&lt;table class="docutils footnote" frame="void" id="id4" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dizey çarpımının nasıl yapıldığını görmek için, bir önceki yazıdaki &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#dizey-carpimi"&gt;ilgili bölüme&lt;/a&gt; bakınız.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id5" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;İlgili örnek, &lt;a class="reference external" href="http://www.mathwords.com/i/inverse_of_a_matrix.htm"&gt;şuradan&lt;/a&gt; alınmıştır.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id3"&gt;[3]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bu kitabın referansını ilk yazı dizisinin ilk yazısında vermiştim, bir daha vereyim. Goodfellow I.,Y. Bengio, Deep Learning, Cambridge, 2016. Kitap internette var.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>dizey</category><category>makine öğrenimi</category><guid>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/</guid><pubDate>Fri, 09 Jun 2017 01:39:11 GMT</pubDate></item><item><title>Makine Öğrenimine Hazırlık 2.1: Doğrusal Cebir- 1.1: Terimler</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba arkadaşlar,&lt;/p&gt;
 &lt;p&gt;Bundan önceki, Derin Öğrenime Giriş &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/"&gt;yazı dizisinde&lt;/a&gt;, çok kabaca derin öğrenimin ne olduğundan, ne tip modeller kullandığından, ilgilendiği problemlerden ve bu problemlere sunduğu çözümlerden bahsettim.
 Bu yazı dizisini ise Derin Öğrenim algoritmalarını açıklarken kullanacağım matematiksel alt yapıya ayırdım.
 Bu alt yapının ilk ayağı hiç kuşkusuz doğrusal cebir. Doğrusal cebiri üniversitede görmeseler de liseden hatırlayanlar olacaktır.

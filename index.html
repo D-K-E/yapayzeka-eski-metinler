@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://d-k-e.github.io/yapayzeka-eski-metinler/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/xph-daiva-yaziti/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/" type="text/html">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">Ana içeriğe geç</a>
@@ -18,6 +18,10 @@
     <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
         <div class="sidebar-item">
             <p>Yapay Zeka Çalışmaları ve Eski Metinler Üzerine Notlar</p>
+        </div>
+        <div class="sidebar-item">
+        <img src="assets/images/KaanFoto1.jpg" alt="My picture"><p>Kaan Eraslan</p>
+        <p>Çok kalifiye kaldırım mühendisiyim.</p>
         </div>
         
     <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="archive.html">Arşiv</a>
@@ -45,7 +49,190 @@
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/xph-daiva-yaziti/" class="u-url">Xph Daiva Yazıtı</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/" class="u-url">Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 3: Birim Dizeyi Ters Dizey</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Kaan Eraslan</span></p>
+            <p class="dateline"><a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-06-09T03:39:11+02:00" title="2017-06-09 03:39">2017-06-09 03:39</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#disqus_thread" data-disqus-identifier="cache/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Merhaba Arkadaşlar,</p>
+<p>Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısıyla karşınızdayım.
+Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
+Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/">önceki yazımda</a> makine öğrenimi algoritmalarının sıklıkla kullandığı işlemleri dile getirmiştim.
+Eğer makine öğrenimine yeni başlıyorsanız, bu yazı dizisinin <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/">ilk bölümünden</a> başlamanızı tavsiye ederim.
+Eğer çok çok yeniyseniz ve "Makine Öğrenimi Nedir, Derin Öğrenim Nedir ?", gibi sorulara cevap bulmaya geldiyseniz, bunun için üç bölümlük bu konulara değinen <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/">ilk yazı dizisini</a> tavsiye ederim.</p>
+<p>Bu yazımda aslında bir önceki yazıda vermiş olduğum <span class="math">\(Ak=u\)</span> denklemine değineceğim.
+Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler">dizey</a>; <span class="math">\(k{\in}{\mathbb{R}^m}\)</span>, k <em>bilinmeyen</em> bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler">yöney</a>; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.</p>
+<p>Bu denklemin çözümü için inceleyeceğimiz konu başlıkları şunlar:</p>
+<ul class="simple">
+<li>Birim Dizeyi</li>
+<li>Ters Dizey</li>
+</ul>
+<div class="section" id="birim-dizeyi">
+<h2><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#birim-dizeyi">Birim Dizeyi</a></h2>
+<p>Kabaca Birim Dizeyi bir yöneyle çarpıldığında o yöneyde bir değişiklik yaratmayan dizeydir. Bunu daha matematiksel bir biçimde ifade etmek istersek:</p>
+<div class="math">
+\begin{equation*}
+\forall x \in \mathbb{R}^n, I_n x = x
+\end{equation*}
+</div>
+<p>Yani her gerçek sayılar kümesi elemanı olan x değeri, n boyutlu birim dizeyi ile çarpıldığında sonuç olarak kendisini verir.
+Neye benziyor ? Örneğin, <span class="math">\(I_4\)</span>, yani normal dizey gibi yazarsak <span class="math">\(I_{4x4}\)</span> birim dizeyi şuna benziyor:</p>
+<div class="math">
+\begin{equation*}
+\left[
+\begin{array}{r,r,r,r}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>Dikkat edilmesi gereken noktalar şunlar:</p>
+<ul class="simple">
+<li>Yalnızca ana çapraz üzerinde 1 değeri var gerisi 0.</li>
+<li>Şekil olarak bir kare, yani <strong>satır sayısı sütun sayısına eşit</strong>.</li>
+</ul>
+</div>
+<div class="section" id="ters-dizey">
+<h2><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#ters-dizey">Ters Dizey</a></h2>
+<p>Birim dizeyini gördükten sonra ters dizeyi anlamak çok kolay.
+Herhangi bir Y dizeyinin ters dizeyi, kendisiyle çarpıldığında <a class="footnote-reference" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id4" id="id1">[1]</a> birim dizeyi verendir.
+Matematiksel ifadesi şu:</p>
+<div class="math">
+\begin{equation*}
+Y^{-1} {\times} Y = I_n
+\end{equation*}
+</div>
+<p>Burada gördüğümüz <span class="math">\(Y^{-1}\)</span> ifadesi ters dizeyi gösteriyor, yani Y dizeyinin ters dizeyini gösteriyor.
+Örnek verecek olursak <a class="footnote-reference" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id5" id="id2">[2]</a>:</p>
+<div class="math">
+\begin{equation*}
+A = \left[
+\begin{array}{r,r}
+4 &amp; 3 \\
+3 &amp; 2 \\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+A^{-1} = \left[
+\begin{array}{r,r}
+-2 &amp; 3 \\
+3 &amp; -4 \\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+AA^{-1} = \left[
+\begin{array}{r,r}
+4 &amp; 3 \\
+3 &amp; 2 \\
+\end{array}
+\right]
+\left[
+\begin{array}{r,r}
+-2 &amp; 3 \\
+3 &amp; -4 \\
+\end{array}
+\right] = \left[
+\begin{array}{r,r}
+1 &amp; 0 \\
+0 &amp; 1 \\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>Dikkat edilmesi gereken noktalar şunlar:</p>
+<ul class="simple">
+<li>Sonucunda birim dizey elde ettiğimize göre hem Y hem de <span class="math">\(Y^{-1}\)</span> kare şeklinde, yani satır sayıları sütun sayılarına eşit.</li>
+</ul>
+<p>Şu an ki bilgilerimizle yazının başındaki denklemi çözmeye muktediriz.</p>
+<div class="math">
+\begin{equation*}
+Ak=u
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+A^{-1}Ak = uA^{-1}
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+I_nk=uA^{-1}
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+k=uA^{-1}
+\end{equation*}
+</div>
+<p>Adım adım açıklayacak olursak:</p>
+<ol class="arabic simple">
+<li>Denklemin kendisi.</li>
+<li>Denklemin iki tarafını da A dizeyinin tersiyle çarptık.</li>
+<li>A dizeyini tersiyle çarpınca sol tarafta birim dizeyi elde ettik.</li>
+<li>Birim dizeyin yöneyle çarpımı yöneyin kendisini verdi, yani bilinmeyen k yöneyinin, bilinen u yöneyinin A'nın ters dizeyi ile çarpımına eşit olduğunu gördük.</li>
+</ol>
+<p>Burada şu soru açığa çıktı ? <span class="math">\(A^{-1}\)</span> hesaplanabilir bir dizey mi ?
+İzlediğim kitap <a class="footnote-reference" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id6" id="id3">[3]</a> burada <span class="math">\(A^{-1}\)</span> aslen teorik işlevi olduğunu ve pratik hesaplamalar için "u" üzerinden işleyen algoritmaların daha isabetli sonuçlar aldığını belirtiyor.
+Bunun sebebiyse bilgisayarların dizeyleri temsil etme konusunda bazen yeterince isabetli temsiller üretemediklerini vurguluyor.</p>
+<p>Bu yazıyı burada bitiriyorum. Farkındayım biraz kısa oldu, ancak bundan sonra değineceğim doğrusal bağımlılık konusu biraz meşakatli.
+Kendi başına bir yazı olmayı hayli hayli hak ediyor.
+Eklemek istediğiniz bir şey varsa, ya da anlamadığınız bir şey varsa, yorumlarda belirtmekten çekinmeyin lütfen.</p>
+<p>Sağlıcakla,</p>
+<p>Kaan</p>
+<div class="section" id="notlar">
+<h3>Notlar</h3>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id1">[1]</a></td>
+<td>Dizey çarpımının nasıl yapıldığını görmek için, bir önceki yazıdaki <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#dizey-carpimi">ilgili bölüme</a> bakınız.</td>
+</tr></tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id2">[2]</a></td>
+<td>İlgili örnek, <a class="reference external" href="http://www.mathwords.com/i/inverse_of_a_matrix.htm">şuradan</a> alınmıştır.</td>
+</tr></tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id3">[3]</a></td>
+<td>Bu kitabın referansını ilk yazı dizisinin ilk yazısında vermiştim, bir daha vereyim. Goodfellow I.,Y. Bengio, Deep Learning, Cambridge, 2016. Kitap internette var.</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/xph-daiva-yaziti/" class="u-url">Xph Daiva Yazıtı</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Kaan Eraslan</span></p>
             <p class="dateline"><a href="posts/xph-daiva-yaziti/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-06-04T01:50:59+02:00" title="2017-06-04 01:50">2017-06-04 01:50</time></a></p>
