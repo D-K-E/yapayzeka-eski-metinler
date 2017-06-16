@@ -1,5 +1,327 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (Kaan Eraslan tarafından yazılanlar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link href="https://d-k-e.github.io/yapayzeka-eski-metinler/authors/kaan-eraslan.xml" type="application/rss+xml" rel="self"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Mon, 12 Jun 2017 21:54:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 3: Birim Dizeyi Ters Dizey</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar,&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (Kaan Eraslan tarafından yazılanlar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link rel="self" href="https://d-k-e.github.io/yapayzeka-eski-metinler/authors/kaan-eraslan.xml" type="application/rss+xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Jun 2017 03:21:51 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 4</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar&lt;/p&gt;
+&lt;p&gt;Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısı.
+Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
+Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/"&gt;önceki yazımda&lt;/a&gt; özellikle doğrusal sınıflayıcıların temeli niteliğindeki &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; denklemini çözmeye yarayan matematiksel kavramlar olan ters dizey ve birim dizeyini açıklamıştım.
+Eğer makine öğrenimine yeni başlıyorsanız, bu yazı dizisinin &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/"&gt;ilk bölümünden&lt;/a&gt; başlamanızı tavsiye ederim.
+Eğer çok çok yeniyseniz ve "Makine Öğrenimi Nedir, Derin Öğrenim Nedir ?", gibi sorulara cevap bulmaya geldiyseniz, bunun için üç bölümlük bu konulara değinen &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/"&gt;ilk yazı dizisini&lt;/a&gt; tavsiye ederim.&lt;/p&gt;
+&lt;p&gt;Bu yazı boyunca temelde Doğrusal Bağımlılık konusuna değinmek için gereken bir kaç kavrama değineceğim.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Doğrusal Bağımlılık
+- Doğru denklemi
+- Doğru denklem sistemi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bunlar ana hattı belirliyor olmakla beraber aralarda yeni terimlere ve konulara baş vuracağız.
+Neden bu konulardan bahsedeceğiz ?
+Çünkü bir önceki yazıda ters dizey ve birim dizeyi aracılığıyla çözdüğümüz, yukarıda da belirttiğimiz denklemi.&lt;/p&gt;
+&lt;div class="section" id="dogrusal-bagimlilik-1"&gt;
+&lt;h2&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#dogrusal-bagimlilik-1"&gt;Doğrusal Bağımlılık - 1&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/"&gt;önceki yazıda&lt;/a&gt; &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt; için sorduğum soru kenarda dursun.
+Bu bölümde bu soruya yaklaşımımızı etkileyecek önemli bir dizi kavramı açıklamaya çalışacağım.
+Doğrusal bağımlılığın ne olduğunu anlayabilmemiz bilmemiz gereken ilk şey, bir doğru denkleminin ne olduğu.&lt;/p&gt;
+&lt;p&gt;Doğru denklemi, koordinat düzlemi üzerindeki bir doğruyu ifade eden denklemdir. Genel formülü şudur:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A_{i,:}k=u_i
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Tanıdık değil mi. Yukarıdaki denkleme çok benziyor. Bir örnek verecek olursak.
+Diyelim ki A, 2x2 bir dizey, "k" 2 satırlı bir yöney, "u" da 2 satırlı bir yöney:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A = \left[
+\begin{array}{r,r}
+3 &amp;amp; 4 \\
+2 &amp;amp; 3 \\
+\end{array}
+\right]
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+k = \left(
+\begin{array}{r}
+x \\
+y \\
+\end{array}
+\right)
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+u = \left(
+\begin{array}{r}
+2 \\
+1 \\
+\end{array}
+\right)
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Verdiğimiz örnekler ışığında, bir doğrunun denklemi şu olacaktır:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+3x + 4y = 2
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Doğru denklem sistemi ise birden fazla doğrudan oluşan ve aynı değişken yöneyini kullanandır.
+Değişken yöneyinden kastım, yukarıdaki örnekteki "k" gibi, doğru denklemine değişkenlerini veren yöney.
+Bu sistemler genelde &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; şeklinde ifade edilirler.
+Dikkat edilmesi gereken noktaysa, eğer &lt;span class="math"&gt;\(A^{mxp}\)&lt;/span&gt; ve &lt;span class="math"&gt;\(k^{1xp}\)&lt;/span&gt; ise &lt;span class="math"&gt;\(u^{1xm}\)&lt;/span&gt; olacaktır.
+Bu genellemeyi açık yazacak olursak:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A_{1,1}k_1 + \dots + A_{1,p}k_p = u_1
+A_{2,1}k_1 + \dots + A_{2,p}k_p = u_2
+\vdots
+A_{m,1}k_1 + \dots + A_{m,p}k_p = u_m
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Bir doğru denklem sisteminin &lt;strong&gt;türdeş&lt;/strong&gt; olması demek, "u" yöneyinin bütün elemanlarının 0 olması demektir.
+Türdeş doğru sistemlerinin hep &lt;em&gt;en az bir&lt;/em&gt; çözümü vardır.
+En az bir çözüm şartını sağlayan denklemlerin başında k yöneyinin sadece 0'lardan oluşması hali gelir.
+Bu çözüme &lt;strong&gt;apaçık çözüm&lt;/strong&gt; denir.
+Sistemdeki denklemlerden birinin çözümünü sağlayan ve sadece 0'lardan oluşmayan "k" yöneyinin sağladığı çözüme ise &lt;strong&gt;apaçık olmayan&lt;/strong&gt; çözüm denir.
+Örneğin elinizde şöyle bir sistem olsun:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+4x + 5y - z = 0
+2x + y - z = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Bu denklemi çözmek için yapmamız gereken şey basit.
+İkinci denklemi - 2 ile çarpıp birinci denkleme eklemek.
+Bunun sonucunda elde edeceğimiz denklemse şu olacaktır:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+3y + z = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;İşin anlaşılması biraz güç, daha doğrusu niye yapıldığını anlamak biraz güç olan noktası burada.
+Bu denklemdeki değişkenlerden birine 0'dan büyük bir değer veriyoruz. Neden ? Daha doğrusu neden 0'dan büyük keyfi bir değer vermemiz
+herhangi bir problem yaratmıyor ?
+Sebebi şu: Bir doğru denklem sistemi, kendisini dönüştüren eşitleme işlemlerinde sonuç kümesini muhafaza eder.&lt;/p&gt;
+&lt;p&gt;Bunun ispatı biraz uzun ve doğrusal cebir işlemlerinden ziyade kümelerin özellikleriyle alakalı, ama karmaşık değil.
+Ben burada işi tam yapmış olmak adına ispatı vereceğim &lt;a class="footnote-reference" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#id2" id="id1"&gt;[1]&lt;/a&gt; .&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Doğru denklem sistemleri aslında birer denklem kümesi olduğundan, bu kümeye ait olan denklemlerin sırası, denklemleri çözen sonuçlar kümesini değiştirmiyor.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;span class="math"&gt;\({\alpha} \not = 0\)&lt;/span&gt; diyelim.&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Elimizdeki &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; sistemindeki, "i" denklemini &lt;span class="math"&gt;\({\alpha}\)&lt;/span&gt; ile çarpalım.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Anlaşılır olması için sistemi açık yazıyorum.&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A_{1,1}k_1 + \dots + A_{1,p}k_p = u_1
+A_{2,1}k_1 + \dots + A_{2,p}k_p = u_2
+\vdots
+{\alpha}A_{i,1}k_1 + \dots {\alpha}A_{i,p}k_p = {\alpha}u_i
+A_{m,1}k_1 + \dots + A_{m,p}k_p = u_m
+\end{equation*}
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;S bu doğru sisteminin çözüm kümesi olsun, T de &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; ile çarpım sonucu dönüşmüş sistemin sonuç kümesi olsun.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;span class="math"&gt;\((k_1, k_2, k_3, \dots, k_p) = (f_1, f_2, f_3, \dots, f_p) \in S\)&lt;/span&gt;. Yani "k" ve "f" eşit yöneyler.&lt;/li&gt;
+&lt;li&gt;Dolayısıyla &lt;span class="math"&gt;\({\alpha}A_{i,1}f_1 + \dots {\alpha}A_{i,p}f_p = {\alpha}u_i\)&lt;/span&gt; geçerlidir.&lt;/li&gt;
+&lt;li&gt;Dolayısıyla &lt;span class="math"&gt;\((f_1, f_2, f_3, \dots, f_p) \in T\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;O halde &lt;span class="math"&gt;\(S \subset T\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;S bu doğru sisteminin çözüm kümesi olsun, T de &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; ile çarpım sonucu dönüşmüş sistemin sonuç kümesi olsun.&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;span class="math"&gt;\((k_1, k_2, k_3, \dots, k_p) = (f_1, f_2, f_3, \dots, f_p) \in T\)&lt;/span&gt;. Yani "k" ve "f" eşit yöneyler.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Dolayısıyla &lt;span class="math"&gt;\(T_i = \{ {\alpha}A_{i,1}f_1 + \dots {\alpha}A_{i,p}f_p = {\alpha}u_i \}\)&lt;/span&gt; geçerlidir.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;span class="math"&gt;\(\alpha \not = 0\)&lt;/span&gt; olduğundan dolayı, &lt;span class="math"&gt;\(\frac{1}{\alpha}T_i\)&lt;/span&gt;, geçerli bir sonuç verecektir.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Açık yazacak olursam:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+{\frac{1}{\alpha}}{\alpha}A_{i,1}k_1 + \dots {\frac{1}{\alpha}}{\alpha}A_{i,p}k_p = {\frac{1}{\alpha}}{\alpha}u_i
+\end{equation*}
+&lt;/div&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Bu işlem geçerlidir.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple" start="4"&gt;
+&lt;li&gt;O halde &lt;span class="math"&gt;\(T \subset S\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;İki kümenin birbirine eşit olmasının şartı böylelikle sağlanmış oluyor.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;İspatın birinci ayağını bitirmiş olduk.
+İlk dikkatimizi çekmesi gereken şey, eğer &lt;span class="math"&gt;\(\alpha = 0\)&lt;/span&gt; olsaydı, 1. ayağın 3. maddesini iddia edemezdik, zira &lt;span class="math"&gt;\(\frac{1}{0}\)&lt;/span&gt; ile karşılaşma imkanımız olurdu.&lt;/p&gt;
+&lt;ol class="arabic" start="3"&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; herhangi bir karmaşık sayı olsun.&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Elimizdeki &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; sistemindeki, "i" denklemini &lt;span class="math"&gt;\({\alpha}\)&lt;/span&gt; ile çarpıp, "j" denklemine ekleyelim.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Açık yazacak olursam:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A_{1,1}k_1 + \dots + A_{1,p}k_p = u_1
+A_{2,1}k_1 + \dots + A_{2,p}k_p = u_2
+\vdots
+({\alpha}A_{i,1} + A_{j,1})k_1 + \dots ({\alpha}A_{i,p} + A_{j,p})k_p = {\alpha}u_i + u_j
+A_{m,1}k_1 + \dots + A_{m,p}k_p = u_m
+\end{equation*}
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;S bu doğru sisteminin çözüm kümesi olsun, T dönüşmüş sistemin sonuç kümesi olsun.&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;span class="math"&gt;\((k_1, k_2, k_3, \dots, k_p) = (f_1, f_2, f_3, \dots, f_p) \in S\)&lt;/span&gt;. Yani "k" ve "f" eşit yöneyler.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;span class="math"&gt;\(T_j\)&lt;/span&gt; açık yazılınca şu görülecektir:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+({\alpha}A_{i,1} + A_{j,1})f_1 + \dots + ({\alpha}A_{i,p} + A_{j,p})f_p = {\alpha}u_i + u_j
+({\alpha}A_{i,1}f_1 + \dots + {\alpha}A_{i,p}f_p) + (A_{j,1}f_1 + \dots + A_{j,p}f_p) = {\alpha}u_i + u_j
+{\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) + (A_{j,1}f_1 + \dots + A_{j,p}f_p}) = {\alpha}u_i + u_j
+{\alpha}u_i + u_j = {\alpha}u_i + u_j
+\end{equation*}
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Dolayısıyla &lt;span class="math"&gt;\((f_1, f_2, f_3, \dots, f_p) \in T\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;O halde &lt;span class="math"&gt;\(S \subset T\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;S bu doğru sisteminin çözüm kümesi olsun, T de &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; dönüşmüş sistemin sonuç kümesi olsun.&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;span class="math"&gt;\((k_1, k_2, k_3, \dots, k_p) = (f_1, f_2, f_3, \dots, f_p) \in T\)&lt;/span&gt;. Yani "k" ve "f" eşit yöneyler.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;span class="math"&gt;\(T_j\)&lt;/span&gt; açık yazılınca şu görülecektir:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}u_i - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + {\alpha}A_{i,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}A_{i,p}f_p - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p} = f_1(A_{j,1} + {\alpha}A_{i,1} ) + \dots + f_p(A_{i,p} + {\alpha}A_{i,p}) - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p} = {\alpha}u_i + u_j - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p} =  u_j
+\end{equation*}
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Dolayısıyla &lt;span class="math"&gt;\((f_1, f_2, f_3, \dots, f_p) \in S\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;O halde &lt;span class="math"&gt;\(T \subset S\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;İki kümenin birbirine eşit olmasının şartı böylelikle sağlanmış oluyor.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Neden ispatın ikinci ayağında &lt;span class="math"&gt;\(\alpha \not = 0\)&lt;/span&gt; şartını aramadık ?
+Bu sorunun cevabı aslında 3.3.2 bölümündeki işlem dizisinden anlaşılıyor.
+&lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; değeri bu işlem dizisi boyunca bir önem teşkil etmiyor, zira kendisiyle herhangi bir işlem yapılmıyor.
+Çarpma işleminin özellikleri çerçevesinde ifadenin tekrar yazılması sonucu, &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; konum değiştiriyor o kadar.&lt;/p&gt;
+&lt;p&gt;Bu ispat ışığında yukarıda verdiğim denklem sisteminin çözümü sırasında kullandığım metodun meşruluğu görülüyor.
+Denklemlerin birbirine eklenmesi ve onların 0'dan büyük sayılarla çarpılması çözüm kümesini yani "k" yöneyinin elemanlarını
+değiştirmediğine göre, ve aradığım çözüm kümesinin tek şartı &lt;strong&gt;apaçık olmamak&lt;/strong&gt; olduğuna göre, denklemi çözmemizi sağlayacak ilk değerin sadece bu şartları sağlaması, denklem sisteminin çözülmesi için yeter neden teşkil eder.
+Örneği çözerek bunu göstereyim:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+4x + 5y - z = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+2x + y - z = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+-2(2x + y - z) = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+4x -4x + 5y - 2y + (-z + 2z) = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+3y + z = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Diyelim ki &lt;span class="math"&gt;\(z=-3\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+3y - 3 = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+y = 1
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;O halde:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+2x + 1 - (-3) = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+2x + 4 = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+x = -2
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Peki bu değerler, ilk denklemi sağlıyorlar mı ? Görelim:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+4(-2) + 5(1) - (-3) = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+-8 + 5 + 3 = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+8 - 8 = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+0 = 0
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Bu ispat ve onun uygulamasıyla bu yazıyı bitiriyorum.
+Doğrusal Bağımlılık konusunun ikinci bölümünde, doğrusal bileşim, katsayı dizeyi, ve en nihayetinde doğrusal bağımlılık ve doğrusal bağımsızlık
+konularını ele alarak, iki yazı boyunca süre gelmiş olan, &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt; hesaplanabilir bir dizey mi, ya da hangi bağlamlarda açığa çıktığını varsaymak yanlış olmaz sorusuna bir cevap vermeye çalışacağım.&lt;/p&gt;
+&lt;p&gt;Sağlıcakla,&lt;/p&gt;
+&lt;p&gt;Kaan&lt;/p&gt;
+&lt;div class="section" id="notlar"&gt;
+&lt;h3&gt;Notlar&lt;/h3&gt;
+&lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;İspatı aldığım &lt;a class="reference external" href="http://linear.ups.edu/html/section-SSLE.html"&gt;kaynak&lt;/a&gt; .&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/</guid><pubDate>Mon, 12 Jun 2017 21:07:43 GMT</pubDate></item><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 3: Birim Dizeyi Ters Dizey</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar,&lt;/p&gt;
 &lt;p&gt;Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısıyla karşınızdayım.
 Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/"&gt;önceki yazımda&lt;/a&gt; makine öğrenimi algoritmalarının sıklıkla kullandığı işlemleri dile getirmiştim.

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 4 | Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar</title>
+<link href="../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Kaan Eraslan">
+<link rel="prev" href="../makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/" title="Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 3: Birim Dizeyi Ters Dizey" type="text/html">
+<meta property="og:site_name" content="Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar">
+<meta property="og:title" content="Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 4">
+<meta property="og:url" content="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/">
+<meta property="og:description" content="Merhaba Arkadaşlar
+Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısı.
+Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel teme">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-06-12T23:07:43+02:00">
+</head>
+<body class="theme-base-0b">
+    <a href="#content" class="sr-only sr-only-focusable">Ana içeriğe geç</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            <p>Yapay Zeka Çalışmaları ve Eski Metinler Üzerine Notlar</p>
+        </div>
+        <div class="sidebar-item">
+        <img src="assets/images/KaanFoto1.jpg" alt="Resmim"><p>Kaan Eraslan</p>
+        <p>Çok kalifiye kaldırım mühendisiyim.</p>
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../archive.html">Arşiv</a>
+        <a class="sidebar-nav-item" href="../../categories/">Etiketler</a>
+        <a class="sidebar-nav-item" href="../../rss.xml">RSS kaynağı</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://d-k-e.github.io/yapayzeka-eski-metinler/" title="Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar" rel="home">Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 4</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Kaan Eraslan</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2017-06-12T23:07:43+02:00" itemprop="datePublished" title="2017-06-12 23:07">2017-06-12 23:07</time></a></p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4.html">Comments</a>
+
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    
+    
+
+
+    <div>
+<p>Merhaba Arkadaşlar</p>
+<p>Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısı.
+Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
+Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/">önceki yazımda</a> özellikle doğrusal sınıflayıcıların temeli niteliğindeki <span class="math">\(Ak=u\)</span> denklemini çözmeye yarayan matematiksel kavramlar olan ters dizey ve birim dizeyini açıklamıştım.
+Eğer makine öğrenimine yeni başlıyorsanız, bu yazı dizisinin <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/">ilk bölümünden</a> başlamanızı tavsiye ederim.
+Eğer çok çok yeniyseniz ve "Makine Öğrenimi Nedir, Derin Öğrenim Nedir ?", gibi sorulara cevap bulmaya geldiyseniz, bunun için üç bölümlük bu konulara değinen <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/">ilk yazı dizisini</a> tavsiye ederim.</p>
+<p>Bu yazı boyunca temelde Doğrusal Bağımlılık konusuna değinmek için gereken bir kaç kavrama değineceğim.</p>
+<ul class="simple">
+<li>Doğrusal Bağımlılık
+- Doğru denklemi
+- Doğru denklem sistemi</li>
+</ul>
+<p>Bunlar ana hattı belirliyor olmakla beraber aralarda yeni terimlere ve konulara baş vuracağız.
+Neden bu konulardan bahsedeceğiz ?
+Çünkü bir önceki yazıda ters dizey ve birim dizeyi aracılığıyla çözdüğümüz, yukarıda da belirttiğimiz denklemi.</p>
+<div class="section" id="dogrusal-bagimlilik-1">
+<h2><a class="reference internal" href="#dogrusal-bagimlilik-1">Doğrusal Bağımlılık - 1</a></h2>
+<p>Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/">önceki yazıda</a> <span class="math">\(A^{-1}\)</span> için sorduğum soru kenarda dursun.
+Bu bölümde bu soruya yaklaşımımızı etkileyecek önemli bir dizi kavramı açıklamaya çalışacağım.
+Doğrusal bağımlılığın ne olduğunu anlayabilmemiz bilmemiz gereken ilk şey, bir doğru denkleminin ne olduğu.</p>
+<p>Doğru denklemi, koordinat düzlemi üzerindeki bir doğruyu ifade eden denklemdir. Genel formülü şudur:</p>
+<div class="math">
+\begin{equation*}
+A_{i,:}k=u_i
+\end{equation*}
+</div>
+<p>Tanıdık değil mi. Yukarıdaki denkleme çok benziyor. Bir örnek verecek olursak.
+Diyelim ki A, 2x2 bir dizey, "k" 2 satırlı bir yöney, "u" da 2 satırlı bir yöney:</p>
+<div class="math">
+\begin{equation*}
+A = \left[
+\begin{array}{r,r}
+3 &amp; 4 \\
+2 &amp; 3 \\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+k = \left(
+\begin{array}{r}
+x \\
+y \\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+u = \left(
+\begin{array}{r}
+2 \\
+1 \\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>Verdiğimiz örnekler ışığında, bir doğrunun denklemi şu olacaktır:</p>
+<div class="math">
+\begin{equation*}
+3x + 4y = 2
+\end{equation*}
+</div>
+<p>Doğru denklem sistemi ise birden fazla doğrudan oluşan ve aynı değişken yöneyini kullanandır.
+Değişken yöneyinden kastım, yukarıdaki örnekteki "k" gibi, doğru denklemine değişkenlerini veren yöney.
+Bu sistemler genelde <span class="math">\(Ak=u\)</span> şeklinde ifade edilirler.
+Dikkat edilmesi gereken noktaysa, eğer <span class="math">\(A^{mxp}\)</span> ve <span class="math">\(k^{1xp}\)</span> ise <span class="math">\(u^{1xm}\)</span> olacaktır.
+Bu genellemeyi açık yazacak olursak:</p>
+<div class="math">
+\begin{equation*}
+A_{1,1}k_1 + \dots + A_{1,p}k_p = u_1
+A_{2,1}k_1 + \dots + A_{2,p}k_p = u_2
+\vdots
+A_{m,1}k_1 + \dots + A_{m,p}k_p = u_m
+\end{equation*}
+</div>
+<p>Bir doğru denklem sisteminin <strong>türdeş</strong> olması demek, "u" yöneyinin bütün elemanlarının 0 olması demektir.
+Türdeş doğru sistemlerinin hep <em>en az bir</em> çözümü vardır.
+En az bir çözüm şartını sağlayan denklemlerin başında k yöneyinin sadece 0'lardan oluşması hali gelir.
+Bu çözüme <strong>apaçık çözüm</strong> denir.
+Sistemdeki denklemlerden birinin çözümünü sağlayan ve sadece 0'lardan oluşmayan "k" yöneyinin sağladığı çözüme ise <strong>apaçık olmayan</strong> çözüm denir.
+Örneğin elinizde şöyle bir sistem olsun:</p>
+<div class="math">
+\begin{equation*}
+4x + 5y - z = 0
+2x + y - z = 0
+\end{equation*}
+</div>
+<p>Bu denklemi çözmek için yapmamız gereken şey basit.
+İkinci denklemi - 2 ile çarpıp birinci denkleme eklemek.
+Bunun sonucunda elde edeceğimiz denklemse şu olacaktır:</p>
+<div class="math">
+\begin{equation*}
+3y + z = 0
+\end{equation*}
+</div>
+<p>İşin anlaşılması biraz güç, daha doğrusu niye yapıldığını anlamak biraz güç olan noktası burada.
+Bu denklemdeki değişkenlerden birine 0'dan büyük bir değer veriyoruz. Neden ? Daha doğrusu neden 0'dan büyük keyfi bir değer vermemiz
+herhangi bir problem yaratmıyor ?
+Sebebi şu: Bir doğru denklem sistemi, kendisini dönüştüren eşitleme işlemlerinde sonuç kümesini muhafaza eder.</p>
+<p>Bunun ispatı biraz uzun ve doğrusal cebir işlemlerinden ziyade kümelerin özellikleriyle alakalı, ama karmaşık değil.
+Ben burada işi tam yapmış olmak adına ispatı vereceğim <a class="footnote-reference" href="#id2" id="id1">[1]</a> .</p>
+<ol class="arabic">
+<li>
+<p class="first">Doğru denklem sistemleri aslında birer denklem kümesi olduğundan, bu kümeye ait olan denklemlerin sırası, denklemleri çözen sonuçlar kümesini değiştirmiyor.</p>
+</li>
+<li>
+<p class="first"><span class="math">\({\alpha} \not = 0\)</span> diyelim.</p>
+<ol class="arabic">
+<li>
+<p class="first">Elimizdeki <span class="math">\(Ak=u\)</span> sistemindeki, "i" denklemini <span class="math">\({\alpha}\)</span> ile çarpalım.</p>
+<ul>
+<li>
+<p class="first">Anlaşılır olması için sistemi açık yazıyorum.</p>
+<div class="math">
+\begin{equation*}
+A_{1,1}k_1 + \dots + A_{1,p}k_p = u_1
+A_{2,1}k_1 + \dots + A_{2,p}k_p = u_2
+\vdots
+{\alpha}A_{i,1}k_1 + \dots {\alpha}A_{i,p}k_p = {\alpha}u_i
+A_{m,1}k_1 + \dots + A_{m,p}k_p = u_m
+\end{equation*}
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p class="first">S bu doğru sisteminin çözüm kümesi olsun, T de <span class="math">\(\alpha\)</span> ile çarpım sonucu dönüşmüş sistemin sonuç kümesi olsun.</p>
+<ol class="arabic simple">
+<li>
+<span class="math">\((k_1, k_2, k_3, \dots, k_p) = (f_1, f_2, f_3, \dots, f_p) \in S\)</span>. Yani "k" ve "f" eşit yöneyler.</li>
+<li>Dolayısıyla <span class="math">\({\alpha}A_{i,1}f_1 + \dots {\alpha}A_{i,p}f_p = {\alpha}u_i\)</span> geçerlidir.</li>
+<li>Dolayısıyla <span class="math">\((f_1, f_2, f_3, \dots, f_p) \in T\)</span>
+</li>
+<li>O halde <span class="math">\(S \subset T\)</span>.</li>
+</ol>
+</li>
+<li>
+<p class="first">S bu doğru sisteminin çözüm kümesi olsun, T de <span class="math">\(\alpha\)</span> ile çarpım sonucu dönüşmüş sistemin sonuç kümesi olsun.</p>
+<ol class="arabic">
+<li>
+<p class="first"><span class="math">\((k_1, k_2, k_3, \dots, k_p) = (f_1, f_2, f_3, \dots, f_p) \in T\)</span>. Yani "k" ve "f" eşit yöneyler.</p>
+</li>
+<li>
+<p class="first">Dolayısıyla <span class="math">\(T_i = \{ {\alpha}A_{i,1}f_1 + \dots {\alpha}A_{i,p}f_p = {\alpha}u_i \}\)</span> geçerlidir.</p>
+</li>
+<li>
+<p class="first"><span class="math">\(\alpha \not = 0\)</span> olduğundan dolayı, <span class="math">\(\frac{1}{\alpha}T_i\)</span>, geçerli bir sonuç verecektir.</p>
+<ul class="simple">
+<li>Açık yazacak olursam:</li>
+</ul>
+<div class="math">
+\begin{equation*}
+{\frac{1}{\alpha}}{\alpha}A_{i,1}k_1 + \dots {\frac{1}{\alpha}}{\alpha}A_{i,p}k_p = {\frac{1}{\alpha}}{\alpha}u_i
+\end{equation*}
+</div>
+<ul class="simple">
+<li>Bu işlem geçerlidir.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<ol class="arabic simple" start="4">
+<li>O halde <span class="math">\(T \subset S\)</span>.</li>
+<li>İki kümenin birbirine eşit olmasının şartı böylelikle sağlanmış oluyor.</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<p>İspatın birinci ayağını bitirmiş olduk.
+İlk dikkatimizi çekmesi gereken şey, eğer <span class="math">\(\alpha = 0\)</span> olsaydı, 1. ayağın 3. maddesini iddia edemezdik, zira <span class="math">\(\frac{1}{0}\)</span> ile karşılaşma imkanımız olurdu.</p>
+<ol class="arabic" start="3">
+<li>
+<p class="first"><span class="math">\(\alpha\)</span> herhangi bir karmaşık sayı olsun.</p>
+<ol class="arabic">
+<li>
+<p class="first">Elimizdeki <span class="math">\(Ak=u\)</span> sistemindeki, "i" denklemini <span class="math">\({\alpha}\)</span> ile çarpıp, "j" denklemine ekleyelim.</p>
+<ul class="simple">
+<li>Açık yazacak olursam:</li>
+</ul>
+<div class="math">
+\begin{equation*}
+A_{1,1}k_1 + \dots + A_{1,p}k_p = u_1
+A_{2,1}k_1 + \dots + A_{2,p}k_p = u_2
+\vdots
+({\alpha}A_{i,1} + A_{j,1})k_1 + \dots ({\alpha}A_{i,p} + A_{j,p})k_p = {\alpha}u_i + u_j
+A_{m,1}k_1 + \dots + A_{m,p}k_p = u_m
+\end{equation*}
+</div>
+</li>
+<li>
+<p class="first">S bu doğru sisteminin çözüm kümesi olsun, T dönüşmüş sistemin sonuç kümesi olsun.</p>
+<ol class="arabic">
+<li>
+<p class="first"><span class="math">\((k_1, k_2, k_3, \dots, k_p) = (f_1, f_2, f_3, \dots, f_p) \in S\)</span>. Yani "k" ve "f" eşit yöneyler.</p>
+</li>
+<li>
+<p class="first"><span class="math">\(T_j\)</span> açık yazılınca şu görülecektir:</p>
+<div class="math">
+\begin{equation*}
+({\alpha}A_{i,1} + A_{j,1})f_1 + \dots + ({\alpha}A_{i,p} + A_{j,p})f_p = {\alpha}u_i + u_j
+({\alpha}A_{i,1}f_1 + \dots + {\alpha}A_{i,p}f_p) + (A_{j,1}f_1 + \dots + A_{j,p}f_p) = {\alpha}u_i + u_j
+{\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) + (A_{j,1}f_1 + \dots + A_{j,p}f_p}) = {\alpha}u_i + u_j
+{\alpha}u_i + u_j = {\alpha}u_i + u_j
+\end{equation*}
+</div>
+</li>
+<li>
+<p class="first">Dolayısıyla <span class="math">\((f_1, f_2, f_3, \dots, f_p) \in T\)</span></p>
+</li>
+<li>
+<p class="first">O halde <span class="math">\(S \subset T\)</span>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="first">S bu doğru sisteminin çözüm kümesi olsun, T de <span class="math">\(\alpha\)</span> dönüşmüş sistemin sonuç kümesi olsun.</p>
+<ol class="arabic">
+<li>
+<p class="first"><span class="math">\((k_1, k_2, k_3, \dots, k_p) = (f_1, f_2, f_3, \dots, f_p) \in T\)</span>. Yani "k" ve "f" eşit yöneyler.</p>
+</li>
+<li>
+<p class="first"><span class="math">\(T_j\)</span> açık yazılınca şu görülecektir:</p>
+<div class="math">
+\begin{equation*}
+A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}u_i - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + {\alpha}A_{i,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}A_{i,p}f_p - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p} = f_1(A_{j,1} + {\alpha}A_{i,1} ) + \dots + f_p(A_{i,p} + {\alpha}A_{i,p}) - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p} = {\alpha}u_i + u_j - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p} =  u_j
+\end{equation*}
+</div>
+</li>
+<li>
+<p class="first">Dolayısıyla <span class="math">\((f_1, f_2, f_3, \dots, f_p) \in S\)</span></p>
+</li>
+<li>
+<p class="first">O halde <span class="math">\(T \subset S\)</span>.</p>
+</li>
+<li>
+<p class="first">İki kümenin birbirine eşit olmasının şartı böylelikle sağlanmış oluyor.</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>Neden ispatın ikinci ayağında <span class="math">\(\alpha \not = 0\)</span> şartını aramadık ?
+Bu sorunun cevabı aslında 3.3.2 bölümündeki işlem dizisinden anlaşılıyor.
+<span class="math">\(\alpha\)</span> değeri bu işlem dizisi boyunca bir önem teşkil etmiyor, zira kendisiyle herhangi bir işlem yapılmıyor.
+Çarpma işleminin özellikleri çerçevesinde ifadenin tekrar yazılması sonucu, <span class="math">\(\alpha\)</span> konum değiştiriyor o kadar.</p>
+<p>Bu ispat ışığında yukarıda verdiğim denklem sisteminin çözümü sırasında kullandığım metodun meşruluğu görülüyor.
+Denklemlerin birbirine eklenmesi ve onların 0'dan büyük sayılarla çarpılması çözüm kümesini yani "k" yöneyinin elemanlarını
+değiştirmediğine göre, ve aradığım çözüm kümesinin tek şartı <strong>apaçık olmamak</strong> olduğuna göre, denklemi çözmemizi sağlayacak ilk değerin sadece bu şartları sağlaması, denklem sisteminin çözülmesi için yeter neden teşkil eder.
+Örneği çözerek bunu göstereyim:</p>
+<div class="math">
+\begin{equation*}
+4x + 5y - z = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+2x + y - z = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+-2(2x + y - z) = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+4x -4x + 5y - 2y + (-z + 2z) = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+3y + z = 0
+\end{equation*}
+</div>
+<p>Diyelim ki <span class="math">\(z=-3\)</span>:</p>
+<div class="math">
+\begin{equation*}
+3y - 3 = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+y = 1
+\end{equation*}
+</div>
+<p>O halde:</p>
+<div class="math">
+\begin{equation*}
+2x + 1 - (-3) = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+2x + 4 = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+x = -2
+\end{equation*}
+</div>
+<p>Peki bu değerler, ilk denklemi sağlıyorlar mı ? Görelim:</p>
+<div class="math">
+\begin{equation*}
+4(-2) + 5(1) - (-3) = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+-8 + 5 + 3 = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+8 - 8 = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+0 = 0
+\end{equation*}
+</div>
+<p>Bu ispat ve onun uygulamasıyla bu yazıyı bitiriyorum.
+Doğrusal Bağımlılık konusunun ikinci bölümünde, doğrusal bileşim, katsayı dizeyi, ve en nihayetinde doğrusal bağımlılık ve doğrusal bağımsızlık
+konularını ele alarak, iki yazı boyunca süre gelmiş olan, <span class="math">\(A^{-1}\)</span> hesaplanabilir bir dizey mi, ya da hangi bağlamlarda açığa çıktığını varsaymak yanlış olmaz sorusuna bir cevap vermeye çalışacağım.</p>
+<p>Sağlıcakla,</p>
+<p>Kaan</p>
+<div class="section" id="notlar">
+<h3>Notlar</h3>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="#id1">[1]</a></td>
+<td>İspatı aldığım <a class="reference external" href="http://linear.ups.edu/html/section-SSLE.html">kaynak</a> .</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/" rel="prev" title="Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 3: Birim Dizeyi Ters Dizey">Önceki yazı</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Yorumlar</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="yapayzeka-eski-metinler",
+            disqus_url="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/",
+        disqus_title="Makine \u00d6\u011frenimine Haz\u0131rl\u0131k 2.1 Do\u011frusal Cebir 4",
+        disqus_identifier="cache/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4.html",
+        disqus_config = function () {
+            this.language = "tr";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="yapayzeka-eski-metinler";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2017         <a href="mailto:kaaneraslan@gmail.com">Kaan Eraslan</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+    
+    
+            <script src="../../assets/js/all-nocdn.js"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style
+    addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><!-- fancy dates --><script>
+    moment.locale("tr");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
