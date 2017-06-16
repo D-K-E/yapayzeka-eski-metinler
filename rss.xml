@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description>Yapay zeka çalışmaları ve bu çalışmaların eski metinlere uygulanması üzerine bir blog</description><atom:link type="application/rss+xml" rel="self" href="https://d-k-e.github.io/yapayzeka-eski-metinler/rss.xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Jun 2017 21:51:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 4</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description>Yapay zeka çalışmaları ve bu çalışmaların eski metinlere uygulanması üzerine bir blog</description><atom:link rel="self" href="https://d-k-e.github.io/yapayzeka-eski-metinler/rss.xml" type="application/rss+xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Jun 2017 22:12:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 4</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar&lt;/p&gt;
 &lt;p&gt;Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısı.
 Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/"&gt;önceki yazımda&lt;/a&gt; özellikle doğrusal sınıflayıcıların temeli niteliğindeki &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; denklemini çözmeye yarayan matematiksel kavramlar olan ters dizey ve birim dizeyini açıklamıştım.
@@ -242,7 +242,7 @@ A_{m,1}k_1 + \dots + A_{m,p}k_p = u_m
 &lt;/div&gt;
 &lt;div class="math"&gt;
 \begin{equation*}
-{\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) + (A_{j,1}f_1 + \dots + A_{j,p}f_p}) = {\alpha}u_i + u_j
+{\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p) + (A_{j,1}f_1 + \dots + A_{j,p}f_p) = {\alpha}u_i + u_j
 \end{equation*}
 &lt;/div&gt;
 &lt;div class="math"&gt;
@@ -264,32 +264,32 @@ A_{m,1}k_1 + \dots + A_{m,p}k_p = u_m
 &lt;li&gt;&lt;p class="first"&gt;&lt;span class="math"&gt;\(T_j\)&lt;/span&gt; açık yazılınca şu görülecektir:&lt;/p&gt;
 &lt;div class="math"&gt;
 \begin{equation*}
-A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}u_i - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}u_i - {\alpha}u_i
 \end{equation*}
 &lt;/div&gt;
 &lt;div class="math"&gt;
 \begin{equation*}
-A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p) - {\alpha}u_i
 \end{equation*}
 &lt;/div&gt;
 &lt;div class="math"&gt;
 \begin{equation*}
-A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + {\alpha}A_{i,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}A_{i,p}f_p - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + {\alpha}A_{i,1}f_1 + \dots + A_{j,p}f_p + {\alpha}A_{i,p}f_p - {\alpha}u_i
 \end{equation*}
 &lt;/div&gt;
 &lt;div class="math"&gt;
 \begin{equation*}
-A_{j,1}f_1 + \dots + A_{j,p}f_p} = f_1(A_{j,1} + {\alpha}A_{i,1} ) + \dots + f_p(A_{i,p} + {\alpha}A_{i,p}) - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p = f_1(A_{j,1} + {\alpha}A_{i,1} ) + \dots + f_p(A_{i,p} + {\alpha}A_{i,p}) - {\alpha}u_i
 \end{equation*}
 &lt;/div&gt;
 &lt;div class="math"&gt;
 \begin{equation*}
-A_{j,1}f_1 + \dots + A_{j,p}f_p} = {\alpha}u_i + u_j - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p = {\alpha}u_i + u_j - {\alpha}u_i
 \end{equation*}
 &lt;/div&gt;
 &lt;div class="math"&gt;
 \begin{equation*}
-A_{j,1}f_1 + \dots + A_{j,p}f_p} =  u_j
+A_{j,1}f_1 + \dots + A_{j,p}f_p =  u_j
 \end{equation*}
 &lt;/div&gt;
 &lt;/li&gt;

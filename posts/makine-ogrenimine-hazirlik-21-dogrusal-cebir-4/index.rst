@@ -193,7 +193,7 @@ Ben burada işi tam yapmış olmak adına ispatı vereceğim [1]_ .
             
             ({\alpha}A_{i,1}f_1 + \dots + {\alpha}A_{i,p}f_p) + (A_{j,1}f_1 + \dots + A_{j,p}f_p) = {\alpha}u_i + u_j
 
-            {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) + (A_{j,1}f_1 + \dots + A_{j,p}f_p}) = {\alpha}u_i + u_j
+            {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p) + (A_{j,1}f_1 + \dots + A_{j,p}f_p) = {\alpha}u_i + u_j
 
             {\alpha}u_i + u_j = {\alpha}u_i + u_j
 
@@ -207,17 +207,17 @@ Ben burada işi tam yapmış olmak adına ispatı vereceğim [1]_ .
 
          .. math::
 
-            A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}u_i - {\alpha}u_i
+            A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}u_i - {\alpha}u_i
 
-            A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) - {\alpha}u_i
+            A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p) - {\alpha}u_i
 
-            A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + {\alpha}A_{i,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}A_{i,p}f_p - {\alpha}u_i
+            A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + {\alpha}A_{i,1}f_1 + \dots + A_{j,p}f_p + {\alpha}A_{i,p}f_p - {\alpha}u_i
 
-            A_{j,1}f_1 + \dots + A_{j,p}f_p} = f_1(A_{j,1} + {\alpha}A_{i,1} ) + \dots + f_p(A_{i,p} + {\alpha}A_{i,p}) - {\alpha}u_i
+            A_{j,1}f_1 + \dots + A_{j,p}f_p = f_1(A_{j,1} + {\alpha}A_{i,1} ) + \dots + f_p(A_{i,p} + {\alpha}A_{i,p}) - {\alpha}u_i
 
-            A_{j,1}f_1 + \dots + A_{j,p}f_p} = {\alpha}u_i + u_j - {\alpha}u_i
+            A_{j,1}f_1 + \dots + A_{j,p}f_p = {\alpha}u_i + u_j - {\alpha}u_i
 
-            A_{j,1}f_1 + \dots + A_{j,p}f_p} =  u_j 
+            A_{j,1}f_1 + \dots + A_{j,p}f_p =  u_j 
 
       3. Dolayısıyla :math:`(f_1, f_2, f_3, \dots, f_p) \in S`
       4. O halde :math:`T \subset S`.
