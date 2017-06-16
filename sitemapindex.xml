@@ -11,7 +11,7 @@
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/authors/kaan-eraslan.xml</loc>
-  <lastmod>2017-06-16T21:39:00Z</lastmod>
+  <lastmod>2017-06-16T21:51:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/cat_eski-metinler.xml</loc>
@@ -19,7 +19,7 @@
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/cat_yapay-zeka.xml</loc>
-  <lastmod>2017-06-16T21:39:00Z</lastmod>
+  <lastmod>2017-06-16T21:51:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/ceviri.xml</loc>
@@ -35,7 +35,11 @@
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/dizey.xml</loc>
-  <lastmod>2017-06-16T21:39:00Z</lastmod>
+  <lastmod>2017-06-16T21:51:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/dogrusal-cebir.xml</loc>
+  <lastmod>2017-06-16T21:51:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/eski-farsca.xml</loc>
@@ -63,11 +67,11 @@
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/makine-ogrenimi.xml</loc>
-  <lastmod>2017-06-16T21:39:00Z</lastmod>
+  <lastmod>2017-06-16T21:51:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/mathjax.xml</loc>
-  <lastmod>2017-06-16T21:39:00Z</lastmod>
+  <lastmod>2017-06-16T21:51:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/sayil.xml</loc>
@@ -79,7 +83,7 @@
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/yapay-zeka.xml</loc>
-  <lastmod>2017-06-16T21:39:00Z</lastmod>
+  <lastmod>2017-06-16T21:51:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/yoney.xml</loc>
@@ -87,18 +91,18 @@
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/galleries/demo/rss.xml</loc>
-  <lastmod>2017-06-16T21:39:00Z</lastmod>
+  <lastmod>2017-06-16T21:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/galleries/rss.xml</loc>
-  <lastmod>2017-06-16T21:39:00Z</lastmod>
+  <lastmod>2017-06-16T21:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/rss.xml</loc>
-  <lastmod>2017-06-16T21:39:00Z</lastmod>
+  <lastmod>2017-06-16T21:51:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/sitemap.xml</loc>
-  <lastmod>2017-06-16T21:39:00Z</lastmod>
+  <lastmod>2017-06-16T21:52:00Z</lastmod>
  </sitemap>
 </sitemapindex>

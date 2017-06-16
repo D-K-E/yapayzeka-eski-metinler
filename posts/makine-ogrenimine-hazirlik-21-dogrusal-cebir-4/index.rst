@@ -1,7 +1,7 @@
 .. title: Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 4
 .. slug: makine-ogrenimine-hazirlik-21-dogrusal-cebir-4
 .. date: 2017-06-12 23:07:43 UTC+02:00
-.. tags: 
+.. tags: mathjax, yapay-zeka, doğrusal cebir
 .. category: 
 .. link: 
 .. description: 
@@ -157,8 +157,8 @@ Ben burada işi tam yapmış olmak adına ispatı vereceğim [1]_ .
 
          - Bu işlem geçerlidir.
 
-     4. O halde :math:`T \subset S`.
-     5. İki kümenin birbirine eşit olmasının şartı böylelikle sağlanmış oluyor.
+      4. O halde :math:`T \subset S`.
+      5. İki kümenin birbirine eşit olmasının şartı böylelikle sağlanmış oluyor.
 
 İspatın birinci ayağını bitirmiş olduk.
 İlk dikkatimizi çekmesi gereken şey, eğer :math:`\alpha = 0` olsaydı, 1. ayağın 3. maddesini iddia edemezdik, zira :math:`\frac{1}{0}` ile karşılaşma imkanımız olurdu.

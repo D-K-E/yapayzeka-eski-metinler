@@ -1,7 +1,7 @@
 .. title: Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 3: Birim Dizeyi Ters Dizey
 .. slug: makine-ogrenimine-hazirlik-21-dogrusal-cebir-3
 .. date: 2017-06-09 03:39:11 UTC+02:00
-.. tags: dizey, makine öğrenimi,
+.. tags: dizey, makine öğrenimi, mathjax
 .. category: yapay-zeka
 .. link: 
 .. description: 
