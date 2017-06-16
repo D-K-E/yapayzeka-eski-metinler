@@ -80,8 +80,11 @@ Bu genellemeyi açık yazacak olursak:
 .. math::
 
    A_{1,1}k_1 + \dots + A_{1,p}k_p = u_1
+   
    A_{2,1}k_1 + \dots + A_{2,p}k_p = u_2
+
    \vdots
+
    A_{m,1}k_1 + \dots + A_{m,p}k_p = u_m
    
 Bir doğru denklem sisteminin **türdeş** olması demek, "u" yöneyinin bütün elemanlarının 0 olması demektir.
@@ -94,6 +97,7 @@ Sistemdeki denklemlerden birinin çözümünü sağlayan ve sadece 0'lardan olu�
 .. math::
    
    4x + 5y - z = 0
+
    2x + y - z = 0
 
 Bu denklemi çözmek için yapmamız gereken şey basit.
@@ -123,9 +127,13 @@ Ben burada işi tam yapmış olmak adına ispatı vereceğim [1]_ .
         .. math::
 
            A_{1,1}k_1 + \dots + A_{1,p}k_p = u_1
+           
            A_{2,1}k_1 + \dots + A_{2,p}k_p = u_2
+
            \vdots
+
            {\alpha}A_{i,1}k_1 + \dots {\alpha}A_{i,p}k_p = {\alpha}u_i
+
            A_{m,1}k_1 + \dots + A_{m,p}k_p = u_m
 
    2. S bu doğru sisteminin çözüm kümesi olsun, T de :math:`\alpha` ile çarpım sonucu dönüşmüş sistemin sonuç kümesi olsun.
@@ -165,9 +173,13 @@ Ben burada işi tam yapmış olmak adına ispatı vereceğim [1]_ .
       .. math::
 
          A_{1,1}k_1 + \dots + A_{1,p}k_p = u_1
+
          A_{2,1}k_1 + \dots + A_{2,p}k_p = u_2
+
          \vdots
+
          ({\alpha}A_{i,1} + A_{j,1})k_1 + \dots ({\alpha}A_{i,p} + A_{j,p})k_p = {\alpha}u_i + u_j
+
          A_{m,1}k_1 + \dots + A_{m,p}k_p = u_m
 
    2. S bu doğru sisteminin çözüm kümesi olsun, T dönüşmüş sistemin sonuç kümesi olsun.
@@ -178,8 +190,11 @@ Ben burada işi tam yapmış olmak adına ispatı vereceğim [1]_ .
          .. math::
 
             ({\alpha}A_{i,1} + A_{j,1})f_1 + \dots + ({\alpha}A_{i,p} + A_{j,p})f_p = {\alpha}u_i + u_j
+            
             ({\alpha}A_{i,1}f_1 + \dots + {\alpha}A_{i,p}f_p) + (A_{j,1}f_1 + \dots + A_{j,p}f_p) = {\alpha}u_i + u_j
+
             {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) + (A_{j,1}f_1 + \dots + A_{j,p}f_p}) = {\alpha}u_i + u_j
+
             {\alpha}u_i + u_j = {\alpha}u_i + u_j
 
       3. Dolayısıyla :math:`(f_1, f_2, f_3, \dots, f_p) \in T`
@@ -193,10 +208,15 @@ Ben burada işi tam yapmış olmak adına ispatı vereceğim [1]_ .
          .. math::
 
             A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}u_i - {\alpha}u_i
+
             A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) - {\alpha}u_i
+
             A_{j,1}f_1 + \dots + A_{j,p}f_p} = A_{j,1}f_1 + {\alpha}A_{i,1}f_1 + \dots + A_{j,p}f_p} + {\alpha}A_{i,p}f_p - {\alpha}u_i
+
             A_{j,1}f_1 + \dots + A_{j,p}f_p} = f_1(A_{j,1} + {\alpha}A_{i,1} ) + \dots + f_p(A_{i,p} + {\alpha}A_{i,p}) - {\alpha}u_i
+
             A_{j,1}f_1 + \dots + A_{j,p}f_p} = {\alpha}u_i + u_j - {\alpha}u_i
+
             A_{j,1}f_1 + \dots + A_{j,p}f_p} =  u_j 
 
       3. Dolayısıyla :math:`(f_1, f_2, f_3, \dots, f_p) \in S`
