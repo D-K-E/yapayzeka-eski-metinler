@@ -25,13 +25,17 @@ Bunlar ana hattı belirliyor olmakla beraber aralarda yeni terimlere ve konulara
 Neden bu konulardan bahsedeceğiz ?
 Çünkü bir önceki yazıda ters dizey ve birim dizeyi aracılığıyla çözdüğümüz, yukarıda da belirttiğimiz denklemi.
 
----------------------------
+===========================
 `Doğrusal Bağımlılık - 1`_
----------------------------
+===========================
 
 Bir `önceki yazıda <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/>`_ :math:`A^{-1}` için sorduğum soru kenarda dursun.
 Bu bölümde bu soruya yaklaşımımızı etkileyecek önemli bir dizi kavramı açıklamaya çalışacağım.
 Doğrusal bağımlılığın ne olduğunu anlayabilmemiz bilmemiz gereken ilk şey, bir doğru denkleminin ne olduğu.
+
+------------------
+`Doğru Denklemi`_
+------------------
 
 Doğru denklemi, koordinat düzlemi üzerindeki bir doğruyu ifade eden denklemdir. Genel formülü şudur:
 
@@ -70,6 +74,10 @@ Verdiğimiz örnekler ışığında, bir doğrunun denklemi şu olacaktır:
 .. math::
 
    3x + 4y = 2
+
+---------------------------
+`Doğru Denklem Sistemi`_
+---------------------------
 
 Doğru denklem sistemi ise birden fazla doğrudan oluşan ve aynı değişken yöneyini kullanandır.
 Değişken yöneyinden kastım, yukarıdaki örnekteki "k" gibi, doğru denklemine değişkenlerini veren yöney.
@@ -209,7 +217,7 @@ Ben burada işi tam yapmış olmak adına ispatı vereceğim [1]_ .
 
             A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}u_i - {\alpha}u_i
 
-            A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p) - {\alpha}u_i
+            A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) - {\alpha}u_i
 
             A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + {\alpha}A_{i,1}f_1 + \dots + A_{j,p}f_p + {\alpha}A_{i,p}f_p - {\alpha}u_i
 
