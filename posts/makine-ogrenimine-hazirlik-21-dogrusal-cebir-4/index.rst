@@ -217,7 +217,7 @@ Ben burada işi tam yapmış olmak adına ispatı vereceğim [1]_ .
 
             A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}u_i - {\alpha}u_i
 
-            A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) - {\alpha}u_i
+            A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p) - {\alpha}u_i
 
             A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + {\alpha}A_{i,1}f_1 + \dots + A_{j,p}f_p + {\alpha}A_{i,p}f_p - {\alpha}u_i
 
@@ -285,7 +285,7 @@ Peki bu değerler, ilk denklemi sağlıyorlar mı ? Görelim:
 
 Bu ispat ve onun uygulamasıyla bu yazıyı bitiriyorum.
 Doğrusal Bağımlılık konusunun ikinci bölümünde, doğrusal bileşim, katsayı dizeyi, ve en nihayetinde doğrusal bağımlılık ve doğrusal bağımsızlık
-konularını ele alarak, iki yazı boyunca süre gelmiş olan, :math:`A^{-1}` hesaplanabilir bir dizey mi, ya da hangi bağlamlarda açığa çıktığını varsaymak yanlış olmaz sorusuna bir cevap vermeye çalışacağım.
+konularını ele alarak, iki yazı boyunca süre gelmiş olan, :math:`Ak=u` denklem sistemi hangi durumlarda :math:`A^{-1}` ile çözülebilir sorusunu ele almak için gerekli olan kavramsal alt yapıyı tamamlamış olacağım.
 
 Sağlıcakla,
 

@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://d-k-e.github.io/yapayzeka-eski-metinler/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/" type="text/html">
 </head>
 <body class="theme-base-0b">
     <a href="#content" class="sr-only sr-only-focusable">Ana içeriğe geç</a>
@@ -49,7 +49,484 @@
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/" class="u-url">Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 4</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/" class="u-url">Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 5</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Kaan Eraslan</span></p>
+            <p class="dateline"><a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-06-20T03:33:17+02:00" title="2017-06-20 03:33">2017-06-20 03:33</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#disqus_thread" data-disqus-identifier="cache/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Merhaba Arkadaşlar,</p>
+<p>Makine Öğrenimine Hazırlık yazı dizisinin doğrusal bağımlılık ile ilgili son yazısıyla karşınızdayım
+Bildiğiniz gibi bu yazı dizisini aslında makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
+Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/">önceki yazımda</a> doğrusal bağımlılık konusunun anlaşılabilmesi için gerekli olan doğru denklemi ve doğru sistemi konularını ele almıştım.
+Eğer makine öğrenimine yeni başlıyorsanız, bu yazı dizisinin <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/">ilk bölümünden</a> başlamanızı tavsiye ederim.
+Eğer çok çok yeniyseniz ve "Makine Öğrenimi Nedir, Derin Öğrenim Nedir ?", gibi sorulara cevap bulmaya geldiyseniz, bunun için üç bölümlük bu konulara değinen <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/">ilk yazı dizisini</a> tavsiye ederim.</p>
+<p>Bu yazı, doğrusal bağımlılık konusunun ikinci ve son bölümünü oluşturuyor.
+Temel sorumuz şuydu, <span class="math">\(Ak=u\)</span> denklem sistemi hangi durumlarda <span class="math">\(A^{-1}\)</span> ile çözülebilir ?
+Ele alacağımız kavramlar şunlar:</p>
+<ul class="simple">
+<li>Doğrusal bileşim,</li>
+<li>Katsayı dizeyi</li>
+</ul>
+<p>Ve en nihayetinde</p>
+<ul class="simple">
+<li>Doğrusal Bağımlılık</li>
+<li>Doğrusal Bağımsızlık</li>
+</ul>
+<div class="section" id="dogrusal-bagimlilik-2">
+<h2><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-bagimlilik-2">Doğrusal Bağımlılık - 2</a></h2>
+<div class="section" id="dogrusal-bilesim">
+<h3><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-bilesim">Doğrusal Bileşim</a></h3>
+<p>Bir doğru sistemini ifade eden denklemi düşünelim, <span class="math">\(Ak=u\)</span>.
+Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler">dizey</a>; <span class="math">\(k{\in}{\mathbb{R}^m}\)</span>, k <em>bilinmeyen</em> bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler">yöney</a>; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.</p>
+<p>Doğrusal bileşim dediğimiz işlem aslında bir yöneyin bir dizey ile çarpılması eyleminin adıdır.
+Matematiksel ifadesi şu şekilde:</p>
+<div class="math">
+\begin{equation*}
+A_{:,1}k_1 + {\dots} + A_{:,n}k_n
+\end{equation*}
+</div>
+<p>Okunuşu kısaca A dizeyinin <strong>sütunlarıyla</strong> "k" yöneyinin elemanlarını çarpıyoruz.
+Dolayısıyla aslında bütün ifade A dizeyinin sütunlarını oluşturan yöneylerin, k yöneyinin elemanlarını oluşturan sayıllarla çarpıldıktan sonra toplanmasını ifade ediyor.</p>
+<p>Burada k yöneyinin elemanlarına <em>katsayılar</em> deniyor.</p>
+</div>
+<div class="section" id="katsayi-dizeyi">
+<h3><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#katsayi-dizeyi">Katsayı dizeyi</a></h3>
+<p>Şu ikisini karıştırmamak lazım.
+Doğrusal bileşim bağlamında "k" yöneyinin elemanlarına katsayılar deniyor, ancak <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#dogru-denklem-sistemi">doğrusal denklem sistemi</a> bağlamında katsayı dizeyi, "A"'ya tekabül ediyor.
+Somut olması için açık bir örnek vereyim:</p>
+<div class="math">
+\begin{equation*}
+4x + 5y - z = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+2x + y - z = 0
+\end{equation*}
+</div>
+<p>Bir önceki yazıdaki denklem sistemini ele alalım.
+Bu sistem bağlamında, katsayı dizeyi G diyelim.
+G dizeyini açık yazalım:</p>
+<div class="math">
+\begin{equation*}
+G = \left[
+\begin{array}{r,r,r}
+4, 5, -1 \\
+2, 1, -1 \\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<p>Doğrusal bileşim bağlamında katsayıları oluşturan yöneye f diyelim.
+f'yi açık yazalım:</p>
+<div class="math">
+\begin{equation*}
+f = \left(
+\begin{array}{r}
+x \\
+y \\
+z \\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>Şimdi doğrusal bileşim bağlamında katsayıların neler olduğunu açıkça gördüğümüze göre, doğrusal bağımlılık ve bağımsızlıktan bahsetmeye başlayabiliriz.
+Eğer doğrusal denklem sistemindeki katsayı dizeyini oluşturan sütunlarla çarpılacak yöney elemanlarından herhangi biri 0'dan başka bir sayıysa, katsayı dizeyinin sütunları <strong>doğrusal bağımlılık</strong> gösterirler.
+Eğer çarpılacak yöney elemanlarının hepsi 0'a eşitse, katsayı dizeyinin sütunları <strong>doğrusal bağımsızlık</strong> gösterirler.</p>
+<p>Doğrusal bağımsızlığın matematiksel ifadesi kolay anlaşılır.
+Bu yüzden onu <span class="math">\(Ak=u\)</span> denklemi çerçevesinde veriyorum:</p>
+<div class="math">
+\begin{equation*}
+A_{:,1}k_1 + {\dots} + A_{:,n}k_n = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+k_i = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+{\forall}i = 1, {\dots}, n
+\end{equation*}
+</div>
+<p>Kısaca <span class="math">\(Ak=u\)</span> denklem sisteminde eğer "k"nın bütün elemanları 0'a eşitse, A dizeyinin sütunları birbirinden doğrusal olarak bağımsızdır.
+Eğer "k"'nın bir tane elemanı bile 0'a eşit değilse, A dizeyinin sütunları birbirine doğrusal olarak bağımlıdır.</p>
+<p>Neden ? Çünkü eğer "k" yöneyinin elemanlarından bir tanesi bile 0'a eşit değilse, A dizeyinin sütunlarından en azından biri, diğerinin doğrusal bileşimi demektir.
+Neden ? Çünkü "k"'nın 0'a eşit olan elemanının çarpıldığı sütun ile, "k"'nın 0'a eşit olmayan elemanın çarpıldığı sütun arasında bir sayıl ile ifade edilebilecek bir ilişki var demektir.
+Yukarıda tarifini verdiğimiz gibi yöney elemanlarını oluşturan sayılların sütun yöneyleriyle çarpımına doğrusal bileşim dendiği düşünülürse, "k"'nın ilgili elemanlarıyla çarpılan sütun yöneyleri doğrusal bileşim olarak yazılabilir.</p>
+<p>Biraz soyut kaldığını tahmin ediyorum ama örnekle daha iyi anlaşılacak.</p>
+<p>Yukarıdaki denklem sistemimizi ve ilgili çözümlerini alalım tekrar.
+Ele aldığımız denklem sistemi doğrusal bağımlılığa bir örnek:</p>
+<div class="math">
+\begin{equation*}
+4x + 5y - z = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+2x + y - z = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+s^T = \left(
+\begin{array}{c}
+x \\
+y \\
+z \\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+s^T = \left(
+\begin{array}{c}
+-2 \\
+1 \\
+-3 \\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+
+G = \left[
+\begin{array}{c,c,c}
+4, 5, -1 \\
+2, 1, -1 \\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+G {\cdot} s = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+\left(
+\begin{array}{c}
+4 \\
+2 \\
+\end{array}
+\right){\times}-2 +
+\left(
+\begin{array}{c}
+5 \\
+1 \\
+\end{array}
+\right){\times}1 +
+\left(
+\begin{array}{c}
+-1 \\
+-1 \\
+\end{array}
+\right){\times}-3 = 0
+\end{equation*}
+</div>
+<p>Durum buyken, doğrusal bağımlılık için şu soruyu soruyoruz "Acaba bir yöneyi diğerinin katı olarak yazabilir miyim ?" Yani hangi koşullarda:</p>
+<div class="math">
+\begin{equation*}
+G_{:,1}s_1 = G_{:,2}s_2
+\end{equation*}
+</div>
+<p>Geçerli bir ifadedir ? Buna verilen cevap, <span class="math">\(\{ s_1, s_2 \} \not = \{ 0,0 \}\)</span> gerek şartı sağlanıyorsa, ifade geçerli olabilir.
+Neden ? Çünkü sütun yöneylerinin değerleri elveriyorsa bu ifade geçerli olacaktır.
+Yukarıda verdiğim denklem sistemi, gerek şartı sağlıyor, olmasına rağmen bağımlılık şartını sağlamıyor. Görelim:</p>
+<div class="math">
+\begin{equation*}
+s_2 \not = 0 \Rightarrow G_{:,1} = G_{:,2}{\frac{s_1}{s_2}}
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+s_1 \not = 0 \Rightarrow G_{:,1} = G_{:,2}{\frac{s_2}{s_1}}
+\end{equation*}
+</div>
+<p>Uygulanabiliyor mu görelim:</p>
+<div class="math">
+\begin{equation*}
+\left(
+\begin{array}{c}
+4 \\
+2 \\
+\end{array}
+\right){\times}-2 = ?
+\left(
+\begin{array}{c}
+5 \\
+1 \\
+\end{array}
+\right){\times}1
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+\left(
+\begin{array}{c}
+4 \\
+2 \\
+\end{array}
+\right) \not = - \frac{1}{2} \left(
+\begin{array}{c}
+5 \\
+1 \\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>Açıkça uygulanamıyor, o halde bir de uygulanabilen bir denklem sistemi görelim:</p>
+<div class="math">
+\begin{equation*}
+2x + 1y  = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+4x + 2y  = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+s^T = \left( x,y \right)
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+s^T = \left( -1,2 \right)
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+G = \left[
+\begin{array}{c,c,c}
+2, 1 \\
+4, 2 \\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+G {\cdot} s = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+\left(
+\begin{array}{c}
+2 \\
+4 \\
+\end{array}
+\right){\times} -1 +
+\left(
+\begin{array}{c}
+1 \\
+2 \\
+\end{array}
+\right){\times}2 = 0
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+G_{:,1}s_1 =? G_{:,2}s_2
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+\left(
+\begin{array}{c}
+4 \\
+2 \\
+\end{array}
+\right){\times}1
+=? \left(
+\begin{array}{c}
+1 \\
+2 \\
+\end{array}
+\right){\times}2
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+\left(
+\begin{array}{c}
+4 {\times}1 \\
+2 {\times}1  \\
+\end{array}
+\right)
+=? \left(
+\begin{array}{c}
+1 {\times}2  \\
+2 {\times}2  \\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+\left(
+\begin{array}{c}
+4 \\
+2 \\
+\end{array}
+\right) = \left(
+\begin{array}{c}
+4 \\
+2 \\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>Görüldüğü üzere geçerlilik doğrulanıyor. O halde buradaki iki sütun yöneyi arasında doğrusal bir bağımlılıktan söz edebiliriz.
+Burada konuyu dizeyler üzerinden anlatıyor olmamın sebebi makine öğreniminde genellikle dizeyler bağlamında kullanılıyor olmasında.
+Özellikle ağırlık dizeyi denilen dizey üzerinde yapılan işlemlerde kilit bir kavram olacak.</p>
+<p>Bu iki denklem sistemi arasındaki farkın gözle görülür olması için ikisinin de koordinat düzleminde nasıl gözüktüğünü görelim.</p>
+<p>Doğrusal Bağımsız:</p>
+<img alt="/images/MÖ-Hazırlık-21/dogrusalBagimsiz.png" src="images/M%C3%96-Haz%C4%B1rl%C4%B1k-21/dogrusalBagimsiz.png"><p>Doğrusal Bağımlı:</p>
+<img alt="/images/MÖ-Hazırlık-21/dogrusalBagimli.png" src="images/M%C3%96-Haz%C4%B1rl%C4%B1k-21/dogrusalBagimli.png"><p>Verdiğim örneklerden de görüleceği üzere aslında doğrusal bağımlılık gösteren denklemleri niteleyen yöneyler, aynı doğrunun birer parçası, doğrusal bağımlılık <em>göstermeyen</em> denklemleri niteleyen yöneyler, kesişen ama aynı yönde olmayan doğrulara ait.</p>
+</div>
+<div class="section" id="dogrusal-aralik">
+<h3><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-aralik">Doğrusal Aralık</a></h3>
+<p>Bu aslında ayrı bir başlık gerektirmeyen bir kavram.
+Bir denklem sisteminin katsayı dizeyinin sütunlarını oluşturan yöneylerle yapılan doğrusal bileşimlerin tümüne <strong>sütun alanı</strong> denir.
+Yer yer <em>doğrusal aralık</em>, ya da kısaca <em>aralık</em> olarak da ifade edilir.
+Doğrusal aralık ifadesi genel olarak bir yöneyler kümesinin olası bütün doğrusal bileşimleri sonucuna denir.
+Bizim ele aldığımız konu yalnızca katsayı dizeyinin sütunları bağlamında olduğunda <em>sütun alanı</em> ifadesi bana daha uygun görünüyor.
+Aralık sözcüğü aslında durumu çok iyi karşılamıyor, yayılım, veya içerim daha iyi karşılıyor.
+Bunu örneği verdikten sonra daha iyi göreceksiniz diye umuyorum.</p>
+<p>Doğrusal Aralık için hızlıca bir örnek vereyim <a class="footnote-reference" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#id2" id="id1">[1]</a>:</p>
+<p>Diyelim ki Y bir yöney uzayı, A'da bu uzayın bir alt kümesi.
+Eğer Y yöney uzayının her yöneyi, A'daki yöneylerin doğrusal bileşimi olarak yazılabiliyorsa, Y, A'nın doğrusal aralığındadır.
+Matematiksel olarak ifade edecek olursak:</p>
+<div class="math">
+\begin{equation*}
+A \subset Y
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+A = \{v_1, v_2, {\dots}, v_n \}
+\end{equation*}
+</div>
+<p>Eğer <span class="math">\(Y = c_1v_1 + c_2v_2 + {\dots} + c_nv_n\)</span> ise DAralık(A) = Y.</p>
+<p>Örneğin <span class="math">\(v_1 = \{1, 0, 0 \}\)</span> ve <span class="math">\(v_2 = \{ 0, 1, 1 \}\)</span> yöneylerinin doğrusal aralığını görelim.</p>
+<div class="math">
+\begin{equation*}
+c_1v^{T}_1 + c_2v^{T}_2 = c_1 \left(
+\begin{array}{c}
+1 \\
+0 \\
+0 \\
+\end{array}
+\right) + \left(
+\begin{array}{c}
+0 \\
+1 \\
+1 \\
+\end{array}
+\right) = \left(
+\begin{array}{c}
+c_1 \\
+c_2 \\
+c_2 \\
+\end{array}
+\right)
+\end{equation*}
+</div>
+<p>Görüldüğü üzere <span class="math">\(v_1\)</span> ve <span class="math">\(v_2\)</span> yöneylerinin doğrusal aralığı <span class="math">\({\mathbb{R}}^3\)</span> kümesindeki ikinci ve üçüncü elemanı aynı olan yöneylerin tamamını kapsar.
+Neden ? Çünkü bu şartı sağlayan bütün yöneyleri <span class="math">\(v_1\)</span> ve <span class="math">\(v_2\)</span> doğrusal bileşimi ile ifade edebilirsiniz.
+Örneğin <span class="math">\(v_5 = \{ 8, 10, 10 \}\)</span> yöneyini ele alalım.
+Görüldüğü üzere yukarıdaki şartı sağlayan bir yöney.
+Bu yöneyin nasıl <span class="math">\(v_1\)</span> ve <span class="math">\(v_2\)</span> doğrusal bileşimi ile ifade edildiğini görelim:</p>
+<div class="math">
+\begin{equation*}
+v_5^{T} = \left(
+\begin{array}{c}
+8 \\
+10 \\
+10 \\
+\end{array}
+\right) =  \left(
+\begin{array}{c}
+1 \\
+0 \\
+0 \\
+\end{array}
+\right) {\times} 8 + \left(
+\begin{array}{c}
+0 \\
+1 \\
+1 \\
+\end{array}
+\right) {\times} 10
+\end{equation*}
+</div>
+<p>Bu haliyle bakıldığında <span class="math">\(v_5\)</span> yöneyinin örnekteki doğrusal bileşimin şekliyle örtüştüğü görülüyor.</p>
+<div class="section" id="bonus">
+<h4>Bonus</h4>
+<p>Ufak bir bonus olarak, grafikleri çizerken kullandığım kodu da burada paylaşıyorum:</p>
+<pre class="code python"><a name="rest_code_f3623a305c70456e9a68f275139a4017-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-2"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-3"></a><span class="k">def</span> <span class="nf">graph</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span> <span class="n">x_range</span><span class="p">):</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-4"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x_range</span><span class="p">)</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-5"></a>    <span class="n">y</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">formula</span><span class="p">)</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-6"></a>    <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-7"></a><span class="c1">#</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-8"></a><span class="c1"># Doğrusal Bağımlı</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-9"></a><span class="c1">#</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-10"></a><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span> <span class="o">=</span> <span class="n">graph</span><span class="p">(</span><span class="s1">'-2*x'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal bağımlı"</span><span class="p">)</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-14"></a>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-15"></a><span class="c1"># Doğrusal Bağımsız</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-16"></a><span class="c1">#</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-17"></a><span class="n">graphX1</span><span class="p">,</span> <span class="n">graphY1</span> <span class="o">=</span><span class="n">graph</span><span class="p">(</span><span class="s1">'(-2*2*x +3)/-1'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-18"></a><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span> <span class="o">=</span> <span class="n">graph</span><span class="p">(</span><span class="s1">'(-2*4*x +3)/-5'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-19"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal Bağımsız 1"</span><span class="p">)</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-20"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX1</span><span class="p">,</span> <span class="n">graphY1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal Bağımsız 2"</span><span class="p">)</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-21"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<a name="rest_code_f3623a305c70456e9a68f275139a4017-22"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre>
+<p>Bu yazıyı burada bitiriyorum.
+Bundan sonraki yazı şu zamana kadar anlata geldiğim kavramların tamamını barındırarak, yazının başında temel soru olarak addettiğim ve <span class="math">\(Ak=u\)</span> denklem sistemi hangi durumlarda <span class="math">\(A^{-1}\)</span> ile çözülebilir sorusuna bir yanıt vereceğim.
+Sizin konuya eklemek istediğiniz bir şey varsa yorumlarda belirtin lütfen.</p>
+<p>Sağlıcakla,</p>
+<p>Kaan</p>
+</div>
+<div class="section" id="notlar">
+<h4>Notlar</h4>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#id1">[1]</a></td>
+<td>Örneği aldığım <a class="reference external" href="http://math.bard.edu/belk/math213s14/LinearCombinationsAndSpanRevised.pdf">site</a>
+</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/" class="u-url">Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 4</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Kaan Eraslan</span></p>
             <p class="dateline"><a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-06-12T23:07:43+02:00" title="2017-06-12 23:07">2017-06-12 23:07</time></a></p>
@@ -360,7 +837,7 @@ A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}u_i 
 </div>
 <div class="math">
 \begin{equation*}
-A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p}) - {\alpha}u_i
+A_{j,1}f_1 + \dots + A_{j,p}f_p = A_{j,1}f_1 + \dots + A_{j,p}f_p + {\alpha}(A_{i,1}f_1 + \dots + A_{i,p}f_p) - {\alpha}u_i
 \end{equation*}
 </div>
 <div class="math">
@@ -481,7 +958,7 @@ x = -2
 </div>
 <p>Bu ispat ve onun uygulamasıyla bu yazıyı bitiriyorum.
 Doğrusal Bağımlılık konusunun ikinci bölümünde, doğrusal bileşim, katsayı dizeyi, ve en nihayetinde doğrusal bağımlılık ve doğrusal bağımsızlık
-konularını ele alarak, iki yazı boyunca süre gelmiş olan, <span class="math">\(A^{-1}\)</span> hesaplanabilir bir dizey mi, ya da hangi bağlamlarda açığa çıktığını varsaymak yanlış olmaz sorusuna bir cevap vermeye çalışacağım.</p>
+konularını ele alarak, iki yazı boyunca süre gelmiş olan, <span class="math">\(Ak=u\)</span> denklem sistemi hangi durumlarda <span class="math">\(A^{-1}\)</span> ile çözülebilir sorusunu ele almak için gerekli olan kavramsal alt yapıyı tamamlamış olacağım.</p>
 <p>Sağlıcakla,</p>
 <p>Kaan</p>
 <div class="section" id="notlar">
