@@ -1,5 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (çeviri ile ilgili yazılar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link type="application/rss+xml" href="https://d-k-e.github.io/yapayzeka-eski-metinler/categories/ceviri.xml" rel="self"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Jun 2017 22:11:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Xph Daiva Yazıtı</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/xph-daiva-yaziti/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Bu yazı &lt;a class="reference external" href="http://antikdillerdenbazilari.blogspot.fr/2015/10/xph-turkce-daiva-yazt.html"&gt;eski blogumdan&lt;/a&gt; alıntıdır. Ufak tefek formatla ilgili düzenlemeler dışında içeriğe hiç dokunulmamıştır.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (çeviri ile ilgili yazılar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link href="https://d-k-e.github.io/yapayzeka-eski-metinler/categories/ceviri.xml" rel="self" type="application/rss+xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Sun, 02 Jul 2017 23:25:36 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Çukurovalılarla ilgili Mevzu - Arşm Mektupları - TAD A6.7</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Bu yazı daha önceki blogumdan alıntıdır.&lt;/p&gt;
+&lt;div class="section" id="arsm-mektuplari-tad-a6-7"&gt;
+&lt;h2&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/#arsm-mektuplari-tad-a6-7"&gt;Arşm Mektupları – TAD A6.7&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Porten ve Yardeni, TAD A6.7'den uyarlanmıştır / Reproduced from Porten and Yardeni TAD A6.7&lt;/p&gt;
+&lt;p&gt;Aşağıdaki resim asıl yazının neye benzediğini örnekleme amacıyla konulmuştur, filolojik içeriği aynı olmakla beraber papirüsün fiziksel görünümüyle alakası yoktur.&lt;/p&gt;
+&lt;img alt="/images/cukurova_arsames/TAD_A67_illustration.png" src="https://d-k-e.github.io/yapayzeka-eski-metinler/images/cukurova_arsames/TAD_A67_illustration.png"&gt;
+&lt;div class="section" id="ibranice-harf-cevirisi-hebrew-transliteration"&gt;
+&lt;h3&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/#ibranice-harf-cevirisi-hebrew-transliteration"&gt;İbranice Harf Çevirisi / Hebrew Transliteration&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;מן ארשם על ארתהנת שלם ושררת שגיא הושרת ל[ך] וכעת בזנה קדמי שלם
+אף תמה קדמ[י]ך שלם יהוי וכעת איתי גברן חיל[כין] עבדן זילי במצרין
+פרימא שמה 1 אמון שמה 1 סרד שמה 1 תענדי [ש]מה [1...] מי שמה 1 סדסבנז שמה
+א[...]ם שמה 1 סרמנז שמה 1 כא שמה 1 בגפרן שמה 1 פיתרענז שמה 1 אסמרוף
+שמה 1 מוסרם שמה 1 כל גברן 3-10 אבשוכן ממנין הוו בין בגיא זילי זי
+בעליתא ותחתיתא אחר כזי מצרין מרדת וחילא הנדיז הוו אדין
+פרימא זך וכנותה לא שנציו למנעל בבירתא אחר [י]נ[ח]רו לחטא אחד המו
+עמה הוו כען הן עליך כות טב מנך יתשם טעם כזי איש מנדעם באיש לא
+יעבד לפירמא זך וכנותה ישתבקו עבידתא זילי יעבדו כזי קדמן
+מן ארשם בר ביתא על ארתהנת זי ב[מצרי]ן
+על חילכיא
+...&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="latin-harfi-cevirisi-latin-transliteration"&gt;
+&lt;h3&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/#latin-harfi-cevirisi-latin-transliteration"&gt;Latin Harfi Çevirisi / Latin Transliteration&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;mn ȝršm ʿl ȝrthnt šlm wšrrt šgyȝ hwšrt lk wkʿt bznh qdmy šlm
+ȝp tmh qdmyk šlm yhwy wkʿt ȝyty gbrn ḥylkyn ʿbdn zyly bmṣryn
+prymȝ šmh 1 ȝmwn šmh 1 srd šmh 1 tʿndy šmh 1... my šmh 1 sdsbnz šmh
+ȝ(...)m šmh 1 srmnz šmh 1 kȝ šmh 1 bgprn šmh 1 pytrʿnz šmh 1 ȝsmrwp
+šmh 1 mwsrm šmh 1 kl gbrn 3-10 ȝbšwkn mmnyn hww byn bgyȝ zyly zy
+bʿlytȝ wtḥtytȝ ȝḥr kzy mṣryn mrdt wḥylȝ hndyz hww ȝdyn
+prymȝ wknwth lȝ šnṣyw lmnʿl bbyrtȝ ȝḥr ynḥrw lḥyȝ ȝḥd hmw
+ʿmh hww kʿn hn ʿlyk kwt ṭb mnk ytšm ṭʿm kzy ȝyš mndʿm bȝyš lȝ
+yʿbd lpyrmȝ zk wknwth yštbqw ʿbydtȝ zyly yʿbdw kzy qdmn
+mn ȝršm br-bytȝ ʿl ȝrthnt zy bmṣryn
+ʿl ḥylkyȝ
+…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ceviri-translation"&gt;
+&lt;h3&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/#ceviri-translation"&gt;Çeviri / Translation&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Ȝršm'dan ȝrthnt'e,&lt;/p&gt;
+&lt;p&gt;Önümdeki refah ve fazlasıyla gücü sana ve iş arkadaşlarına bununla yollatım, senin de önünde refah olsun. Ve şimdi, Çukurova'lı adamlar var, benim Mısır'daki kölelerim :&lt;/p&gt;
+&lt;p&gt;adı prymȝ 1 (tane) ; adı ȝmwn 1 (tane) ; adı srd 1 (tane) ; adı tʿndy 1 (tane) ; adı ...my 1 (tane) ; adı sdsbnz 1 (tane) ; adı ȝ(...)m 1 (tane) ; adı srmnz 1 (tane) ; adı kȝ 1 (tane) ; adı bgprn 1 (tane); adı pytrʿnz 1 (tane) ; adı ȝsmrwp 1 (tane) ; adı mwsrm 1 (tane) ;&lt;/p&gt;
+&lt;p&gt;hepsi erkek 13, baskıcı [tekstil işlerindeki ?](?) tayin edilmişler benim Yukarı ve Aşağı Mısır'daki konaklarımın arasında.
+Sonra, Mısır baş kaldırdığında ve ordu garnizon kurulu olduğunda, prymȝ ve iş arkadaşları kaleye girememişler.
+Sonrasında nefes nefese kalsınlar, kötü (olan) onları yakaladı, onlar onunlaymışlar.
+Şimdi eğer sana iyiyse, senden buyruk konsun şunun gibi: kişi prymȝ ve iş arkadaşlarına kötü şey yapmasın.
+Terk edilsinler, önceden olduğu gibi benim işimi yapsınlar.&lt;/p&gt;
+&lt;p&gt;Ȝršm, evin oğlu'ndan, Mısır'daki ȝrthnt'e&lt;/p&gt;
+&lt;p&gt;From ȝršm to ȝrthnt,&lt;/p&gt;
+&lt;p&gt;Peace and very much force I have caused to send to you and your associate(s) by this before me, peace also there before you shall be. And now, there are Cilician men, my slaves in Egypt :&lt;/p&gt;
+&lt;p&gt;prymȝ his name 1 ; ȝmwn his name 1 ; srd his name 1 ; tʿndy his name 1 ; ...my his name 1 ; sdsbnz his name 1 ; ȝ(...)m his name 1 ; srmnz his name 1 ; kȝ his name 1; bgprn his name  1 ; pytrʿnz his name 1 ; ȝsmrwp his name 1 ; mwsrm his name 1 ;&lt;/p&gt;
+&lt;p&gt;all men 13, presser(?) they have been appointed between my two estates that are in Upper and Lower Egypt.
+Afterwards, when Egypt revolted and the army was garrnisoned then prymȝ and his associates they haven't been able to enter into the fortress.
+Afterwards they shall pant, the bad locked them, with him they have been.
+Now if thus (is) good towards you, from you the order shall be placed, as follows, man shall not do something evil to that prymȝ and his associate.
+They shall be left alone.
+They shall do my work just as before.&lt;/p&gt;
+&lt;p&gt;From ȝršm, the son of the house to ȝrthnt that (is) in Egypt.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kelimeler-ve-cozumlemeleri-vocabulary-and-word-analysis"&gt;
+&lt;h3&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/#kelimeler-ve-cozumlemeleri-vocabulary-and-word-analysis"&gt;Kelimeler ve Çözümlemeleri / Vocabulary and Word Analysis&lt;/a&gt;&lt;/h3&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;b-byrtȝ&lt;/dt&gt;
+&lt;dd&gt;b-, infra. + byrtȝ, d.i., v.f., tekil, hisar / byrtȝ, f.n., emph. f. singular.&lt;/dd&gt;
+&lt;dt&gt;b-mṣryn&lt;/dt&gt;
+&lt;dd&gt;b-, ilgeç, içinde, sayesinde / b-, prep. in, by (means of) + mṣryn Ö.i. Mısır / P.n., Egypt.&lt;/dd&gt;
+&lt;dt&gt;b-znh&lt;/dt&gt;
+&lt;dd&gt;b-, ilgeç, içinde, sayesinde / b-, prep. in, by (means of) + znh, y.i.z. ( yakındaki için işaret zamiri), bu, bunlar / n.d.p (near object demonstrative pronoun), this, these.&lt;/dd&gt;
+&lt;dt&gt;bgprn&lt;/dt&gt;
+&lt;dd&gt;Ö.i. (Özel isim) / P.n. (Proper noun)&lt;/dd&gt;
+&lt;dt&gt;bgyȝ&lt;/dt&gt;
+&lt;dd&gt;e.i. (eril isim), v.f. (vurgulu form), ikil, malikane, arazi / m.n., emp. f., dual, domain, estate.&lt;/dd&gt;
+&lt;dt&gt;br bytȝ&lt;/dt&gt;
+&lt;dd&gt;br-bytȝ unvan, Evin oğlu / title, son of the house&lt;/dd&gt;
+&lt;dt&gt;byn&lt;/dt&gt;
+&lt;dd&gt;ilgeç, arasında / prep. Between&lt;/dd&gt;
+&lt;dt&gt;bȝyš&lt;/dt&gt;
+&lt;dd&gt;önad, kötü, zararlı / adj. evil, bad&lt;/dd&gt;
+&lt;dt&gt;Bʿlytȝ&lt;/dt&gt;
+&lt;dd&gt;b-, ilgeç, içinde, sayesinde / b-, prep. in, by (means of) + ʿlytȝ, Ö.i., Yukarı Mısır/ P.n., Upper Egypt&lt;/dd&gt;
+&lt;dt&gt;gbrn&lt;/dt&gt;
+&lt;dd&gt;e.i., y.f. (yalın form), çoğul, erkek / m.n., abs. f., plural, men&lt;/dd&gt;
+&lt;dt&gt;hmw&lt;/dt&gt;
+&lt;dd&gt;kişi zamiri, 3. e.ç.k., onlar / personal pronoun, P3M, they&lt;/dd&gt;
+&lt;dt&gt;hn&lt;/dt&gt;
+&lt;dd&gt;takı, eğer / particule, if.&lt;/dd&gt;
+&lt;dt&gt;hndyz&lt;/dt&gt;
+&lt;dd&gt;belirteç, garnizon kurulu / adv. Garrnisoned&lt;/dd&gt;
+&lt;dt&gt;hwšrt&lt;/dt&gt;
+&lt;dd&gt;yšr fiili, ettirgen gövde, 1.t.k. (tekil şahıs), tm.v. (tamamlanmış veçhe), yollatmak / verb yšr, causative stem, S1 form, p.a. (perfect aspect), I caused to dispatch.&lt;/dd&gt;
+&lt;dt&gt;hww&lt;/dt&gt;
+&lt;dd&gt;hwh, olmak fiili, III.y, temel gövde, (3. e.ç.ş. eril çoğul kişi) tm.v., olmuşlar / hwh, verb to be, III.y, ground stem, ( P3M, plural 3. person masculin) p.a., have been&lt;/dd&gt;
+&lt;dt&gt;ḥylkyn&lt;/dt&gt;
+&lt;dd&gt;e.i., y.f., çoğul, Çukurovalı / m.n., abs. f., plural, Cilician&lt;/dd&gt;
+&lt;dt&gt;kl&lt;/dt&gt;
+&lt;dd&gt;hepsi, bütün / all, every, whole&lt;/dd&gt;
+&lt;dt&gt;kwt&lt;/dt&gt;
+&lt;dd&gt;belirteç, öyleyse, o halde / adverb, thus.&lt;/dd&gt;
+&lt;dt&gt;kzy&lt;/dt&gt;
+&lt;dd&gt;aynı andalık belirten bağlaç / conjunction, when&lt;/dd&gt;
+&lt;dt&gt;kȝ&lt;/dt&gt;
+&lt;dd&gt;Ö.i. (Özel isim) / P.n. (Proper noun)&lt;/dd&gt;
+&lt;dt&gt;kʿn&lt;/dt&gt;
+&lt;dd&gt;şimdi / now.&lt;/dd&gt;
+&lt;dt&gt;lḥyȝ&lt;/dt&gt;
+&lt;dd&gt;lḥy, sıfat, v.f., çoğul, kötü / lḥy adj., emp. f., plural, bad.&lt;/dd&gt;
+&lt;dt&gt;lk&lt;/dt&gt;
+&lt;dd&gt;l, ilgeç, e doğru / prep. to + k 2. e.t.ş. (eril tekil şahıs) soneki )) / ((S2M s.p.p, Single 2 masculine sufixed personal pronoun))&lt;/dd&gt;
+&lt;dt&gt;lmnʿl&lt;/dt&gt;
+&lt;dd&gt;ʿll fiili, temel gövde, mastar hali, tekil eril, girmek / ʿll verb, ground stem, infinitive, masculin singular, to enter.&lt;/dd&gt;
+&lt;dt&gt;lpyrmȝ&lt;/dt&gt;
+&lt;dd&gt;l, supra. + pyrmȝ, supra.&lt;/dd&gt;
+&lt;dt&gt;lȝ&lt;/dt&gt;
+&lt;dd&gt;olumsuzluk eki/ not .&lt;/dd&gt;
+&lt;dt&gt;mmnyn&lt;/dt&gt;
+&lt;dd&gt;mnh/y fiili, Pa''el gövdesi, sıfat-fiil, eril çoğul, tayin etmek / mnh/y verb, Pa''el stem, participle, plural masculine, to appoint.&lt;/dd&gt;
+&lt;dt&gt;mn&lt;/dt&gt;
+&lt;dd&gt;ilgeç -den /prep. (preposition) from&lt;/dd&gt;
+&lt;dt&gt;mndʿm&lt;/dt&gt;
+&lt;dd&gt;adıl, herhangi bir şey, bir şey/ pronoun, something&lt;/dd&gt;
+&lt;dt&gt;mnk&lt;/dt&gt;
+&lt;dd&gt;mn, supra. + k, supra.&lt;/dd&gt;
+&lt;dt&gt;mrdt&lt;/dt&gt;
+&lt;dd&gt;mrd fiili, temel gövde, dişi 3.tekil şahıs, tm.v., başkaldırmak / mrd verb, ground stem, feminine 3. person singular, p.a., to rebel.&lt;/dd&gt;
+&lt;dt&gt;mṣryn&lt;/dt&gt;
+&lt;dd&gt;supra.&lt;/dd&gt;
+&lt;dt&gt;mwsrm&lt;/dt&gt;
+&lt;dd&gt;Ö.i. (Özel isim) / P.n. (Proper noun)&lt;/dd&gt;
+&lt;dt&gt;Prymȝ&lt;/dt&gt;
+&lt;dd&gt;Ö.i./ P.n.&lt;/dd&gt;
+&lt;dt&gt;Prymȝ&lt;/dt&gt;
+&lt;dd&gt;Ö.i. (Özel isim) / P.n. (Proper noun)&lt;/dd&gt;
+&lt;dt&gt;pytrʿnz&lt;/dt&gt;
+&lt;dd&gt;Ö.i. (Özel isim) / P.n. (Proper noun)&lt;/dd&gt;
+&lt;dt&gt;qdmn&lt;/dt&gt;
+&lt;dd&gt;önceki / formerly&lt;/dd&gt;
+&lt;dt&gt;qdmy&lt;/dt&gt;
+&lt;dd&gt;qdm, ilgeç, ön / prep. before, in front of + y 1. t.k. soneki / S1 s.p.p&lt;/dd&gt;
+&lt;dt&gt;qdmyk&lt;/dt&gt;
+&lt;dd&gt;qdm, ilgeç, ön / prep. before, in front of + y, ? + k 2. e.t.k. soneki / S2M s.p.p.&lt;/dd&gt;
+&lt;dt&gt;sdsbnz&lt;/dt&gt;
+&lt;dd&gt;Ö.i. (Özel isim) / P.n. (Proper noun)&lt;/dd&gt;
+&lt;dt&gt;šgyȝ&lt;/dt&gt;
+&lt;dd&gt;belirteç-önad, çok, fazla / adverb-adjective, very, much, many&lt;/dd&gt;
+&lt;dt&gt;šlm&lt;/dt&gt;
+&lt;dd&gt;e.i., y.f., gönenç, barış, refah / m.n (masculin noun), abs. f., (absolute form), peace, welfare, prosperity&lt;/dd&gt;
+&lt;dt&gt;šmh&lt;/dt&gt;
+&lt;dd&gt;šm e.i. t.f. (tamlayan form) ad, isim / (m.n. ( masculine noun) (cons.f.)) name + h ( 3. e.t.k.) / (S3M s.p.p)&lt;/dd&gt;
+&lt;dt&gt;Šnṣyw&lt;/dt&gt;
+&lt;dd&gt;4 sesli kök, temel gövde, tm. v., 3. e.ç.k., -e bilmek / 4 letter root, ground stem, p.a. P3M, to be able.&lt;/dd&gt;
+&lt;dt&gt;srd&lt;/dt&gt;
+&lt;dd&gt;Ö.i. (Özel isim) / P.n. (Proper noun)&lt;/dd&gt;
+&lt;dt&gt;srmnz&lt;/dt&gt;
+&lt;dd&gt;Ö.i. (Özel isim) / P.n. (Proper noun)&lt;/dd&gt;
+&lt;dt&gt;ṭb&lt;/dt&gt;
+&lt;dd&gt;sıfat, y.f., tekil, iyi / adj., abs. f., singular, good.&lt;/dd&gt;
+&lt;dt&gt;tmh&lt;/dt&gt;
+&lt;dd&gt;orada / there&lt;/dd&gt;
+&lt;dt&gt;ṭʿm&lt;/dt&gt;
+&lt;dd&gt;e.i., y.f. emir, buyruk / m.n., abs.f. command, order&lt;/dd&gt;
+&lt;dt&gt;tʿndy&lt;/dt&gt;
+&lt;dd&gt;Ö.i. (Özel isim) / P.n. (Proper noun)&lt;/dd&gt;
+&lt;dt&gt;w-knwth&lt;/dt&gt;
+&lt;dd&gt;w, supra. + knw.t (d.i. (dişil isim) t. f. meslektaş, iş arkadaşı ç.-t. çoğul veya tekil şekilsel bir ayrım yok / f.n. (feminine noun), cons.f. (construct form) associate   / plu.-sing. plural or singular, no morphological difference + h 3. e.t.k. soneki / S3M s.p.p&lt;/dd&gt;
+&lt;dt&gt;w-kʿt&lt;/dt&gt;
+&lt;dd&gt;w-: ve, dahi, de / and, also + kʿt: şimdi/ now.&lt;/dd&gt;
+&lt;dt&gt;wḥylȝ&lt;/dt&gt;
+&lt;dd&gt;w, supra. + ḥylȝ, e.i., v.f., tekil, ordu / m.n., emp.f., sing. the army&lt;/dd&gt;
+&lt;dt&gt;wšrrt&lt;/dt&gt;
+&lt;dd&gt;w-, bağlaç ve, dahi, de / conjunction, and, also + šrrt, d.i. y.f., güç, kuvvet / f.n. (feminine noun), abs.f., strength.&lt;/dd&gt;
+&lt;dt&gt;wtḥtytȝ&lt;/dt&gt;
+&lt;dd&gt;w, supra. / tḥtytȝ, Ö.i., Aşağı Mısır / P.n., Lower Egypt&lt;/dd&gt;
+&lt;dt&gt;yhwy&lt;/dt&gt;
+&lt;dd&gt;hwh fiili, temel gövde, 3.t.k. g.-e. kipi (gereklilik-emir kipi), olmak / hwh, to be, ground stem,  S3M, j.m. (jussive mood)&lt;/dd&gt;
+&lt;dt&gt;ynḥrw&lt;/dt&gt;
+&lt;dd&gt;nḥr fiili, temel gövde, g.-e. kipi, 3. e.ç.k., solumak, burnundan çekmek / nḥr verb, ground stem, P3M, j.m., snort, pant.&lt;/dd&gt;
+&lt;dt&gt;yštbqw&lt;/dt&gt;
+&lt;dd&gt;temel gövde dönüşlü yapı (tG), 3. e.ç.ş. tmm.v. terk etmek / external passive ground stem, imp. a. P3M, leave&lt;/dd&gt;
+&lt;dt&gt;ytšm&lt;/dt&gt;
+&lt;dd&gt;temel gövde dönüşlü yapı (tG), 3. e.t.ş. tmm.v., koymak, yerleştirmek / external passive ground stem, imp. a. S3M, set, place&lt;/dd&gt;
+&lt;dt&gt;yʿbdw&lt;/dt&gt;
+&lt;dd&gt;ʿbd, yapmak fiili, temel gövde 3.ç.ş. g.-e. kipi (gereklilik-emir kipi) / ʿbd, to make, ground stem,  P3M, j.m. (jussive mood)&lt;/dd&gt;
+&lt;dt&gt;zk&lt;/dt&gt;
+&lt;dd&gt;u.i.z. (uzaktaki için işaret zamiri) o / (f.d.p. far object demonstrative pronoun) that, those&lt;/dd&gt;
+&lt;dt&gt;zyly&lt;/dt&gt;
+&lt;dd&gt;zy (i.z. (ilgi zamiri) ki o / (r.p.) relative pronoun, that, who, which + l, ilgeç, e doğru / prep. to + y, 1. t.k. soneki / S1, s.p.p&lt;/dd&gt;
+&lt;dt&gt;ȝbšwkn&lt;/dt&gt;
+&lt;dd&gt;e.i., y.f., kaçak/baskıcı (anlam belirsiz) / m.n., abs.f., presser/deserter( uncertain meaning)&lt;/dd&gt;
+&lt;dt&gt;ȝdyn&lt;/dt&gt;
+&lt;dd&gt;bağlaç/belirteç, sonrasında/ conjunction/adverb, then, at that time.&lt;/dd&gt;
+&lt;dt&gt;ȝḥd&lt;/dt&gt;
+&lt;dd&gt;ȝḥd fiili, temel gövde, tm.v., 3. e.t.ş., kitlemek, yakalamak, almak / ȝḥd verb, ground stem, p.a., 3SM.&lt;/dd&gt;
+&lt;dt&gt;ȝḥr&lt;/dt&gt;
+&lt;dd&gt;ilgeç, sonra /prep. Then, afterwards.&lt;/dd&gt;
+&lt;dt&gt;ȝmwn&lt;/dt&gt;
+&lt;dd&gt;Ö.i. (Özel isim) / P.n. (Proper noun)&lt;/dd&gt;
+&lt;dt&gt;ȝp&lt;/dt&gt;
+&lt;dd&gt;bağlaç, de, dahi / conjunction, also.&lt;/dd&gt;
+&lt;dt&gt;ȝršm&lt;/dt&gt;
+&lt;dd&gt;Ö.i. / P.n.&lt;/dd&gt;
+&lt;dt&gt;ȝrthnt&lt;/dt&gt;
+&lt;dd&gt;Ö.i. / P.n.&lt;/dd&gt;
+&lt;dt&gt;ȝsmrwp&lt;/dt&gt;
+&lt;dd&gt;Ö.i. (Özel isim) / P.n. (Proper noun)&lt;/dd&gt;
+&lt;dt&gt;ȝyš&lt;/dt&gt;
+&lt;dd&gt;e.i., y.f. erkek, kişi / m.n., abs.f. command, man, person&lt;/dd&gt;
+&lt;dt&gt;ȝyty&lt;/dt&gt;
+&lt;dd&gt;varlık belirten takı / particle of existence, there is/are&lt;/dd&gt;
+&lt;dt&gt;ʿbdn&lt;/dt&gt;
+&lt;dd&gt;e.i., y.f., çoğul, köle /m.n., abs. f., plural, slave&lt;/dd&gt;
+&lt;dt&gt;ʿbydtȝ&lt;/dt&gt;
+&lt;dd&gt;d.i. v.f., iş, hizmet/ f.n. emp. f., service, work&lt;/dd&gt;
+&lt;dt&gt;ʿl-&lt;/dt&gt;
+&lt;dd&gt;ilgeç, -e, üstünde / prep., on, toward, upon&lt;/dd&gt;
+&lt;dt&gt;ʿlyk&lt;/dt&gt;
+&lt;dd&gt;ʿl, ilgeç, -e, üstünde / prep., on, toward, upon + y, ? + k, supra.&lt;/dd&gt;
+&lt;dt&gt;ʿmh&lt;/dt&gt;
+&lt;dd&gt;ʿm, ilgeç, ile / prep. With + h, supra.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>Arşames</category><category>eski aramice</category><category>eski iran imparatorluğu</category><category>eski metinler</category><category>harf çevirisi</category><category>çeviri</category><guid>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/</guid><pubDate>Sun, 02 Jul 2017 23:07:12 GMT</pubDate></item><item><title>Xph Daiva Yazıtı</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/xph-daiva-yaziti/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Bu yazı &lt;a class="reference external" href="http://antikdillerdenbazilari.blogspot.fr/2015/10/xph-turkce-daiva-yazt.html"&gt;eski blogumdan&lt;/a&gt; alıntıdır. Ufak tefek formatla ilgili düzenlemeler dışında içeriğe hiç dokunulmamıştır.&lt;/p&gt;
 &lt;div class="section" id="giris"&gt;
 &lt;h2&gt;Giriş&lt;/h2&gt;
 &lt;p&gt;Aşağıda çevirisini bulacağınız Kşayãrşa adlı Eski İran kralının (MÖ 5. yy) Persepolis ve Pasargad'da bulunan bir metni. 3 farklı dilde kopyalanmış. Biz aşağıda Eski Farsça'sının Türkçe'sini sunuyoruz. Kşayãrşa Eski Yunan literatüründe sıkça bahsedilen bir figür, yunanlılar onları kendi kaynaklarında hybris'in ayaklı hali olarak görüyor olmalarına rağmen, tahmin edilebileceği gibi Eski Farsça kaynaklarda böylesi bir tasvir görülmüyor.&lt;/p&gt;

@@ -315,7 +315,7 @@ Bu aslında ayrı bir başlık gerektirmeyen bir kavram.
 Bir denklem sisteminin katsayı dizeyinin sütunlarını oluşturan yöneylerle yapılan doğrusal bileşimlerin tümüne **sütun alanı** denir.
 Yer yer *doğrusal aralık*, ya da kısaca *aralık* olarak da ifade edilir.
 Doğrusal aralık ifadesi genel olarak bir yöneyler kümesinin olası bütün doğrusal bileşimleri sonucuna denir.
-Bizim ele aldığımız konu yalnızca katsayı dizeyinin sütunları bağlamında olduğunda *sütun alanı* ifadesi bana daha uygun görünüyor.
+Bizim ele aldığımız konu yalnızca katsayı dizeyinin sütunları bağlamında olduğundan *sütun alanı* ifadesi bana daha uygun görünüyor.
 Aralık sözcüğü aslında durumu çok iyi karşılamıyor, yayılım, veya içerim daha iyi karşılıyor.
 Bunu örneği verdikten sonra daha iyi göreceksiniz diye umuyorum.
 
