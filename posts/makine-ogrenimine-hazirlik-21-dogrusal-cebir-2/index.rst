@@ -10,6 +10,8 @@
 
 Merhaba Arkadaşlar,
 
+.. contents::
+
 Bir `önceki yazımda <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/>`_, makine öğrenimi ve derin öğrenimde sık kullanılan algoritmalarda geçen matematiksel kavramların kısa bir özetini vermiştim.
 Yine o yazıda belirttiğim gibi, bu yazıyı o kavramlarla yapılan işlemlere ayıracağım. Örnekleri bol tutmaya özen göstereceğim.
 
@@ -226,7 +228,7 @@ Dizey çarpımının çaprazlanması ise şunu verir :math:`(AR)^T=A^TR^T`
 
 Şimdilik bu kadar yeter.
 Bundan sonraki yazımda, şu denklemin çözülmesi için gereken işlemleri inceleyeceğim :math:`Ak=u`.
-Denklemde :math:`A{\in}{\mathbb{R}}^{mxp}`, A bir dizey; :math:`k{\in}{\mathbb{R}^m}`, k *bilinmeyen* bir yöney; :math:`u{\in}{\mathbb{R}^p}`, u *bilinen* bir yöneydir.
+Denklemde :math:`A{\in}{\mathbb{R}}^{mxp}`, A bir dizey; :math:`k{\in}{\mathbb{R}^p}`, k *bilinmeyen* bir yöney; :math:`u{\in}{\mathbb{R}^p}`, u *bilinen* bir yöneydir.
 Neden bu denklemle uğraşacağız sorusunun cevabı ise basit.
 Bu denklem aslında doğrusal sınıflandırıcının kullandığı ana şemayı oluşturur.
 Doğrusal sınıflandırıcı da makine öğreniminde, ve özellikle derin öğrenimde bir hayli kullanılan bir algoritma.

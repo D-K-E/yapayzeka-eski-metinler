@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/</loc>
-  <lastmod>2017-06-16T22:11:00Z</lastmod>
+  <lastmod>2017-07-31T14:56:00Z</lastmod>
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/2017/</loc>
@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/archive.html</loc>
-  <lastmod>2017-07-02T23:25:00Z</lastmod>
+  <lastmod>2017-07-31T14:56:00Z</lastmod>
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/authors/</loc>
@@ -31,11 +31,15 @@
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/</loc>
-  <lastmod>2017-07-02T23:25:00Z</lastmod>
+  <lastmod>2017-07-31T14:56:00Z</lastmod>
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/arsames/</loc>
   <lastmod>2017-07-02T23:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/bilgi-alim/</loc>
+  <lastmod>2017-07-31T14:56:00Z</lastmod>
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/categories/cat_eski-metinler/</loc>
@@ -126,6 +130,10 @@
   <lastmod>2017-06-16T22:11:00Z</lastmod>
  </url>
  <url>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/index-1.html</loc>
+  <lastmod>2017-07-31T15:01:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/listings/</loc>
   <lastmod>2017-06-16T22:11:00Z</lastmod>
  </url>
@@ -202,6 +210,10 @@
   <lastmod>2017-07-02T23:25:00Z</lastmod>
  </url>
  <url>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/</loc>
+  <lastmod>2017-07-31T14:56:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/</loc>
   <lastmod>2017-06-16T22:11:00Z</lastmod>
  </url>
@@ -220,6 +232,10 @@
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/</loc>
   <lastmod>2017-06-29T03:27:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-6/</loc>
+  <lastmod>2017-07-31T14:56:00Z</lastmod>
  </url>
  <url>
   <loc>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/xph-daiva-yaziti/</loc>

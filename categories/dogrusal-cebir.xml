@@ -1,5 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (doğrusal cebir ile ilgili yazılar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link href="https://d-k-e.github.io/yapayzeka-eski-metinler/categories/dogrusal-cebir.xml" rel="self" type="application/rss+xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Sun, 02 Jul 2017 23:25:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 5</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar,&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (doğrusal cebir ile ilgili yazılar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link rel="self" type="application/rss+xml" href="https://d-k-e.github.io/yapayzeka-eski-metinler/categories/dogrusal-cebir.xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Mon, 31 Jul 2017 15:01:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 6</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-6/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar,&lt;/p&gt;
+&lt;p&gt;Bu yazıda &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; denklem sistemi hangi durumlarda &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt; ile çözülebilir sorusuna bir yanıt vereceğim.
+Bundan önceki yazılar boyunca, özellikle Doğrusal Cebir 3-5 arasında bu sorunun çözümünde kullanılacak kavramsal alt yapıyı vermeye çalıştım.
+Bildiğiniz gibi bu yazı dizisini aslında makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
+Eğer makine öğrenimine yeni başlıyorsanız, bu yazı dizisinin &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/"&gt;ilk bölümünden&lt;/a&gt; başlamanızı tavsiye ederim.
+Eğer çok çok yeniyseniz ve "Makine Öğrenimi Nedir, Derin Öğrenim Nedir ?", gibi sorulara cevap bulmaya geldiyseniz, bunun için üç bölümlük bu konulara değinen &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/"&gt;ilk yazı dizisini&lt;/a&gt; tavsiye ederim.&lt;/p&gt;
+&lt;p&gt;Denklemimizdeki elemanları hatırlayalım: &lt;span class="math"&gt;\(A{\in}{\mathbb{R}}^{mxp}\)&lt;/span&gt;, A bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler"&gt;dizey&lt;/a&gt;; &lt;span class="math"&gt;\(k{\in}{\mathbb{R}^p}\)&lt;/span&gt;, k &lt;em&gt;bilinmeyen&lt;/em&gt; bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler"&gt;yöney&lt;/a&gt;; &lt;span class="math"&gt;\(u{\in}{\mathbb{R}^p}\)&lt;/span&gt;, u &lt;em&gt;bilinen&lt;/em&gt; bir yöneydir.
+Kısaca "k"'nın değerini bulmaya çalışıyoruz.
+Bunun için &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt; ters dizeyini kullanarak şu çözüme gitmiştik:&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+Ak=u
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+A^{-1}Ak = uA^{-1}
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+I_nk=uA^{-1}
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+k=uA^{-1}
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Bu hatırlatmayı burada bırakalım.
+Daha detaylı bir açıklama için, &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#ters-dizey"&gt;buraya&lt;/a&gt; bakabilirsiniz.&lt;/p&gt;
+&lt;p&gt;Burada "k"'nın bir çözümünün olması, "u"'nun, "k" ve "A"'nın çarpımından oluştuğu düşünülürse, A'nın &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-aralik"&gt;sütun alanında&lt;/a&gt;  olmasına bağlıdır.
+Bu durumda, yine aynı işlemde gerçekleştirilen &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#yoney-carpimi"&gt;nokta çarpımı&lt;/a&gt; dolayısıyla &lt;span class="math"&gt;\(u{\in}{\mathbb{R}^m}\)&lt;/span&gt; halini varsayar.
+Kısaca "u" yöneyinin elemanları "A" dizeyinin katsayı yöneyi ile çarpılıp toplanmasından oluştuğundan ve katsayı yöneyi bilinmeyen olduğundan, "u"nun elemanlarının A yöneyinin satırlarının elemanlarının ait olduğu kümeye ait olması beklenir.
+Katsayı yöneyinin bilinmeyen olması durumu, denklemin çözülebilmesi için "A"'nın sütun alanının &lt;span class="math"&gt;\({\mathbb{R}^m}\)&lt;/span&gt; kümesini kapsamasını gerektirir, zira eğer herhangi bir nokta sütun alanından eksik ise "u" nun o nokta için alabileceği değerin çözümü yoktur.
+Daha önceki yazılarımda dizey çarpımı işleminin nasıl yapıldığına değinmiştim, ama burada gözünüzde canlandıramadıysanız bir kere daha belirteyim.
+A dizeyi ile "k" yöneyini çarpmak demek, A dizeyinin satırlarının her birinde bulunan elemanları "k" yöneyinin satıra denk gelen elemanıyla çarparak, dizey satırını kendi içinde toplamak demek olduğundan, bu işlem sonucu oluşacak "u" yöneyinin ilgili elemanının da A dizeyinin satırlarını kapsayan kümeye dahil olması beklenir, çünkü en nihayetinde yapılan şey A dizeyinin bir satırını katsayı yöneyinin sayıllarıyla çarpıp toplamak.&lt;/p&gt;
+&lt;p&gt;Şimdi, "m" A'nın satır sayısını temsil ettiğine göre, ve yukarıda belirttiğim &lt;span class="math"&gt;\(u{\in}{\mathbb{R}^m}\)&lt;/span&gt; durumu da geçerli olduğuna göre, şu göstergeyi de kabul etmek durumundayız, &lt;span class="math"&gt;\(p {\ge} m\)&lt;/span&gt;.
+Neden ? Çünkü A dizeyinin k yöneyi ile çarpımı sonucu oluşacak olanın p sütun sayısına sahip olacağını dizey çarpımı işleminin yapısı gereği olduğunu biliyoruz.
+Yine aynı şekilde eğer "u" yöneyinin elemanlarının &lt;span class="math"&gt;\({\mathbb{R}^m}\)&lt;/span&gt; kümesine dahil olduklarını da biliyoruz.
+O halde "p" "m"'den küçük olamaz, çünkü eğer olursa "u" yöneyinin elemanlarından biri A dizeyinin sütun alanın dışında kalır.
+Bunun getireceği sonuç "u"'yöneyinin denklem sisteminin her bileşimi için sonucunun garanti olmaması olacaktır.&lt;/p&gt;
+&lt;p&gt;Ancak şunu biliyoruz, doğrusal bağımlılık gösteren yöneyler, aslında tek bir yöney ile temsil edilebiliyorlar.
+Dolayısıyla sütun alanına yaptıkları bir etki yok. Bu şu demek, &lt;span class="math"&gt;\(p {\ge} m\)&lt;/span&gt; şartına bir de, bir veya daha fazla m boyutlu doğrusal bağımsızlık gösteren denklemler kümesi barındırmak eklendi.
+Sorulabilecek makul soru şu, neden "p" "m"'den büyük olabiliyorken, barındırılabilecek bağımsız denklemler kümesi "m" üzerinden birimleniyor ?
+Bunun sebebi şu, yukarıda belirttiğim gibi esasında &lt;span class="math"&gt;\(p {\ge} m\)&lt;/span&gt; bir gösterge, yani ilk elde baktığınızda size bir fikir verecek, kabaca eleme yapabilmenizi sağlayacak bir belirti.
+Doğrusal bağımlılık söz konusu olduğunda bu göstergenin işlememesi riski var, çünkü elinizdeki denklem sisteminde her ne kadar &lt;span class="math"&gt;\(p {\ge} m\)&lt;/span&gt; tutuyor olsa da bağımlı denklemler tek bir denklem olarak temsil edilebildiği için &lt;span class="math"&gt;\(p {\le} m\)&lt;/span&gt; riski var.
+Bu riskin oluşmaması için kontrol etmemiz gereken, A dizeyinin sütun alanının "m" boyutunda bir bağımsız denklemler kümesini barındırıp barındırmadığı.
+"m" boytundaki bir denklemler kümesinin "m" taneden daha fazla bağımsız denkleme sahip olamayacağı düşünülürse, zira hiçbir denklem bir diğeri cinsinden yazılamayacaktır, A dizeyinin u yöneyi bağlamında yukarıdaki şartları sağlayabilmesi için, m üzerinden birimlenen bir bağımsız denklemler kümesini barındırması gerektiği aşikardır.
+Kaç tane "m" kadar barındıracağı sorun değil, ancak bir veya daha fazla "m" boyutlu küme barındırması şart.&lt;/p&gt;
+&lt;p&gt;Sorumuzun diğer ayağına gelelim, &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; denklem sistemini &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt; ile çözmeye çalıştığımı yazmıştım.
+Ters dizeyi bir önceki yazılardan hatırlayanlar, onun düzüyle çarpıldığında birim dizeyi verdiğini hatırlayacaklardır.
+Birim dizeyin temel şartı olan kendisiyle çarpılanı değiştirmeme özelliğinin temel dayanağı olan kare şeklinde olmayı, yani satır sayısının sütun sayısına eşit olmasını da hatırlayalım.
+Bu bağlamda belki de en başta söylememiz gereken en bariz olgu şuydu, A dizeyi eğer ters dizey ile çözülebiliyorsa, kare şeklindedir, yani &lt;span class="math"&gt;\(p {\ge} m\)&lt;/span&gt; filan demeye gerek kalmadan, baştan &lt;span class="math"&gt;\(p = m\)&lt;/span&gt; olmak durumundadır arkadaşlar da diyebilirdim.
+Takip ettiğim kaynak &lt;a class="footnote-reference" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-6/#id2" id="id1"&gt;[1]&lt;/a&gt; bunu bu şekilde sunmuyor, yani bunu başta sunmuyor ki iyi de yapıyor aslında, çünkü mantıken denklemin kendisinin çözülebilme şartlarının denklemin bir yöntemle çözülebilme şartına öncelenmesi gerekir.&lt;/p&gt;
+&lt;p&gt;O halde soruya tam yanıt verelim.&lt;/p&gt;
+&lt;p&gt;Soru şuydu:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; denklem sistemi hangi durumlarda &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt; ile çözülebilir ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cevabıysa şu:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Eğer A'nın satır ve sütun sayısı birbirine eşitse ve sütunlarını oluşturan yöneyler doğrusal bağımsızlık şartını sağlıyorsa, &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; denklem sistemi &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt; ile çözülebilir.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bu yazıyı burada bitiriyorum.
+Doğrusal Cebir üzerine olan yazı dizisinin bir sonraki yazısı, yöney normları, üzerine olacak.
+Eklemek istediğiniz bir şey varsa, ya da daha iyi açıklanmasını talep ettiğiniz bir şey lütfen yorumlarda belirtin.&lt;/p&gt;
+&lt;p&gt;Sağlıcakla,&lt;/p&gt;
+&lt;p&gt;Kaan&lt;/p&gt;
+&lt;!-- deep learning p., 38 --&gt;
+&lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-6/#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Kaynağı önceki yazılarımda sıkça belirttim. Goodfellow I.,Y. Bengio, Deep Learning, Cambridge, 2016.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;</description><category>doğrusal cebir</category><category>makine öğrenimi</category><category>mathjax</category><category>yapay-zeka</category><guid>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-6/</guid><pubDate>Tue, 04 Jul 2017 00:25:17 GMT</pubDate></item><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 5</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar,&lt;/p&gt;
+&lt;div class="contents topic" id="contents"&gt;
+&lt;p class="topic-title first"&gt;Contents&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-bagimlilik-2" id="id3"&gt;Doğrusal Bağımlılık - 2&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-bilesim" id="id4"&gt;Doğrusal Bileşim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#katsayi-dizeyi" id="id5"&gt;Katsayı dizeyi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-aralik" id="id6"&gt;Doğrusal Aralık&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#bonus" id="id7"&gt;Bonus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#notlar" id="id8"&gt;Notlar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;p&gt;Makine Öğrenimine Hazırlık yazı dizisinin doğrusal bağımlılık ile ilgili son yazısıyla karşınızdayım
 Bildiğiniz gibi bu yazı dizisini aslında makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/"&gt;önceki yazımda&lt;/a&gt; doğrusal bağımlılık konusunun anlaşılabilmesi için gerekli olan doğru denklemi ve doğru sistemi konularını ele almıştım.
@@ -22,7 +112,7 @@ Ele alacağımız kavramlar şunlar:&lt;/p&gt;
 &lt;div class="section" id="dogrusal-bilesim"&gt;
 &lt;h3&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-bilesim"&gt;Doğrusal Bileşim&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Bir doğru sistemini ifade eden denklemi düşünelim, &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt;.
-Denklemde &lt;span class="math"&gt;\(A{\in}{\mathbb{R}}^{mxp}\)&lt;/span&gt;, A bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler"&gt;dizey&lt;/a&gt;; &lt;span class="math"&gt;\(k{\in}{\mathbb{R}^m}\)&lt;/span&gt;, k &lt;em&gt;bilinmeyen&lt;/em&gt; bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler"&gt;yöney&lt;/a&gt;; &lt;span class="math"&gt;\(u{\in}{\mathbb{R}^p}\)&lt;/span&gt;, u &lt;em&gt;bilinen&lt;/em&gt; bir yöneydir.&lt;/p&gt;
+Denklemde &lt;span class="math"&gt;\(A{\in}{\mathbb{R}}^{mxp}\)&lt;/span&gt;, A bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler"&gt;dizey&lt;/a&gt;; &lt;span class="math"&gt;\(k{\in}{\mathbb{R}^p}\)&lt;/span&gt;, k &lt;em&gt;bilinmeyen&lt;/em&gt; bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler"&gt;yöney&lt;/a&gt;; &lt;span class="math"&gt;\(u{\in}{\mathbb{R}^p}\)&lt;/span&gt;, u &lt;em&gt;bilinen&lt;/em&gt; bir yöneydir.&lt;/p&gt;
 &lt;p&gt;Doğrusal bileşim dediğimiz işlem aslında bir yöneyin bir dizey ile çarpılması eyleminin adıdır.
 Matematiksel ifadesi şu şekilde:&lt;/p&gt;
 &lt;div class="math"&gt;
@@ -416,30 +506,30 @@ v_5^{T} = \left(
 &lt;/div&gt;
 &lt;p&gt;Bu haliyle bakıldığında &lt;span class="math"&gt;\(v_5\)&lt;/span&gt; yöneyinin örnekteki doğrusal bileşimin şekliyle örtüştüğü görülüyor.&lt;/p&gt;
 &lt;div class="section" id="bonus"&gt;
-&lt;h4&gt;Bonus&lt;/h4&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#id7"&gt;Bonus&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Ufak bir bonus olarak, grafikleri çizerken kullandığım kodu da burada paylaşıyorum:&lt;/p&gt;
-&lt;pre class="code python"&gt;&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-1"&gt;&lt;/a&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-2"&gt;&lt;/a&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;graph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;formula&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x_range&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-4"&gt;&lt;/a&gt;    &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x_range&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-5"&gt;&lt;/a&gt;    &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;eval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;formula&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-7"&gt;&lt;/a&gt;&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-8"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Doğrusal Bağımlı&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-9"&gt;&lt;/a&gt;&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-10"&gt;&lt;/a&gt;&lt;span class="n"&gt;graphX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;graphY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;graph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'-2*x'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-11"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;graphX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;graphY&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Doğrusal bağımlı"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-12"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;legend&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-13"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-14"&gt;&lt;/a&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-15"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Doğrusal Bağımsız&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-16"&gt;&lt;/a&gt;&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-17"&gt;&lt;/a&gt;&lt;span class="n"&gt;graphX1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;graphY1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;graph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'(-2*2*x +3)/-1'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-18"&gt;&lt;/a&gt;&lt;span class="n"&gt;graphX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;graphY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;graph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'(-2*4*x +3)/-5'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-19"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;graphX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;graphY&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Doğrusal Bağımsız 1"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-20"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;graphX1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;graphY1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Doğrusal Bağımsız 2"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-21"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;legend&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;a name="rest_code_0b5802449a8f46e9bdd9986f16638732-22"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-1"&gt;&lt;/a&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-2"&gt;&lt;/a&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;graph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;formula&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x_range&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-4"&gt;&lt;/a&gt;    &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x_range&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-5"&gt;&lt;/a&gt;    &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;eval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;formula&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-7"&gt;&lt;/a&gt;&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-8"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Doğrusal Bağımlı&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-9"&gt;&lt;/a&gt;&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-10"&gt;&lt;/a&gt;&lt;span class="n"&gt;graphX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;graphY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;graph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'-2*x'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-11"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;graphX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;graphY&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Doğrusal bağımlı"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-12"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;legend&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-13"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-14"&gt;&lt;/a&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-15"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Doğrusal Bağımsız&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-16"&gt;&lt;/a&gt;&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-17"&gt;&lt;/a&gt;&lt;span class="n"&gt;graphX1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;graphY1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;graph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'(-2*2*x +3)/-1'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-18"&gt;&lt;/a&gt;&lt;span class="n"&gt;graphX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;graphY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;graph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'(-2*4*x +3)/-5'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-19"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;graphX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;graphY&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Doğrusal Bağımsız 1"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-20"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;graphX1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;graphY1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Doğrusal Bağımsız 2"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-21"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;legend&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-22"&gt;&lt;/a&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Bu yazıyı burada bitiriyorum.
 Bundan sonraki yazı şu zamana kadar anlata geldiğim kavramların tamamını barındırarak, yazının başında temel soru olarak addettiğim ve &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; denklem sistemi hangi durumlarda &lt;span class="math"&gt;\(A^{-1}\)&lt;/span&gt; ile çözülebilir sorusuna bir yanıt vereceğim.
 Sizin konuya eklemek istediğiniz bir şey varsa yorumlarda belirtin lütfen.&lt;/p&gt;
@@ -447,7 +537,7 @@ Sizin konuya eklemek istediğiniz bir şey varsa yorumlarda belirtin lütfen.&lt
 &lt;p&gt;Kaan&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="notlar"&gt;
-&lt;h4&gt;Notlar&lt;/h4&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#id8"&gt;Notlar&lt;/a&gt;&lt;/h4&gt;
 &lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
@@ -457,6 +547,19 @@ Sizin konuya eklemek istediğiniz bir şey varsa yorumlarda belirtin lütfen.&lt
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;</description><category>doğrusal cebir</category><category>makine öğrenimi</category><category>mathjax</category><category>yapay-zeka</category><guid>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/</guid><pubDate>Tue, 20 Jun 2017 01:33:17 GMT</pubDate></item><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 4</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar&lt;/p&gt;
+&lt;div class="contents topic" id="contents"&gt;
+&lt;p class="topic-title first"&gt;Contents&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#dogrusal-bagimlilik-1" id="id3"&gt;Doğrusal Bağımlılık - 1&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#dogru-denklemi" id="id4"&gt;Doğru Denklemi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#dogru-denklem-sistemi" id="id5"&gt;Doğru Denklem Sistemi&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#notlar" id="id6"&gt;Notlar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;p&gt;Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısı.
 Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/"&gt;önceki yazımda&lt;/a&gt; özellikle doğrusal sınıflayıcıların temeli niteliğindeki &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; denklemini çözmeye yarayan matematiksel kavramlar olan ters dizey ve birim dizeyini açıklamıştım.
@@ -528,7 +631,7 @@ u = \left(
 &lt;p&gt;Doğru denklem sistemi ise birden fazla doğrudan oluşan ve aynı değişken yöneyini kullanandır.
 Değişken yöneyinden kastım, yukarıdaki örnekteki "k" gibi, doğru denklemine değişkenlerini veren yöney.
 Bu sistemler genelde &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; şeklinde ifade edilirler.
-Dikkat edilmesi gereken noktaysa, eğer &lt;span class="math"&gt;\(A^{mxp}\)&lt;/span&gt; ve &lt;span class="math"&gt;\(k^{1xp}\)&lt;/span&gt; ise &lt;span class="math"&gt;\(u^{1xm}\)&lt;/span&gt; olacaktır.
+Dikkat edilmesi gereken noktaysa, eğer &lt;span class="math"&gt;\(A^{mxp}\)&lt;/span&gt; ve &lt;span class="math"&gt;\(k^{1xp}\)&lt;/span&gt; ise &lt;span class="math"&gt;\(u^{1xp}\)&lt;/span&gt; olacaktır.
 Bu genellemeyi açık yazacak olursak:&lt;/p&gt;
 &lt;div class="math"&gt;
 \begin{equation*}
@@ -853,7 +956,7 @@ konularını ele alarak, iki yazı boyunca süre gelmiş olan, &lt;span class="m
 &lt;p&gt;Sağlıcakla,&lt;/p&gt;
 &lt;p&gt;Kaan&lt;/p&gt;
 &lt;div class="section" id="notlar"&gt;
-&lt;h4&gt;Notlar&lt;/h4&gt;
+&lt;h4&gt;&lt;a class="toc-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#id6"&gt;Notlar&lt;/a&gt;&lt;/h4&gt;
 &lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;

@@ -13,6 +13,9 @@ Yapay Zeka ve Derin Öğrenime Giriş - 1.1
 
 Merhaba arkadaşlar,
 
+.. contents::
+
+
 Bu yapay zeka ve derin öğrenim ile ilgili yazmaya başladığım serinin ilk bölümü. Temel olarak kullandığım kaynak [DeepLearning2016]_. Bu bölümde::
 
 - Yapay zeka çalışmaları nedir ?

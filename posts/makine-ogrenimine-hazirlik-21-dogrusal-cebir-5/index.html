@@ -15,8 +15,22 @@
 <meta property="og:title" content="Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 5">
 <meta property="og:url" content="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/">
 <meta property="og:description" content="Merhaba Arkadaşlar,
-Makine Öğrenimine Hazırlık yazı dizisinin doğrusal bağımlılık ile ilgili son yazısıyla karşınızdayım
-Bildiğiniz gibi bu yazı dizisini aslında makine öğreniminde ve daha sonrasında ">
+
+Contents
+
+Doğrusal Bağımlılık - 2
+Doğrusal Bileşim
+Katsayı dizeyi
+Doğrusal Aralık
+Bonus
+Notlar
+
+
+
+
+
+
+Makine Öğrenimine Hazırlık yazı dizisinin doğrusal bağımlılık ile ilgili son y">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-06-20T03:33:17+02:00">
 <meta property="article:tag" content="doğrusal cebir">
@@ -82,6 +96,23 @@ Bildiğiniz gibi bu yazı dizisini aslında makine öğreniminde ve daha sonras�
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
         </script><div>
 <p>Merhaba Arkadaşlar,</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li>
+<a class="reference internal" href="#dogrusal-bagimlilik-2" id="id3">Doğrusal Bağımlılık - 2</a><ul>
+<li><a class="reference internal" href="#dogrusal-bilesim" id="id4">Doğrusal Bileşim</a></li>
+<li><a class="reference internal" href="#katsayi-dizeyi" id="id5">Katsayı dizeyi</a></li>
+<li>
+<a class="reference internal" href="#dogrusal-aralik" id="id6">Doğrusal Aralık</a><ul>
+<li><a class="reference internal" href="#bonus" id="id7">Bonus</a></li>
+<li><a class="reference internal" href="#notlar" id="id8">Notlar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <p>Makine Öğrenimine Hazırlık yazı dizisinin doğrusal bağımlılık ile ilgili son yazısıyla karşınızdayım
 Bildiğiniz gibi bu yazı dizisini aslında makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/">önceki yazımda</a> doğrusal bağımlılık konusunun anlaşılabilmesi için gerekli olan doğru denklemi ve doğru sistemi konularını ele almıştım.
@@ -104,7 +135,7 @@ Ele alacağımız kavramlar şunlar:</p>
 <div class="section" id="dogrusal-bilesim">
 <h3><a class="reference internal" href="#dogrusal-bilesim">Doğrusal Bileşim</a></h3>
 <p>Bir doğru sistemini ifade eden denklemi düşünelim, <span class="math">\(Ak=u\)</span>.
-Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler">dizey</a>; <span class="math">\(k{\in}{\mathbb{R}^m}\)</span>, k <em>bilinmeyen</em> bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler">yöney</a>; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.</p>
+Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler">dizey</a>; <span class="math">\(k{\in}{\mathbb{R}^p}\)</span>, k <em>bilinmeyen</em> bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler">yöney</a>; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.</p>
 <p>Doğrusal bileşim dediğimiz işlem aslında bir yöneyin bir dizey ile çarpılması eyleminin adıdır.
 Matematiksel ifadesi şu şekilde:</p>
 <div class="math">
@@ -496,30 +527,30 @@ v_5^{T} = \left(
 </div>
 <p>Bu haliyle bakıldığında <span class="math">\(v_5\)</span> yöneyinin örnekteki doğrusal bileşimin şekliyle örtüştüğü görülüyor.</p>
 <div class="section" id="bonus">
-<h4>Bonus</h4>
+<h4><a class="toc-backref" href="#id7">Bonus</a></h4>
 <p>Ufak bir bonus olarak, grafikleri çizerken kullandığım kodu da burada paylaşıyorum:</p>
-<pre class="code python"><a name="rest_code_0b5802449a8f46e9bdd9986f16638732-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-2"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-3"></a><span class="k">def</span> <span class="nf">graph</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span> <span class="n">x_range</span><span class="p">):</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-4"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x_range</span><span class="p">)</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-5"></a>    <span class="n">y</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">formula</span><span class="p">)</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-6"></a>    <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-7"></a><span class="c1">#</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-8"></a><span class="c1"># Doğrusal Bağımlı</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-9"></a><span class="c1">#</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-10"></a><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span> <span class="o">=</span> <span class="n">graph</span><span class="p">(</span><span class="s1">'-2*x'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal bağımlı"</span><span class="p">)</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-14"></a>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-15"></a><span class="c1"># Doğrusal Bağımsız</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-16"></a><span class="c1">#</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-17"></a><span class="n">graphX1</span><span class="p">,</span> <span class="n">graphY1</span> <span class="o">=</span><span class="n">graph</span><span class="p">(</span><span class="s1">'(-2*2*x +3)/-1'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-18"></a><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span> <span class="o">=</span> <span class="n">graph</span><span class="p">(</span><span class="s1">'(-2*4*x +3)/-5'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-19"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal Bağımsız 1"</span><span class="p">)</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-20"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX1</span><span class="p">,</span> <span class="n">graphY1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal Bağımsız 2"</span><span class="p">)</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-21"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-22"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<pre class="code python"><a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-2"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-3"></a><span class="k">def</span> <span class="nf">graph</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span> <span class="n">x_range</span><span class="p">):</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-4"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x_range</span><span class="p">)</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-5"></a>    <span class="n">y</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">formula</span><span class="p">)</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-6"></a>    <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-7"></a><span class="c1">#</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-8"></a><span class="c1"># Doğrusal Bağımlı</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-9"></a><span class="c1">#</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-10"></a><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span> <span class="o">=</span> <span class="n">graph</span><span class="p">(</span><span class="s1">'-2*x'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal bağımlı"</span><span class="p">)</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-14"></a>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-15"></a><span class="c1"># Doğrusal Bağımsız</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-16"></a><span class="c1">#</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-17"></a><span class="n">graphX1</span><span class="p">,</span> <span class="n">graphY1</span> <span class="o">=</span><span class="n">graph</span><span class="p">(</span><span class="s1">'(-2*2*x +3)/-1'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-18"></a><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span> <span class="o">=</span> <span class="n">graph</span><span class="p">(</span><span class="s1">'(-2*4*x +3)/-5'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-19"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal Bağımsız 1"</span><span class="p">)</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-20"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX1</span><span class="p">,</span> <span class="n">graphY1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal Bağımsız 2"</span><span class="p">)</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-21"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-22"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre>
 <p>Bu yazıyı burada bitiriyorum.
 Bundan sonraki yazı şu zamana kadar anlata geldiğim kavramların tamamını barındırarak, yazının başında temel soru olarak addettiğim ve <span class="math">\(Ak=u\)</span> denklem sistemi hangi durumlarda <span class="math">\(A^{-1}\)</span> ile çözülebilir sorusuna bir yanıt vereceğim.
@@ -528,7 +559,7 @@ Sizin konuya eklemek istediğiniz bir şey varsa yorumlarda belirtin lütfen.</p
 <p>Kaan</p>
 </div>
 <div class="section" id="notlar">
-<h4>Notlar</h4>
+<h4><a class="toc-backref" href="#id8">Notlar</a></h4>
 <table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup>
 <col class="label">

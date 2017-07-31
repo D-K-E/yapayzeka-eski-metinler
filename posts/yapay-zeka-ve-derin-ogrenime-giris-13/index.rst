@@ -9,6 +9,9 @@
 
 Merhaba Arkadaşlar,
 
+.. contents::
+
+
 Bir `önceki yazımda <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-2/>`_ *Temsil Öğrenimi* veya diğer bir adıyla *Nitelik Öğrenimi* konusuna değinmiştim.
 Otomatik kodlayıcıların aldıkları işlevlerden ve temsilde açığa çıkan değişiklik unsurlarıyla, gözlemlenenlerin ayrıştırıcı özellikleri arasındaki ilişkiden bahsetmiştim.
 Ayrıştırıcı özelliklerin arasındaki karşılıklı etkileşim dolayısıyla temsil öğrenimindeki aşılması güç gözüken bir sorun olan değişiklik unsurlarının birbirinden ayrıştırılması işlemini açıklamaya çalıştım.

@@ -12,6 +12,9 @@ Yapay Zeka ve Derin Öğrenime Giriş - 1.2
 
 Merhaba Arkadaşlar,
 
+.. contents::
+
+
 Daha `önceki yazımda <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/>`_, yapay zeka çalışmalarında Derin Öğrenime gelene kadar kullanılagelmiş yöntem ve yaklaşımların kısa bir özetini yapmıştım. En son gelinen noktada, makine öğrenimi için gereken temsilde nitelik oluşturma zorunluluğuna kırmızı ışıkta geçen arabaların plakasını yakalamak problemi üzerinden değinmiştim.
 
 

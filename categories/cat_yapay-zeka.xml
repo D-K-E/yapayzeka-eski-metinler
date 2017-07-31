@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (yapay-zeka ile ilgili yazılar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link type="application/rss+xml" href="https://d-k-e.github.io/yapayzeka-eski-metinler/categories/cat_yapay-zeka.xml" rel="self"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Jun 2017 22:11:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 3: Birim Dizeyi Ters Dizey</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar,&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (yapay-zeka ile ilgili yazılar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link rel="self" type="application/rss+xml" href="https://d-k-e.github.io/yapayzeka-eski-metinler/categories/cat_yapay-zeka.xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Mon, 31 Jul 2017 15:01:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 3: Birim Dizeyi Ters Dizey</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar,&lt;/p&gt;
+&lt;div class="contents topic" id="contents"&gt;
+&lt;p class="topic-title first"&gt;Contents&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#birim-dizeyi" id="id7"&gt;Birim Dizeyi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#ters-dizey" id="id8"&gt;Ters Dizey&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#notlar" id="id9"&gt;Notlar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;p&gt;Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısıyla karşınızdayım.
 Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/"&gt;önceki yazımda&lt;/a&gt; makine öğrenimi algoritmalarının sıklıkla kullandığı işlemleri dile getirmiştim.
 Eğer makine öğrenimine yeni başlıyorsanız, bu yazı dizisinin &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/"&gt;ilk bölümünden&lt;/a&gt; başlamanızı tavsiye ederim.
 Eğer çok çok yeniyseniz ve "Makine Öğrenimi Nedir, Derin Öğrenim Nedir ?", gibi sorulara cevap bulmaya geldiyseniz, bunun için üç bölümlük bu konulara değinen &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/"&gt;ilk yazı dizisini&lt;/a&gt; tavsiye ederim.&lt;/p&gt;
 &lt;p&gt;Bu yazımda aslında bir önceki yazıda vermiş olduğum &lt;span class="math"&gt;\(Ak=u\)&lt;/span&gt; denklemine değineceğim.
-Denklemde &lt;span class="math"&gt;\(A{\in}{\mathbb{R}}^{mxp}\)&lt;/span&gt;, A bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler"&gt;dizey&lt;/a&gt;; &lt;span class="math"&gt;\(k{\in}{\mathbb{R}^m}\)&lt;/span&gt;, k &lt;em&gt;bilinmeyen&lt;/em&gt; bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler"&gt;yöney&lt;/a&gt;; &lt;span class="math"&gt;\(u{\in}{\mathbb{R}^p}\)&lt;/span&gt;, u &lt;em&gt;bilinen&lt;/em&gt; bir yöneydir.&lt;/p&gt;
+Denklemde &lt;span class="math"&gt;\(A{\in}{\mathbb{R}}^{mxp}\)&lt;/span&gt;, A bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler"&gt;dizey&lt;/a&gt;; &lt;span class="math"&gt;\(k{\in}{\mathbb{R}^p}\)&lt;/span&gt;, k &lt;em&gt;bilinmeyen&lt;/em&gt; bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler"&gt;yöney&lt;/a&gt;; &lt;span class="math"&gt;\(u{\in}{\mathbb{R}^p}\)&lt;/span&gt;, u &lt;em&gt;bilinen&lt;/em&gt; bir yöneydir.&lt;/p&gt;
 &lt;p&gt;Bu denklemin çözümü için inceleyeceğimiz konu başlıkları şunlar:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Birim Dizeyi&lt;/li&gt;
@@ -134,7 +144,7 @@ Eklemek istediğiniz bir şey varsa, ya da anlamadığınız bir şey varsa, yor
 &lt;p&gt;Sağlıcakla,&lt;/p&gt;
 &lt;p&gt;Kaan&lt;/p&gt;
 &lt;div class="section" id="notlar"&gt;
-&lt;h3&gt;Notlar&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id9"&gt;Notlar&lt;/a&gt;&lt;/h3&gt;
 &lt;table class="docutils footnote" frame="void" id="id4" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
@@ -155,6 +165,18 @@ Eklemek istediğiniz bir şey varsa, ya da anlamadığınız bir şey varsa, yor
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;</description><category>dizey</category><category>makine öğrenimi</category><category>mathjax</category><guid>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/</guid><pubDate>Fri, 09 Jun 2017 01:39:11 GMT</pubDate></item><item><title>Makine Öğrenimine Hazırlık 2.1: Doğrusal Cebir- 1.1: Terimler</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba arkadaşlar,&lt;/p&gt;
+&lt;div class="contents topic" id="contents"&gt;
+&lt;p class="topic-title first"&gt;Contents&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#sayillar" id="id5"&gt;Sayıllar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler" id="id6"&gt;Yöneyler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler" id="id7"&gt;Dizeyler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#gereyler" id="id8"&gt;Gereyler&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#notlar" id="id9"&gt;Notlar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;p&gt;Bundan önceki, Derin Öğrenime Giriş &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/"&gt;yazı dizisinde&lt;/a&gt;, çok kabaca derin öğrenimin ne olduğundan, ne tip modeller kullandığından, ilgilendiği problemlerden ve bu problemlere sunduğu çözümlerden bahsettim.
 Bu yazı dizisini ise Derin Öğrenim algoritmalarını açıklarken kullanacağım matematiksel alt yapıya ayırdım.
 Bu alt yapının ilk ayağı hiç kuşkusuz doğrusal cebir. Doğrusal cebiri üniversitede görmeseler de liseden hatırlayanlar olacaktır.
@@ -250,7 +272,7 @@ Anlaşılmayan bir şey varsa, ya da eklemek istediğiniz bir şey varsa lütfen
 &lt;p&gt;Sağlıcakla,&lt;/p&gt;
 &lt;p&gt;Kaan&lt;/p&gt;
 &lt;div class="section" id="notlar"&gt;
-&lt;h3&gt;Notlar&lt;/h3&gt;
+&lt;h3&gt;&lt;a class="toc-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#id9"&gt;Notlar&lt;/a&gt;&lt;/h3&gt;
 &lt;table class="docutils footnote" frame="void" id="id3" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
@@ -321,6 +343,13 @@ Anlaşılmayan, ya da çok açık gözükmeyen noktaları lütfen yorumlarda bel
 Elimden geldiğince açıklamaya çalışırım.&lt;/p&gt;
 &lt;p&gt;Sağlıcakla,&lt;/p&gt;
 &lt;p&gt;Kaan&lt;/p&gt;&lt;/div&gt;</description><category>derin-öğrenim</category><category>makine öğrenimi</category><category>yapay-zeka</category><guid>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-13/</guid><pubDate>Sun, 28 May 2017 01:52:32 GMT</pubDate></item><item><title>Yapay Zeka ve Derin Öğrenime Giriş - 1.1</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/</link><dc:creator>Doğu Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba arkadaşlar,&lt;/p&gt;
+&lt;div class="contents topic" id="contents"&gt;
+&lt;p class="topic-title first"&gt;Contents&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/#terimler" id="id12"&gt;Terimler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/#notlar" id="id13"&gt;Notlar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;p&gt;Bu yapay zeka ve derin öğrenim ile ilgili yazmaya başladığım serinin ilk bölümü. Temel olarak kullandığım kaynak &lt;a class="citation-reference" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/#deeplearning2016" id="id1"&gt;[DeepLearning2016]&lt;/a&gt;. Bu bölümde:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 - Yapay zeka çalışmaları nedir ?
@@ -348,7 +377,7 @@ Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-esk
 &lt;p&gt;Sağlıcakla,&lt;/p&gt;
 &lt;p&gt;Kaan&lt;/p&gt;
 &lt;div class="section" id="terimler"&gt;
-&lt;h2&gt;Terimler&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id12"&gt;Terimler&lt;/a&gt;&lt;/h2&gt;
 &lt;table class="docutils footnote" frame="void" id="id8" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
@@ -375,7 +404,7 @@ Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-esk
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;div class="section" id="notlar"&gt;
-&lt;h2&gt;Notlar&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id13"&gt;Notlar&lt;/a&gt;&lt;/h2&gt;
 &lt;table class="docutils citation" frame="void" id="deeplearning2016" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;

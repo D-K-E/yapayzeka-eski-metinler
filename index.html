@@ -9,7 +9,8 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://d-k-e.github.io/yapayzeka-eski-metinler/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/" type="text/html">
+<link rel="next" href="index-1.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/" type="text/html">
 </head>
 <body class="theme-base-0b">
     <a href="#content" class="sr-only sr-only-focusable">Ana içeriğe geç</a>
@@ -49,7 +50,168 @@
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/" class="u-url">Çukurovalılarla ilgili Mevzu - Arşm Mektupları - TAD A6.7</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/" class="u-url">Dillerarası Bilgi Alım Teknikleri Üzerine Notlar - 1</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Kaan Eraslan</span></p>
+            <p class="dateline"><a href="posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-07-17T14:48:38+02:00" title="2017-07-17 14:48">2017-07-17 14:48</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/#disqus_thread" data-disqus-identifier="cache/posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Merhaba Arkadaşlar,</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/#bilgi-alimda-karsilasilan-sorunlar" id="id1">Bilgi Alımda Karşılaşılan Sorunlar</a></li>
+<li><a class="reference internal" href="posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/#bilgi-alim-yontemlerinin-unsurlari" id="id2">Bilgi Alım Yöntemlerinin Unsurları</a></li>
+</ul>
+</div>
+<p>Bu yazı dizisinde dillerarası bilgi alım tekniklerine değineceğim. Kullandığım temel kaynak: Nie, Jian-Yun, Cross-Language Information Retrieval, Synthesis Lectures in Human Language Technologies, 8 (2010).
+Internette kendisini bulmak mümkün.</p>
+<p>Önce konuya bir giriş niteliğinde olması için genel bilgi alım yöntemlerinin uygulama alanları, karşılaşılan sorunlar ve bu sorunlara cevap niteliğinde gelen modellerden bahsedeceğim.</p>
+<div class="section" id="bilgi-alimda-karsilasilan-sorunlar">
+<h2><a class="reference internal" href="posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/#bilgi-alimda-karsilasilan-sorunlar">Bilgi Alımda Karşılaşılan Sorunlar</a></h2>
+<p>Bilgi alım yöntemleri, adı üstünde, ulaşmak istediğiniz bilgiyi size sunmaya çalışır.
+Sayısal ortamda gerçekleştirilen bir bilgi alım sürecinin kabaca iki ana unsuru var:</p>
+<ul class="simple">
+<li>Bilgi ihtiyacını temsil eden</li>
+<li>Bilgi ihtiyacına cevap veren</li>
+</ul>
+<p>Bu ikisinin ne olduğu ve aralarındaki ilişkinin nasıl kurulduğu, daha doğrusu ne olduğuna bağlı olarak nasıl kurulduğu, bilgi alımda yöntemlerinin temel uygulama alanlarını ve ilgilendiği sorunları oluşturuyor.</p>
+<p>Bir bilgi alım problemi örneği verelim:</p>
+<p>Diyelim sevdiğiniz bir müzisyenin örneğin Emiltan Erten'in ya da Müşfik Can Müftüoğlunun bir parçasını dinlemek istediniz.
+Ya da tatildesiniz, örneğin Kaş'ta, ve dalış yapmak istiyorsunuz, sizinle dalan hocanın adı aklınızda, Anıl Bozkırlı, tekne de aklınızda naturablue, ama teknenin kalkış saatlerini hatırlamıyorsunuz.
+Elinizde parçanın adı var, müzisyenin adı var. İşte bunar bilgi ihtiyacınızı temsil edenler, dinlemek istediğiniz parçaysa bilgi ihtiyacınıza cevap veren, ya da teknenin saatleri bilgi ihtiyacınıza cevap veren.</p>
+<p>Daha aykırı bir örnek verelim:</p>
+<p>Bir şarkı bestelediniz, çok tuttu.
+Öyle ki başka insanlar sizden telif almadan sağda solda parçanızı çalmaya ve hatta kendi parçalarıymış gibi pazarlamaya başladılar.
+Siz bu insanları dava etmek istiyorsunuz. Bu senaryoda bilgi ihtiyacını temsil eden sizin parçanız, bilgi ihtiyacına cevap verense diğer insanların parçaları.
+Bu senaryoda gerçekleşecek olan şey şu. Bir arama motoruna kendi parçanızı yükleyeceksiniz, o da size sizin parçalarınıza benzer parçaların listesini verecek.</p>
+<p>Geneli itibariyle bilgi alım süreçleri ve metodları her ne kadar metin dışındaki aracılara da uygulanabiliyor olsa da, genel uygulama alanı metindir, yani genelde bilgi ihtiyacını temsil eden ve ona cevap veren uzunluğu değişebilir olmak kaydıyla bir karakter zinciridir.</p>
+</div>
+<div class="section" id="bilgi-alim-yontemlerinin-unsurlari">
+<h2><a class="reference internal" href="posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/#bilgi-alim-yontemlerinin-unsurlari">Bilgi Alım Yöntemlerinin Unsurları</a></h2>
+<p>Kabaca bir bilgi alım sürecinde etkin olan beş unsur vardır:</p>
+<dl class="docutils">
+<dt>Belge derlemi</dt>
+<dd>Belge derlemi genellikle bilgi ihtiacına cevap vermesi beklenen belgelerin toplamından oluşur. Bu örneğin bir arama motoru için, internetteki sayfalardır.</dd>
+<dt>Sorgu</dt>
+<dd>Bu bir kelime de olabilir, bir belge de, bir cümle de. Bilgi ihtiyacını arayan failin bilgi ihtiyacına verene ulaşmak için kullandığı aracıdır. Örneğin, ulaşmak istediğiniz sayfanın çıkması için arama motoruna yazdığınız kelimeler.</dd>
+<dt>Dizinleme</dt>
+<dd>Bu belge ve sorgu için belge bir süreçtir. Genellikle belgenin ve sorgunun temsil şeklinin değiştirilmesi sayesinde olur. Örneğin, girdiğiniz sorguyu, girerken kullandığınız kelimelerin sıklığı ve sırası olarak temsil edebilirsiniz, bu derleminizdeki belgeler içinde geçerli.</dd>
+<dt>Benzerlik Notu</dt>
+<dd>Sorgu ve belge arasındaki benzerliğin ne kadar olduğunu hesaplamaya yarayan algoritmalar sonucunda ortaya çıkan nottur. Genellikle, bilgi ihtiyacına cevap verenlerin sıraya konmasında kullanılır.</dd>
+<dt>Geri Bildirim</dt>
+<dd>Bilgi ihtiyacının karşılanması adına sunduğunuz belgelerin ne kadar ilgili olduğuna dair kullanıcıların yaptığı geri dönüştür. Pratikte kullanıcılar nadiren böyle bir sürece dahil olurlar. Bu yüzden genelde <em>yalancı ilgililik geri bildirimleri</em> kullanırlar. Bu da tıklanan tepedeki belgelerin daha ilgili olduğunu varsaymak şeklinde gerçekleşir.</dd>
+</dl>
+<p>Bu yazıyı burada bitiriyorum, zira bundan sonra gelen konu bilgi alım modelleri ve başlı başına bir yazı olmayı hak ediyor.</p>
+<p>Sağlıcakla,</p>
+<p>Kaan</p>
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-6/" class="u-url">Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 6</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Kaan Eraslan</span></p>
+            <p class="dateline"><a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-6/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-07-04T02:25:17+02:00" title="2017-07-04 02:25">2017-07-04 02:25</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-6/#disqus_thread" data-disqus-identifier="cache/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-6.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Merhaba Arkadaşlar,</p>
+<p>Bu yazıda <span class="math">\(Ak=u\)</span> denklem sistemi hangi durumlarda <span class="math">\(A^{-1}\)</span> ile çözülebilir sorusuna bir yanıt vereceğim.
+Bundan önceki yazılar boyunca, özellikle Doğrusal Cebir 3-5 arasında bu sorunun çözümünde kullanılacak kavramsal alt yapıyı vermeye çalıştım.
+Bildiğiniz gibi bu yazı dizisini aslında makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
+Eğer makine öğrenimine yeni başlıyorsanız, bu yazı dizisinin <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/">ilk bölümünden</a> başlamanızı tavsiye ederim.
+Eğer çok çok yeniyseniz ve "Makine Öğrenimi Nedir, Derin Öğrenim Nedir ?", gibi sorulara cevap bulmaya geldiyseniz, bunun için üç bölümlük bu konulara değinen <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/">ilk yazı dizisini</a> tavsiye ederim.</p>
+<p>Denklemimizdeki elemanları hatırlayalım: <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler">dizey</a>; <span class="math">\(k{\in}{\mathbb{R}^p}\)</span>, k <em>bilinmeyen</em> bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler">yöney</a>; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.
+Kısaca "k"'nın değerini bulmaya çalışıyoruz.
+Bunun için <span class="math">\(A^{-1}\)</span> ters dizeyini kullanarak şu çözüme gitmiştik:</p>
+<div class="math">
+\begin{equation*}
+Ak=u
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+A^{-1}Ak = uA^{-1}
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+I_nk=uA^{-1}
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+k=uA^{-1}
+\end{equation*}
+</div>
+<p>Bu hatırlatmayı burada bırakalım.
+Daha detaylı bir açıklama için, <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#ters-dizey">buraya</a> bakabilirsiniz.</p>
+<p>Burada "k"'nın bir çözümünün olması, "u"'nun, "k" ve "A"'nın çarpımından oluştuğu düşünülürse, A'nın <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-aralik">sütun alanında</a>  olmasına bağlıdır.
+Bu durumda, yine aynı işlemde gerçekleştirilen <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#yoney-carpimi">nokta çarpımı</a> dolayısıyla <span class="math">\(u{\in}{\mathbb{R}^m}\)</span> halini varsayar.
+Kısaca "u" yöneyinin elemanları "A" dizeyinin katsayı yöneyi ile çarpılıp toplanmasından oluştuğundan ve katsayı yöneyi bilinmeyen olduğundan, "u"nun elemanlarının A yöneyinin satırlarının elemanlarının ait olduğu kümeye ait olması beklenir.
+Katsayı yöneyinin bilinmeyen olması durumu, denklemin çözülebilmesi için "A"'nın sütun alanının <span class="math">\({\mathbb{R}^m}\)</span> kümesini kapsamasını gerektirir, zira eğer herhangi bir nokta sütun alanından eksik ise "u" nun o nokta için alabileceği değerin çözümü yoktur.
+Daha önceki yazılarımda dizey çarpımı işleminin nasıl yapıldığına değinmiştim, ama burada gözünüzde canlandıramadıysanız bir kere daha belirteyim.
+A dizeyi ile "k" yöneyini çarpmak demek, A dizeyinin satırlarının her birinde bulunan elemanları "k" yöneyinin satıra denk gelen elemanıyla çarparak, dizey satırını kendi içinde toplamak demek olduğundan, bu işlem sonucu oluşacak "u" yöneyinin ilgili elemanının da A dizeyinin satırlarını kapsayan kümeye dahil olması beklenir, çünkü en nihayetinde yapılan şey A dizeyinin bir satırını katsayı yöneyinin sayıllarıyla çarpıp toplamak.</p>
+<p>Şimdi, "m" A'nın satır sayısını temsil ettiğine göre, ve yukarıda belirttiğim <span class="math">\(u{\in}{\mathbb{R}^m}\)</span> durumu da geçerli olduğuna göre, şu göstergeyi de kabul etmek durumundayız, <span class="math">\(p {\ge} m\)</span>.
+Neden ? Çünkü A dizeyinin k yöneyi ile çarpımı sonucu oluşacak olanın p sütun sayısına sahip olacağını dizey çarpımı işleminin yapısı gereği olduğunu biliyoruz.
+Yine aynı şekilde eğer "u" yöneyinin elemanlarının <span class="math">\({\mathbb{R}^m}\)</span> kümesine dahil olduklarını da biliyoruz.
+O halde "p" "m"'den küçük olamaz, çünkü eğer olursa "u" yöneyinin elemanlarından biri A dizeyinin sütun alanın dışında kalır.
+Bunun getireceği sonuç "u"'yöneyinin denklem sisteminin her bileşimi için sonucunun garanti olmaması olacaktır.</p>
+<p>Ancak şunu biliyoruz, doğrusal bağımlılık gösteren yöneyler, aslında tek bir yöney ile temsil edilebiliyorlar.
+Dolayısıyla sütun alanına yaptıkları bir etki yok. Bu şu demek, <span class="math">\(p {\ge} m\)</span> şartına bir de, bir veya daha fazla m boyutlu doğrusal bağımsızlık gösteren denklemler kümesi barındırmak eklendi.
+Sorulabilecek makul soru şu, neden "p" "m"'den büyük olabiliyorken, barındırılabilecek bağımsız denklemler kümesi "m" üzerinden birimleniyor ?
+Bunun sebebi şu, yukarıda belirttiğim gibi esasında <span class="math">\(p {\ge} m\)</span> bir gösterge, yani ilk elde baktığınızda size bir fikir verecek, kabaca eleme yapabilmenizi sağlayacak bir belirti.
+Doğrusal bağımlılık söz konusu olduğunda bu göstergenin işlememesi riski var, çünkü elinizdeki denklem sisteminde her ne kadar <span class="math">\(p {\ge} m\)</span> tutuyor olsa da bağımlı denklemler tek bir denklem olarak temsil edilebildiği için <span class="math">\(p {\le} m\)</span> riski var.
+Bu riskin oluşmaması için kontrol etmemiz gereken, A dizeyinin sütun alanının "m" boyutunda bir bağımsız denklemler kümesini barındırıp barındırmadığı.
+"m" boytundaki bir denklemler kümesinin "m" taneden daha fazla bağımsız denkleme sahip olamayacağı düşünülürse, zira hiçbir denklem bir diğeri cinsinden yazılamayacaktır, A dizeyinin u yöneyi bağlamında yukarıdaki şartları sağlayabilmesi için, m üzerinden birimlenen bir bağımsız denklemler kümesini barındırması gerektiği aşikardır.
+Kaç tane "m" kadar barındıracağı sorun değil, ancak bir veya daha fazla "m" boyutlu küme barındırması şart.</p>
+<p>Sorumuzun diğer ayağına gelelim, <span class="math">\(Ak=u\)</span> denklem sistemini <span class="math">\(A^{-1}\)</span> ile çözmeye çalıştığımı yazmıştım.
+Ters dizeyi bir önceki yazılardan hatırlayanlar, onun düzüyle çarpıldığında birim dizeyi verdiğini hatırlayacaklardır.
+Birim dizeyin temel şartı olan kendisiyle çarpılanı değiştirmeme özelliğinin temel dayanağı olan kare şeklinde olmayı, yani satır sayısının sütun sayısına eşit olmasını da hatırlayalım.
+Bu bağlamda belki de en başta söylememiz gereken en bariz olgu şuydu, A dizeyi eğer ters dizey ile çözülebiliyorsa, kare şeklindedir, yani <span class="math">\(p {\ge} m\)</span> filan demeye gerek kalmadan, baştan <span class="math">\(p = m\)</span> olmak durumundadır arkadaşlar da diyebilirdim.
+Takip ettiğim kaynak <a class="footnote-reference" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-6/#id2" id="id1">[1]</a> bunu bu şekilde sunmuyor, yani bunu başta sunmuyor ki iyi de yapıyor aslında, çünkü mantıken denklemin kendisinin çözülebilme şartlarının denklemin bir yöntemle çözülebilme şartına öncelenmesi gerekir.</p>
+<p>O halde soruya tam yanıt verelim.</p>
+<p>Soru şuydu:</p>
+<ul class="simple">
+<li>
+<span class="math">\(Ak=u\)</span> denklem sistemi hangi durumlarda <span class="math">\(A^{-1}\)</span> ile çözülebilir ?</li>
+</ul>
+<p>Cevabıysa şu:</p>
+<ul class="simple">
+<li>Eğer A'nın satır ve sütun sayısı birbirine eşitse ve sütunlarını oluşturan yöneyler doğrusal bağımsızlık şartını sağlıyorsa, <span class="math">\(Ak=u\)</span> denklem sistemi <span class="math">\(A^{-1}\)</span> ile çözülebilir.</li>
+</ul>
+<p>Bu yazıyı burada bitiriyorum.
+Doğrusal Cebir üzerine olan yazı dizisinin bir sonraki yazısı, yöney normları, üzerine olacak.
+Eklemek istediğiniz bir şey varsa, ya da daha iyi açıklanmasını talep ettiğiniz bir şey lütfen yorumlarda belirtin.</p>
+<p>Sağlıcakla,</p>
+<p>Kaan</p>
+<!-- deep learning p., 38 -->
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-6/#id1">[1]</a></td>
+<td>Kaynağı önceki yazılarımda sıkça belirttim. Goodfellow I.,Y. Bengio, Deep Learning, Cambridge, 2016.</td>
+</tr></tbody>
+</table>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/" class="u-url">Çukurovalılarla ilgili Mevzu - Arşm Mektupları - TAD A6.7</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Kaan Eraslan</span></p>
             <p class="dateline"><a href="posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-07-03T01:07:12+02:00" title="2017-07-03 01:07">2017-07-03 01:07</time></a></p>
@@ -65,6 +227,19 @@
 <p>Bu yazı daha önceki blogumdan alıntıdır.</p>
 <div class="section" id="arsm-mektuplari-tad-a6-7">
 <h2><a class="reference internal" href="posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/#arsm-mektuplari-tad-a6-7">Arşm Mektupları – TAD A6.7</a></h2>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li>
+<a class="reference internal" href="posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/#arsm-mektuplari-tad-a6-7" id="id1">Arşm Mektupları – TAD A6.7</a><ul>
+<li><a class="reference internal" href="posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/#ibranice-harf-cevirisi-hebrew-transliteration" id="id2">İbranice Harf Çevirisi / Hebrew Transliteration</a></li>
+<li><a class="reference internal" href="posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/#latin-harfi-cevirisi-latin-transliteration" id="id3">Latin Harfi Çevirisi / Latin Transliteration</a></li>
+<li><a class="reference internal" href="posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/#ceviri-translation" id="id4">Çeviri / Translation</a></li>
+<li><a class="reference internal" href="posts/cukurovalilarla-ilgili-mevzu-arsm-mektuplari-tad-a67/#kelimeler-ve-cozumlemeleri-vocabulary-and-word-analysis" id="id5">Kelimeler ve Çözümlemeleri / Vocabulary and Word Analysis</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>Porten ve Yardeni, TAD A6.7'den uyarlanmıştır / Reproduced from Porten and Yardeni TAD A6.7</p>
 <p>Aşağıdaki resim asıl yazının neye benzediğini örnekleme amacıyla konulmuştur, filolojik içeriği aynı olmakla beraber papirüsün fiziksel görünümüyle alakası yoktur.</p>
 <img alt="/images/cukurova_arsames/TAD_A67_illustration.png" src="images/cukurova_arsames/TAD_A67_illustration.png"><div class="section" id="ibranice-harf-cevirisi-hebrew-transliteration">
@@ -297,6 +472,23 @@ They shall do my work just as before.</p>
     </header><div class="e-content entry-content">
     <div>
 <p>Merhaba Arkadaşlar,</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li>
+<a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-bagimlilik-2" id="id3">Doğrusal Bağımlılık - 2</a><ul>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-bilesim" id="id4">Doğrusal Bileşim</a></li>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#katsayi-dizeyi" id="id5">Katsayı dizeyi</a></li>
+<li>
+<a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-aralik" id="id6">Doğrusal Aralık</a><ul>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#bonus" id="id7">Bonus</a></li>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#notlar" id="id8">Notlar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <p>Makine Öğrenimine Hazırlık yazı dizisinin doğrusal bağımlılık ile ilgili son yazısıyla karşınızdayım
 Bildiğiniz gibi bu yazı dizisini aslında makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/">önceki yazımda</a> doğrusal bağımlılık konusunun anlaşılabilmesi için gerekli olan doğru denklemi ve doğru sistemi konularını ele almıştım.
@@ -319,7 +511,7 @@ Ele alacağımız kavramlar şunlar:</p>
 <div class="section" id="dogrusal-bilesim">
 <h3><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#dogrusal-bilesim">Doğrusal Bileşim</a></h3>
 <p>Bir doğru sistemini ifade eden denklemi düşünelim, <span class="math">\(Ak=u\)</span>.
-Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler">dizey</a>; <span class="math">\(k{\in}{\mathbb{R}^m}\)</span>, k <em>bilinmeyen</em> bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler">yöney</a>; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.</p>
+Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler">dizey</a>; <span class="math">\(k{\in}{\mathbb{R}^p}\)</span>, k <em>bilinmeyen</em> bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler">yöney</a>; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.</p>
 <p>Doğrusal bileşim dediğimiz işlem aslında bir yöneyin bir dizey ile çarpılması eyleminin adıdır.
 Matematiksel ifadesi şu şekilde:</p>
 <div class="math">
@@ -711,30 +903,30 @@ v_5^{T} = \left(
 </div>
 <p>Bu haliyle bakıldığında <span class="math">\(v_5\)</span> yöneyinin örnekteki doğrusal bileşimin şekliyle örtüştüğü görülüyor.</p>
 <div class="section" id="bonus">
-<h4>Bonus</h4>
+<h4><a class="toc-backref" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#id7">Bonus</a></h4>
 <p>Ufak bir bonus olarak, grafikleri çizerken kullandığım kodu da burada paylaşıyorum:</p>
-<pre class="code python"><a name="rest_code_0b5802449a8f46e9bdd9986f16638732-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-2"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-3"></a><span class="k">def</span> <span class="nf">graph</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span> <span class="n">x_range</span><span class="p">):</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-4"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x_range</span><span class="p">)</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-5"></a>    <span class="n">y</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">formula</span><span class="p">)</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-6"></a>    <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-7"></a><span class="c1">#</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-8"></a><span class="c1"># Doğrusal Bağımlı</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-9"></a><span class="c1">#</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-10"></a><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span> <span class="o">=</span> <span class="n">graph</span><span class="p">(</span><span class="s1">'-2*x'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal bağımlı"</span><span class="p">)</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-14"></a>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-15"></a><span class="c1"># Doğrusal Bağımsız</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-16"></a><span class="c1">#</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-17"></a><span class="n">graphX1</span><span class="p">,</span> <span class="n">graphY1</span> <span class="o">=</span><span class="n">graph</span><span class="p">(</span><span class="s1">'(-2*2*x +3)/-1'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-18"></a><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span> <span class="o">=</span> <span class="n">graph</span><span class="p">(</span><span class="s1">'(-2*4*x +3)/-5'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-19"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal Bağımsız 1"</span><span class="p">)</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-20"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX1</span><span class="p">,</span> <span class="n">graphY1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal Bağımsız 2"</span><span class="p">)</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-21"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<a name="rest_code_0b5802449a8f46e9bdd9986f16638732-22"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<pre class="code python"><a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-2"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-3"></a><span class="k">def</span> <span class="nf">graph</span><span class="p">(</span><span class="n">formula</span><span class="p">,</span> <span class="n">x_range</span><span class="p">):</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-4"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x_range</span><span class="p">)</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-5"></a>    <span class="n">y</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">formula</span><span class="p">)</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-6"></a>    <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-7"></a><span class="c1">#</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-8"></a><span class="c1"># Doğrusal Bağımlı</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-9"></a><span class="c1">#</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-10"></a><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span> <span class="o">=</span> <span class="n">graph</span><span class="p">(</span><span class="s1">'-2*x'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal bağımlı"</span><span class="p">)</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-14"></a>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-15"></a><span class="c1"># Doğrusal Bağımsız</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-16"></a><span class="c1">#</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-17"></a><span class="n">graphX1</span><span class="p">,</span> <span class="n">graphY1</span> <span class="o">=</span><span class="n">graph</span><span class="p">(</span><span class="s1">'(-2*2*x +3)/-1'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-18"></a><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span> <span class="o">=</span> <span class="n">graph</span><span class="p">(</span><span class="s1">'(-2*4*x +3)/-5'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-19"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX</span><span class="p">,</span> <span class="n">graphY</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal Bağımsız 1"</span><span class="p">)</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-20"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">graphX1</span><span class="p">,</span> <span class="n">graphY1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Doğrusal Bağımsız 2"</span><span class="p">)</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-21"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<a name="rest_code_d40c2d173b4a4ec7b3baa7d313caea20-22"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre>
 <p>Bu yazıyı burada bitiriyorum.
 Bundan sonraki yazı şu zamana kadar anlata geldiğim kavramların tamamını barındırarak, yazının başında temel soru olarak addettiğim ve <span class="math">\(Ak=u\)</span> denklem sistemi hangi durumlarda <span class="math">\(A^{-1}\)</span> ile çözülebilir sorusuna bir yanıt vereceğim.
@@ -743,7 +935,7 @@ Sizin konuya eklemek istediğiniz bir şey varsa yorumlarda belirtin lütfen.</p
 <p>Kaan</p>
 </div>
 <div class="section" id="notlar">
-<h4>Notlar</h4>
+<h4><a class="toc-backref" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-5/#id8">Notlar</a></h4>
 <table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup>
 <col class="label">
@@ -774,6 +966,21 @@ Sizin konuya eklemek istediğiniz bir şey varsa yorumlarda belirtin lütfen.</p
     </header><div class="e-content entry-content">
     <div>
 <p>Merhaba Arkadaşlar</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li>
+<a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#dogrusal-bagimlilik-1" id="id3">Doğrusal Bağımlılık - 1</a><ul>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#dogru-denklemi" id="id4">Doğru Denklemi</a></li>
+<li>
+<a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#dogru-denklem-sistemi" id="id5">Doğru Denklem Sistemi</a><ul>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#notlar" id="id6">Notlar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <p>Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısı.
 Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/">önceki yazımda</a> özellikle doğrusal sınıflayıcıların temeli niteliğindeki <span class="math">\(Ak=u\)</span> denklemini çözmeye yarayan matematiksel kavramlar olan ters dizey ve birim dizeyini açıklamıştım.
@@ -845,7 +1052,7 @@ u = \left(
 <p>Doğru denklem sistemi ise birden fazla doğrudan oluşan ve aynı değişken yöneyini kullanandır.
 Değişken yöneyinden kastım, yukarıdaki örnekteki "k" gibi, doğru denklemine değişkenlerini veren yöney.
 Bu sistemler genelde <span class="math">\(Ak=u\)</span> şeklinde ifade edilirler.
-Dikkat edilmesi gereken noktaysa, eğer <span class="math">\(A^{mxp}\)</span> ve <span class="math">\(k^{1xp}\)</span> ise <span class="math">\(u^{1xm}\)</span> olacaktır.
+Dikkat edilmesi gereken noktaysa, eğer <span class="math">\(A^{mxp}\)</span> ve <span class="math">\(k^{1xp}\)</span> ise <span class="math">\(u^{1xp}\)</span> olacaktır.
 Bu genellemeyi açık yazacak olursak:</p>
 <div class="math">
 \begin{equation*}
@@ -1196,7 +1403,7 @@ konularını ele alarak, iki yazı boyunca süre gelmiş olan, <span class="math
 <p>Sağlıcakla,</p>
 <p>Kaan</p>
 <div class="section" id="notlar">
-<h4>Notlar</h4>
+<h4><a class="toc-backref" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/#id6">Notlar</a></h4>
 <table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup>
 <col class="label">
@@ -1226,13 +1433,24 @@ konularını ele alarak, iki yazı boyunca süre gelmiş olan, <span class="math
     </header><div class="e-content entry-content">
     <div>
 <p>Merhaba Arkadaşlar,</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#birim-dizeyi" id="id7">Birim Dizeyi</a></li>
+<li>
+<a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#ters-dizey" id="id8">Ters Dizey</a><ul>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#notlar" id="id9">Notlar</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısıyla karşınızdayım.
 Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/">önceki yazımda</a> makine öğrenimi algoritmalarının sıklıkla kullandığı işlemleri dile getirmiştim.
 Eğer makine öğrenimine yeni başlıyorsanız, bu yazı dizisinin <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/">ilk bölümünden</a> başlamanızı tavsiye ederim.
 Eğer çok çok yeniyseniz ve "Makine Öğrenimi Nedir, Derin Öğrenim Nedir ?", gibi sorulara cevap bulmaya geldiyseniz, bunun için üç bölümlük bu konulara değinen <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/">ilk yazı dizisini</a> tavsiye ederim.</p>
 <p>Bu yazımda aslında bir önceki yazıda vermiş olduğum <span class="math">\(Ak=u\)</span> denklemine değineceğim.
-Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler">dizey</a>; <span class="math">\(k{\in}{\mathbb{R}^m}\)</span>, k <em>bilinmeyen</em> bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler">yöney</a>; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.</p>
+Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler">dizey</a>; <span class="math">\(k{\in}{\mathbb{R}^p}\)</span>, k <em>bilinmeyen</em> bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler">yöney</a>; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.</p>
 <p>Bu denklemin çözümü için inceleyeceğimiz konu başlıkları şunlar:</p>
 <ul class="simple">
 <li>Birim Dizeyi</li>
@@ -1360,7 +1578,7 @@ Eklemek istediğiniz bir şey varsa, ya da anlamadığınız bir şey varsa, yor
 <p>Sağlıcakla,</p>
 <p>Kaan</p>
 <div class="section" id="notlar">
-<h3>Notlar</h3>
+<h3><a class="toc-backref" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/#id9">Notlar</a></h3>
 <table class="docutils footnote" frame="void" id="id4" rules="none">
 <colgroup>
 <col class="label">
@@ -1408,9 +1626,17 @@ Eklemek istediğiniz bir şey varsa, ya da anlamadığınız bir şey varsa, yor
 </div>
     </header><div class="e-content entry-content">
     <div>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="posts/xph-daiva-yaziti/#giris" id="id78">Giriş</a></li>
+<li><a class="reference internal" href="posts/xph-daiva-yaziti/#metin-ve-harf-cevirisi" id="id79">Metin ve Harf Çevirisi</a></li>
+<li><a class="reference internal" href="posts/xph-daiva-yaziti/#notlar" id="id80">Notlar</a></li>
+</ul>
+</div>
 <p>Bu yazı <a class="reference external" href="http://antikdillerdenbazilari.blogspot.fr/2015/10/xph-turkce-daiva-yazt.html">eski blogumdan</a> alıntıdır. Ufak tefek formatla ilgili düzenlemeler dışında içeriğe hiç dokunulmamıştır.</p>
 <div class="section" id="giris">
-<h2>Giriş</h2>
+<h2><a class="toc-backref" href="posts/xph-daiva-yaziti/#id78">Giriş</a></h2>
 <p>Aşağıda çevirisini bulacağınız Kşayãrşa adlı Eski İran kralının (MÖ 5. yy) Persepolis ve Pasargad'da bulunan bir metni. 3 farklı dilde kopyalanmış. Biz aşağıda Eski Farsça'sının Türkçe'sini sunuyoruz. Kşayãrşa Eski Yunan literatüründe sıkça bahsedilen bir figür, yunanlılar onları kendi kaynaklarında hybris'in ayaklı hali olarak görüyor olmalarına rağmen, tahmin edilebileceği gibi Eski Farsça kaynaklarda böylesi bir tasvir görülmüyor.</p>
 <p>Metin temelde üç bölümden oluşuyor:</p>
 <ol class="arabic simple">
@@ -1422,7 +1648,7 @@ Eklemek istediğiniz bir şey varsa, ya da anlamadığınız bir şey varsa, yor
 <p>Eski Farsça Metin: P.Lecoq, Manuel de Vieux-Perse, adlı kitabındaki fotoğraftan dijital ortama tarafımdan aktarılmıştır.</p>
 </div>
 <div class="section" id="metin-ve-harf-cevirisi">
-<h2>Metin ve Harf Çevirisi</h2>
+<h2><a class="toc-backref" href="posts/xph-daiva-yaziti/#id79">Metin ve Harf Çevirisi</a></h2>
 <ol class="arabic">
 <li>
 <p class="first">𐎲𐎥 𐏐 𐎺𐏀𐎼𐎣 𐏐 𐎠𐎢𐎼𐎶𐏀𐎭𐎠 𐏐 𐏃𐎹 𐏐 𐎡𐎶𐎠𐎶 𐏐 𐎲𐎢𐎷</p>
@@ -1694,7 +1920,7 @@ Bana haraç getirdiler, ki onlara benden denildi onu yaptılar. Kanunu ki o beni
 </ul>
 </div>
 <div class="section" id="notlar">
-<h2>Notlar</h2>
+<h2><a class="toc-backref" href="posts/xph-daiva-yaziti/#id80">Notlar</a></h2>
 <table class="docutils footnote" frame="void" id="id39" rules="none">
 <colgroup>
 <col class="label">
@@ -2102,6 +2328,24 @@ Bana haraç getirdiler, ki onlara benden denildi onu yaptılar. Kanunu ki o beni
     </header><div class="e-content entry-content">
     <div>
 <p>Merhaba Arkadaşlar,</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li>
+<a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#yoney-islemleri" id="id1">Yöney İşlemleri</a><ul>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#yoney-caprazlama" id="id2">Yöney Çaprazlama</a></li>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#yoney-carpimi" id="id3">Yöney Çarpımı</a></li>
+</ul>
+</li>
+<li>
+<a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#dizey-islemleri" id="id4">Dizey İşlemleri</a><ul>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#dizey-toplami" id="id5">Dizey Toplamı</a></li>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#dizey-caprazlama" id="id6">Dizey Çaprazlama</a></li>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/#dizey-carpimi" id="id7">Dizey Çarpımı</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/">önceki yazımda</a>, makine öğrenimi ve derin öğrenimde sık kullanılan algoritmalarda geçen matematiksel kavramların kısa bir özetini vermiştim.
 Yine o yazıda belirttiğim gibi, bu yazıyı o kavramlarla yapılan işlemlere ayıracağım. Örnekleri bol tutmaya özen göstereceğim.</p>
 <div class="section" id="yoney-islemleri">
@@ -2320,7 +2564,7 @@ A {\times} 2 = \left[
 Dizey çarpımının çaprazlanması ise şunu verir <span class="math">\((AR)^T=A^TR^T\)</span></p>
 <p>Şimdilik bu kadar yeter.
 Bundan sonraki yazımda, şu denklemin çözülmesi için gereken işlemleri inceleyeceğim <span class="math">\(Ak=u\)</span>.
-Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir dizey; <span class="math">\(k{\in}{\mathbb{R}^m}\)</span>, k <em>bilinmeyen</em> bir yöney; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.
+Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir dizey; <span class="math">\(k{\in}{\mathbb{R}^p}\)</span>, k <em>bilinmeyen</em> bir yöney; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.
 Neden bu denklemle uğraşacağız sorusunun cevabı ise basit.
 Bu denklem aslında doğrusal sınıflandırıcının kullandığı ana şemayı oluşturur.
 Doğrusal sınıflandırıcı da makine öğreniminde, ve özellikle derin öğrenimde bir hayli kullanılan bir algoritma.
@@ -2345,6 +2589,19 @@ Anlaşılmayan bir şey varsa veya belirtmek istediğiniz bir şey varsa, yoruml
     </header><div class="e-content entry-content">
     <div>
 <p>Merhaba arkadaşlar,</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#sayillar" id="id5">Sayıllar</a></li>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler" id="id6">Yöneyler</a></li>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler" id="id7">Dizeyler</a></li>
+<li>
+<a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#gereyler" id="id8">Gereyler</a><ul>
+<li><a class="reference internal" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#notlar" id="id9">Notlar</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>Bundan önceki, Derin Öğrenime Giriş <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/">yazı dizisinde</a>, çok kabaca derin öğrenimin ne olduğundan, ne tip modeller kullandığından, ilgilendiği problemlerden ve bu problemlere sunduğu çözümlerden bahsettim.
 Bu yazı dizisini ise Derin Öğrenim algoritmalarını açıklarken kullanacağım matematiksel alt yapıya ayırdım.
 Bu alt yapının ilk ayağı hiç kuşkusuz doğrusal cebir. Doğrusal cebiri üniversitede görmeseler de liseden hatırlayanlar olacaktır.
@@ -2439,7 +2696,7 @@ Anlaşılmayan bir şey varsa, ya da eklemek istediğiniz bir şey varsa lütfen
 <p>Sağlıcakla,</p>
 <p>Kaan</p>
 <div class="section" id="notlar">
-<h3>Notlar</h3>
+<h3><a class="toc-backref" href="posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#id9">Notlar</a></h3>
 <table class="docutils footnote" frame="void" id="id3" rules="none">
 <colgroup>
 <col class="label">
@@ -2536,219 +2793,14 @@ Elimden geldiğince açıklamaya çalışırım.</p>
 <p>Kaan</p>
 </div>
     </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/" class="u-url">Yapay Zeka ve Derin Öğrenime Giriş 1.2</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Kaan Eraslan</span></p>
-            <p class="dateline"><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-05-26T04:49:35+02:00" title="2017-05-26 04:49">2017-05-26 04:49</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#disqus_thread" data-disqus-identifier="cache/posts/yapay-zeka-ve-derin-ogrenime-giris-2.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>Merhaba Arkadaşlar,</p>
-<p>Daha <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/">önceki yazımda</a>, yapay zeka çalışmalarında Derin Öğrenime gelene kadar kullanılagelmiş yöntem ve yaklaşımların kısa bir özetini yapmıştım. En son gelinen noktada, makine öğrenimi için gereken temsilde nitelik oluşturma zorunluluğuna kırmızı ışıkta geçen arabaların plakasını yakalamak problemi üzerinden değinmiştim.</p>
-<p>Aynı örnek üzerinden devam edecek olursak, nitelikleri üretmenin/ayrıştırmanın <em>en doğru</em> veya <em>en geçerli</em> yolu yok. Ne özelliği yakalamanızı sağlıyorsa o geçerli, doğru yol, ancak şu var, el ile bu nitelikleri yaratmak çok vakit isteyen bir şey.
-Elimizdeki örnek için elle ilgili niteliği kurgulamaya çalışsak, plakayı oluşturması muhtemel imgecik serilerini, kameranın aracı resmin kaçta kaçına taşıdığına göre, plakanın büyüklüğünün sabit olduğu düşünülürse, plakanın resimde olabileceği alanlarda, eşleştirmeye çalışırdık.
-Böyle deyince çok zor duyulmuyor olabilir, özellikle bilgisayarla görüş alanındaki kütüphanelerin çokluğu düşünülürse, ancak şunu belirtmek zorundayım 'plakayı oluşturması muhtemel imgecik serileri' ifadesini el ile oluşturmak mümkün değil, zira temsilinizi değiştiren çok fazla özellik dışı etmen var.
-Örneğin, yazın güneş tam kameranın arkasından vurdu, plakanın beyazı parladı bazı harfler silüet gibi görünüyor, veya kırsal alan, araba çamura girmiş plakanın bir kısmına çamur bulaşmış, veya kamyonun kasası plakaya gölge ediyor, bu yüzden plaka tam beyaz gibi gözükmüyor, vs gibi özelliğe dair olmayan bir sürü etmen özelliği değiştiriyor. Dolayısıyla, özelliğin temsili de beklenen değerlerde olmuyor.</p>
-<p><em>Temsil Öğrenimi</em> <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id4" id="id1">[1]</a> ya da diğer adıyla <em>Nitelik Öğrenimi</em> denen yaklaşım, bu soruna çare bulmaya çalışıyor.
-Bu yaklaşımı temsilin temsillerini üretmek gibi de düşünebilirsiniz.
-Örneğin, elimizdeki ışıkta geçen araba resmine bakalım. Resim, bir imgecikler bütün dedik.
-Bu imgecikler bütününü örneğin aynı değere sahip olanların koordinat düzlemindeki pozisyonları kümesi olarak da temsil edebiliriz.
-Bu bir çeşit veri çerçevesi olacaktır. Çerçevenin sütunları imgecik değerleri, satırları da bir koordinat noktaları olacaktır.
-Kullanılan imgecik değerlerinin yayılma aralığını verir.
-Tek başına bu bile resmin içinde bulunduğu şartlara dair önemli tiyolar barındıracaktır.
-Resim daha sonrasında koordinatlar sütun, imgecik değerleri satır olarak temsil edilebilir.
-Bu sütunlar plakanın standard büyüklüğüne göre gruplanıp, benzer değerlerde seyreden satırların uzunluğuna bakılarak, plakanın bulunduğu koordinatlar saptanabilir, zira plakanın beyaz başladığı düşünülürse, koordinatlar değişse bile imgeciklerin değerleri belirli bir aralıkta seyredecektir. Yani bu olması beklenen şey.
-Yukarıda belirttiğim gibi özellik dışı etmenler, işlerin bu kadar düzgün yürümemesi sağlayacaktır, ancak şu önemli, buraya kadar tarif ettiğim her şey bir makine tarafından yapılabilir.
-Yapması gereken tek şey, ham maddeyi çeşitli temsillere dönüştürmek ve bu temsillerde tekrar eden kalıpları yakalamak. Bu çok katmanlı bir temsil grubu olarak kurgulanabilir.</p>
-<p>Bu çok katmanlı temsil grubunu oluşturmakta kullanılan tipik algoritma, otomatik kodlayıcılardır <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id5" id="id2">[2]</a>.
-Yukarıda tarif ettiğim şablonda otomatik kodlayıcılar temsiller arası geçişleri sağlayanlardır.
-Genellikle çift yönlüdürler. Kabaca bir kodlayıcı ve bir de çözücü içerirler.
-Kodlayıcı gelen girdiyi bir başka temsile dönüştürür, çözücü de yeni oluşan temsili kodlayıcıya geldiği haline dönüştürür.
-Genelde kodlayıcılar belirli niteliklileri oluşturacak şekilde alıştırılırlar.
-Burada temel amaç tabi değişiklik unsurlarını <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id6" id="id3">[3]</a> yakalamak.
-Bu unsurlar, temsilde gözlemlenen olgunun ayrıştırıcı özelliklerine tekabül ederler.
-Ayrıştırıcı özellikler, temelde bir varlığı diğer varlıktan ayırmamızı veya onunla gruplamamızı sağlayanlar.
-Bundan çok acayip şeyler anlamaya gerek yok, örneğin masanın ayrıştırıcı özelliği nedir, ya da onu üzerindeki lambadan nasıl ayırıyoruz ?
-Masanın dört ayağı var, düz bir yüzeyi var, vs, lambanın yuvarlak bir tabanı ve bir kablosu var, vs.
-Bu ve bunlar gibi özellikler masayı lambadan ayırmamızı sağlayan unsurlar.
-Temsil üzerinde bu unsurları yakalamak, yapay zekanın gerçek dünya da iş yapabilmesinin temel gerekliliklerinden biri.</p>
-<p>Sorun şu, gerçek dünyadaki gözlemlenenlerin çok fazla ayrıştırıcı özelliği var, dahası bir sürü gözlemlenenin ayrıştırıcı özelliği başka gözlemlenenlerin ayışrtırıcı özellikleriyle etkileşime giriyor.
-Bu karşılıklı etkileşim hali, bize değişiklik unsurlarının birbirinden ayrılmasını zorunlu kılıyor.
-İnsan bu ayrımı otomatik olarak yapıyor, örneğin ışığın üzerine vurduğu açı değiştiği zaman, insan masanın masa olarak kalmaya devam ettiğinin ayırdına varabiliyor, ancak baktığın şeyin ne olduğundan habersiz makineler için bu durumun bir garantisi yok.
-Dolayısıyla bilgisayarlar için masanın masa olarak temsilde belirmesini sağlayan değişiklik unsurlarının, masaya vuran ışığın değişiklik unsurlarından ayrılabilmesi gerekli.
-Bu temsil öğreniminin derin öğrenim yöntemleri olmaksızın tıkandığı noktalardan biri, zira bu iki değişiklik unsurunu birbirinden ayıracak olanın saptanması temsile dair neredeyse insan düzeyinde bir anlamayı varsayıyor.
-Masanın üstüne vuran ışık örneğinden gidecek olursak, mevcut durumda masanın üstüne vuran ışıktan ayrıştırılabilmesi için, masayı oluşturan imgeciklerin ışık değiştikçe nasıl değer değiştirdiklerini biliyor olmamız lazım.
-Örnek izole edildiğinde yapılabilir gözükse de, gerçek dünyadaki, masanın üstünde duran başka şeyler olabileceği, ışığın örneğin doğrudan değilde başka bir objeye vurarak masaya yansıdığı vs gibi durumlar düşünüldüğünde nitelik öğreniminin unsurlar arasında bir hiyerarşi kurmaksızın, bahsettiğim soruna çözüm getirebilmesi mümkün gözükmüyor.</p>
-<p>Bu yazıyı burada noktalıyorum. Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-13/">sonraki yazı</a> giriş bölümünün son yazısı olacak. O yazıda <em>Derin Öğrenimin</em> bahsettiğim kavramlarla olan ilişkisine, ve <em>derinliğin</em> nereden geldiğine değineceğim. Son olarak da model derinliğinin ölçülmesinde kullanılan yöntemlerden kısaca bahsedeceğim.</p>
-<p>Sağlıcakla,</p>
-<p>Kaan</p>
-<!-- Sayfa 5 deep learning bölümünde kaldın devam et oradan -->
-<div class="section" id="terimler">
-<h2>Terimler</h2>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id1">[1]</a></td>
-<td>Temsil Öğrenimi: Ham verinin temsilinde özelliği ayrıştıracak niteliği elle oluşturmaktansa, makinenin bu nitelikleri oluşturması süreci.</td>
-</tr></tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id5" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id2">[2]</a></td>
-<td>Otomatik Kodlayıcılar: Genelde Kodlayıcı ve Çözücüden oluşan, temsilden nitelikli temsiller türetmeye ve türetilen temsillerden önceki hallerine dönmeye yarayan algoritmaların genel adı.</td>
-</tr></tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id6" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id3">[3]</a></td>
-<td>Değişiklik unsurları: Bu unsurlar, gözlemlenenin gözlemlendiği halini oluşturduğu kabul edilen etmenler. Örneğin bir araba plakasının değişiklik unsurları, siyahlık, beyazlık, köşeli olmak, düz çizgili olmak, eğrilere sahip olmak, vs gibidir.</td>
-</tr></tbody>
-</table>
-</div>
-</div>
-    </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/" class="u-url">Yapay Zeka ve Derin Öğrenime Giriş - 1.1</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Doğu Kaan Eraslan</span></p>
-            <p class="dateline"><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-05-26T02:13:15+02:00" title="2017-05-26 02:13">2017-05-26 02:13</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#disqus_thread" data-disqus-identifier="cache/posts/yapay-zeka-ve-derin-ogrenime-giris-1.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>Merhaba arkadaşlar,</p>
-<p>Bu yapay zeka ve derin öğrenim ile ilgili yazmaya başladığım serinin ilk bölümü. Temel olarak kullandığım kaynak <a class="citation-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#deeplearning2016" id="id1">[DeepLearning2016]</a>. Bu bölümde:</p>
-<pre class="literal-block">
-- Yapay zeka çalışmaları nedir ?
-- Hangi sorunlara cevap vermeye çalışmaktadır ?
-- İçindeki çalışma alanları nelerdir ?
-</pre>
-<p>Gibi sorulara değineceğim. Sonraki yazılarda daha teknik konulara yer yer algoritmalara da gireceğim. Bu yazıda bahsettiğim konular, referans verdiğim kaynağın 1. bölümüne tekabül etmektedir.</p>
-<p>Yapay zeka esasen fark etme ve tanımlama sorunsalı üzerinden okunabilecek bir alan. Bir şeyleri 5 duyudan ve onları sentetize eden bir beyinden yoksun bir varlığa fark ettirme sorunsalı. Fark etmenin gerçekleşmesi içinde yapılması gerekense, fark edilecek şeyin duyusal içerikten bağımsız bir biçimde tanımlanması.</p>
-<p>Bilgisayarlar genel olarak, soyut kuralları takip etme işinde bizden daha iyiler. Bunun güzel bir örneği, bizden daha hızlı matematik işlemi yapabiliyor olmalarında, bir başka örneği yine bizden daha iyi satranç oynuyor olmalarında. Counter Strike vs gibi oyunlarla ilgilenen arkadaşların, internet kafede hedef botu kullanan adamı dövmesindeki sebepte yine bilgisayarın verili kuralları bizden daha iyi uygulayabiliyor olmasında.</p>
-<p>Ancak bilgisayarlar 5 duyu gerektiren işlerde açık ara kötüler. Örneğin soru sorana cevap verme, karşıdan karşıya geçerken gelen arabayı görüp durma vs gibi işleri beceremiyorlar, zira bu işler çok fazla farklı türden veriyi birbiriyle ilişkilendirmiş olarak zihnimizde barındırmamız sayesinde mümkün oluyor. Biz bu işleri otomatik yapıyoruz ve aslında ne kadar karmaşık bir ilişkiler ağının ürünü olduğunun genelde farkında değiliz. Çok fark etmeye başladığımız zaman da deliriyoruz zaten, ancak şu da bir gerçek ki bilgisayarın günlük hayatımızı gerçekten kolaylaştırabilmesi, büyük oranda bu cins işleri yapabilmesine bağlı. Yani siz dizi izlerken makinenin, akşam yemeği, ev temizliği, hatta ofis işlerinizin belirli bir bölümü gibi işlevleri gerçekleştirebilmesi için, bu 5 duyu gerektiren işlerde de sonuç alabilmeleri gerekiyor.</p>
-<p>İşte yapay zeka çalışmaları makinenin bu işleri yapabilmesini sağlayacak yöntemleri araştırıyor.
-Denen yöntemlerden biri, makinenin dünyaya ilişkin bilmesi gereken her şeyi kodlamaya çalışmak, ki buna yapay zekaya bilgi temelli yaklaşım <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id8" id="id2">[1]</a> deniyor. Siz bilgileri anlamsal içerikten yoksun bir dille ifade etmeye çalışıyorsunuz. Bilgisayarda genel mantık çerçevesinde dizayn edilmiş çıkarım kurallarını kullanarak, kendisine gelen bilgiden çıkarımlar yapıyor. Bu çok tutmadı, zira varolanı anlamdan yoksun bir dille ifade etmek hem bizim çok iyi yapamadığımız bir şey, hem de çok ağır işleyen bir süreç.</p>
-<p>Her şeyin el ile kodlanması gerektiği sistemlerde karşılaşılan güçlükler,bizi makinelerin ham haldeki veriden kendilerinin tekrar eden kalıpları çıkarsamasını sağlayacak sistemler yaratmaya yöneltti. Bu minvalden gelen çalışmalara da genel adıyla makine öğrenimi <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id9" id="id3">[2]</a> alanında yapılan çalışmalar deniyor. Bu alanda yürütülen çalışmaların günlük hayattaki etkileri daha gözlemlenebilir durumda. Örneğin Naive Bayes algoritmasını kullanarak sahte e-postaları ayırt edebiliyoruz, ya da Doğrusal Bağlanımları kullanarak elimizdeki malzeme stoklarını ne zaman yenilememiz gerektiğine dair akıl yürütmeler yapabiliyoruz, veya Netflix gibi büyük şirketler çok basit K-Ortalamalar Kümesi gibi gruplama algoritmalarıyla sizin hangi filmlerden hoşlanabileceğiniz size sunuyorlar <a class="citation-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#algoritmalar" id="id4">[Algoritmalar]</a>.</p>
-<p>Bu yaklaşım iyi hoş ama önemli bir sorunu var, o da verinin temsil <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id10" id="id5">[3]</a> edilmesi gerekliliği. Yukarıda bahsettiğim algoritmaların işleyebilmesi için, verinin belirli işlemlerden geçmesi gerekiyor. Bu çok basit bir biçimde bir metni boşlukları kullanarak, kelimelere ayırmak olabileceği gibi, kelimelerin belge içindeki sıklığı kere kelimelerin içinde görüldüğü belge sayısının kesri, boyutlarından oluşan uzunluğu standartlaştırılmış belge yöneyleriyle kosünüs benzerliği hesapları yapmak gibi görece daha karmaşık işlemleri de kapsayabiliyor <a class="citation-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#tf-idf" id="id6">[TF-IDF]</a>. İşlem görmüş ham veri içerisinde dikkate alınan her bir parçaya nitelik <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id11" id="id7">[4]</a> deniyor. Yani ham veriye dair makinenin çıkarımlar yapabilmesini istiyorsanız onu bir nitelikler bütününe dönüştürmeniz lazım.</p>
-<p>Üzerinde çalıştığınız problemin gerektirdiği verilerin hangi özelliğinin çözüme ilişkin olduğunu ve bu özelliğin ne şekilde bir niteliğe dönüştürebileceğini saptamanız gerekiyor. Bu bir hayli meşakatli bir iş. Örneğin, elinizde 100 bin tane kırmızı ışıkta geçen araba resmi var. Bu arabalara ceza kesilebilmesi için, plakalarının fotoğraflarda ayrıştırılabilmesi gerekiyor. Bilgisayar için arabanın tamponu ile plakası arasında bir fark yok. İkisi de imgecik. Örneği ilgili terimlerle ifade edersek:</p>
-<pre class="literal-block">
-- Problem: Işıktan geçen araba resminden plaka alma
-- Özellik: Plaka: Beyaz bir dikdörtgen, üstünde siyahla yazılmış rakamlar ve sayılar var, bazılarında tire işareti de oluyor.
-- Temsil: İmgecikler.
-</pre>
-<p>Çözüm ne peki ? Temsilden özelliği türetmemizi sağlayacak nitelikleri ayrıştırmakta. Bunu nasıl yapacağız ? İşte makine öğreniminin temel sıkıntısı burada yatıyor.</p>
-<p>Bu yazıyı burada noktalıyorum, zira ara vermek için güzel bir nokta.
-Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-2/">sonraki yazımda</a> <em>Temsil Öğrenimi</em> ya da diğer bir adıyla <em>Nitelik Öğrenimini</em> açıklamaya çalışacağım.
-Çok katmanlı temsil gruplamalarından, değişiklik unsurlarından ve bunların öğrenimdeki rollerinden bahsedeceğim. Üçüncü yazımdaysa <em>Derin Öğrenimin</em> bu bahsettiğim kavramlarla olan ilişkisine, ve <em>derinliğin</em> nereden geldiğine değineceğim.</p>
-<p>Sağlıcakla,</p>
-<p>Kaan</p>
-<div class="section" id="terimler">
-<h2>Terimler</h2>
-<table class="docutils footnote" frame="void" id="id8" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id2">[1]</a></td>
-<td>Bilgi Temelli Yaklaşım: Makinenin dünyaya ilişkin bilmesi gereken her şeyi elle kodlamaya çalışmak.</td>
-</tr></tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id9" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id3">[2]</a></td>
-<td>Makine Öğrenimi: Makinenin ham veriden tekrar eden kalıplar çıkarsaması.</td>
-</tr></tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id10" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id5">[3]</a></td>
-<td>Temsil: Verinin sayısal ortamdaki hali.</td>
-</tr></tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id11" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id7">[4]</a></td>
-<td>Nitelik: Temsilde bir özelliği ayrıştırmaya yarayan ölçülebilir yapı.</td>
-</tr></tbody>
-</table>
-</div>
-<div class="section" id="notlar">
-<h2>Notlar</h2>
-<table class="docutils citation" frame="void" id="deeplearning2016" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id1">[DeepLearning2016]</a></td>
-<td>Goodfellow I.,Y. Bengio, Deep Learning, Cambridge, 2016.</td>
-</tr></tbody>
-</table>
-<table class="docutils citation" frame="void" id="algoritmalar" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id4">[Algoritmalar]</a></td>
-<td>Bahsettiğim algoritmaları açıklayan yazılar da yayımlayacağım.</td>
-</tr></tbody>
-</table>
-<table class="docutils citation" frame="void" id="tf-idf" rules="none">
-<colgroup>
-<col class="label">
-<col>
-</colgroup>
-<tbody valign="top"><tr>
-<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id6">[TF-IDF]</a></td>
-<td>Kabaca tarifini yaptığım algoritmanın adı genellikle arama motorlarında kullanılan bir sıralama algoritması. İlk bölümü ts-tbs, açılımı, terim sıklığı-ters belge sıklığı algoritması (ingilizcesi t(erm) f(requency)-i(nverse) d(ocument) f(requency)), ikinci bölümüyse, kosünüs benzerliği. Bu ikisi arama motorlarındaki 'buna benzer sayfaları göster' gibi işlemlerin gerçekleşmesini sağlıyor. Bu algoritmayı açıklayan yazıları da ileride paylaşacağım.</td>
-</tr></tbody>
-</table>
-</div>
-</div>
-    </div>
     </article>
 </div>
 
-
-
-        
-       <script>var disqus_shortname="yapayzeka-eski-metinler";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-yYfngbEKv4RENfGDvNUqJTqGFcKf31NJEe9OTnnMH3Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        <nav class="postindexpager"><ul class="pager">
+<li class="next">
+                <a href="index-1.html" rel="next">Daha eski yazılar</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="yapayzeka-eski-metinler";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-yYfngbEKv4RENfGDvNUqJTqGFcKf31NJEe9OTnnMH3Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
         </script><footer id="footer"><p>Contents © 2017         <a href="mailto:kaaneraslan@gmail.com">Kaan Eraslan</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
             

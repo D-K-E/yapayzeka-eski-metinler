@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Yapay zeka çalışmaları ve bu çalışmaların eski metinlere uygulanması üzerine bir blog">
+<meta name="viewport" content="width=device-width">
+<title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (eski yazılar, sayfa 1) | Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar</title>
+<link href="assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="canonical" href="https://d-k-e.github.io/yapayzeka-eski-metinler/index-1.html">
+<link rel="prev" href="." type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body class="theme-base-0b">
+    <a href="#content" class="sr-only sr-only-focusable">Ana içeriğe geç</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            <p>Yapay Zeka Çalışmaları ve Eski Metinler Üzerine Notlar</p>
+        </div>
+        <div class="sidebar-item">
+        <img src="images/KaanFoto1.jpg" alt="Resmim"><p>Kaan Eraslan</p>
+        <p>Çok kalifiye kaldırım mühendisiyim.</p>
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="archive.html">Arşiv</a>
+        <a class="sidebar-nav-item" href="categories/">Etiketler</a>
+        <a class="sidebar-nav-item" href="rss.xml">RSS kaynağı</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://d-k-e.github.io/yapayzeka-eski-metinler/" title="Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar" rel="home">Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+
+<div class="posts">
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/" class="u-url">Yapay Zeka ve Derin Öğrenime Giriş 1.2</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Kaan Eraslan</span></p>
+            <p class="dateline"><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-05-26T04:49:35+02:00" title="2017-05-26 04:49">2017-05-26 04:49</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#disqus_thread" data-disqus-identifier="cache/posts/yapay-zeka-ve-derin-ogrenime-giris-2.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Merhaba Arkadaşlar,</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#terimler" id="id7">Terimler</a></li>
+</ul>
+</div>
+<p>Daha <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/">önceki yazımda</a>, yapay zeka çalışmalarında Derin Öğrenime gelene kadar kullanılagelmiş yöntem ve yaklaşımların kısa bir özetini yapmıştım. En son gelinen noktada, makine öğrenimi için gereken temsilde nitelik oluşturma zorunluluğuna kırmızı ışıkta geçen arabaların plakasını yakalamak problemi üzerinden değinmiştim.</p>
+<p>Aynı örnek üzerinden devam edecek olursak, nitelikleri üretmenin/ayrıştırmanın <em>en doğru</em> veya <em>en geçerli</em> yolu yok. Ne özelliği yakalamanızı sağlıyorsa o geçerli, doğru yol, ancak şu var, el ile bu nitelikleri yaratmak çok vakit isteyen bir şey.
+Elimizdeki örnek için elle ilgili niteliği kurgulamaya çalışsak, plakayı oluşturması muhtemel imgecik serilerini, kameranın aracı resmin kaçta kaçına taşıdığına göre, plakanın büyüklüğünün sabit olduğu düşünülürse, plakanın resimde olabileceği alanlarda, eşleştirmeye çalışırdık.
+Böyle deyince çok zor duyulmuyor olabilir, özellikle bilgisayarla görüş alanındaki kütüphanelerin çokluğu düşünülürse, ancak şunu belirtmek zorundayım 'plakayı oluşturması muhtemel imgecik serileri' ifadesini el ile oluşturmak mümkün değil, zira temsilinizi değiştiren çok fazla özellik dışı etmen var.
+Örneğin, yazın güneş tam kameranın arkasından vurdu, plakanın beyazı parladı bazı harfler silüet gibi görünüyor, veya kırsal alan, araba çamura girmiş plakanın bir kısmına çamur bulaşmış, veya kamyonun kasası plakaya gölge ediyor, bu yüzden plaka tam beyaz gibi gözükmüyor, vs gibi özelliğe dair olmayan bir sürü etmen özelliği değiştiriyor. Dolayısıyla, özelliğin temsili de beklenen değerlerde olmuyor.</p>
+<p><em>Temsil Öğrenimi</em> <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id4" id="id1">[1]</a> ya da diğer adıyla <em>Nitelik Öğrenimi</em> denen yaklaşım, bu soruna çare bulmaya çalışıyor.
+Bu yaklaşımı temsilin temsillerini üretmek gibi de düşünebilirsiniz.
+Örneğin, elimizdeki ışıkta geçen araba resmine bakalım. Resim, bir imgecikler bütün dedik.
+Bu imgecikler bütününü örneğin aynı değere sahip olanların koordinat düzlemindeki pozisyonları kümesi olarak da temsil edebiliriz.
+Bu bir çeşit veri çerçevesi olacaktır. Çerçevenin sütunları imgecik değerleri, satırları da bir koordinat noktaları olacaktır.
+Kullanılan imgecik değerlerinin yayılma aralığını verir.
+Tek başına bu bile resmin içinde bulunduğu şartlara dair önemli tiyolar barındıracaktır.
+Resim daha sonrasında koordinatlar sütun, imgecik değerleri satır olarak temsil edilebilir.
+Bu sütunlar plakanın standard büyüklüğüne göre gruplanıp, benzer değerlerde seyreden satırların uzunluğuna bakılarak, plakanın bulunduğu koordinatlar saptanabilir, zira plakanın beyaz başladığı düşünülürse, koordinatlar değişse bile imgeciklerin değerleri belirli bir aralıkta seyredecektir. Yani bu olması beklenen şey.
+Yukarıda belirttiğim gibi özellik dışı etmenler, işlerin bu kadar düzgün yürümemesi sağlayacaktır, ancak şu önemli, buraya kadar tarif ettiğim her şey bir makine tarafından yapılabilir.
+Yapması gereken tek şey, ham maddeyi çeşitli temsillere dönüştürmek ve bu temsillerde tekrar eden kalıpları yakalamak. Bu çok katmanlı bir temsil grubu olarak kurgulanabilir.</p>
+<p>Bu çok katmanlı temsil grubunu oluşturmakta kullanılan tipik algoritma, otomatik kodlayıcılardır <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id5" id="id2">[2]</a>.
+Yukarıda tarif ettiğim şablonda otomatik kodlayıcılar temsiller arası geçişleri sağlayanlardır.
+Genellikle çift yönlüdürler. Kabaca bir kodlayıcı ve bir de çözücü içerirler.
+Kodlayıcı gelen girdiyi bir başka temsile dönüştürür, çözücü de yeni oluşan temsili kodlayıcıya geldiği haline dönüştürür.
+Genelde kodlayıcılar belirli niteliklileri oluşturacak şekilde alıştırılırlar.
+Burada temel amaç tabi değişiklik unsurlarını <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id6" id="id3">[3]</a> yakalamak.
+Bu unsurlar, temsilde gözlemlenen olgunun ayrıştırıcı özelliklerine tekabül ederler.
+Ayrıştırıcı özellikler, temelde bir varlığı diğer varlıktan ayırmamızı veya onunla gruplamamızı sağlayanlar.
+Bundan çok acayip şeyler anlamaya gerek yok, örneğin masanın ayrıştırıcı özelliği nedir, ya da onu üzerindeki lambadan nasıl ayırıyoruz ?
+Masanın dört ayağı var, düz bir yüzeyi var, vs, lambanın yuvarlak bir tabanı ve bir kablosu var, vs.
+Bu ve bunlar gibi özellikler masayı lambadan ayırmamızı sağlayan unsurlar.
+Temsil üzerinde bu unsurları yakalamak, yapay zekanın gerçek dünya da iş yapabilmesinin temel gerekliliklerinden biri.</p>
+<p>Sorun şu, gerçek dünyadaki gözlemlenenlerin çok fazla ayrıştırıcı özelliği var, dahası bir sürü gözlemlenenin ayrıştırıcı özelliği başka gözlemlenenlerin ayışrtırıcı özellikleriyle etkileşime giriyor.
+Bu karşılıklı etkileşim hali, bize değişiklik unsurlarının birbirinden ayrılmasını zorunlu kılıyor.
+İnsan bu ayrımı otomatik olarak yapıyor, örneğin ışığın üzerine vurduğu açı değiştiği zaman, insan masanın masa olarak kalmaya devam ettiğinin ayırdına varabiliyor, ancak baktığın şeyin ne olduğundan habersiz makineler için bu durumun bir garantisi yok.
+Dolayısıyla bilgisayarlar için masanın masa olarak temsilde belirmesini sağlayan değişiklik unsurlarının, masaya vuran ışığın değişiklik unsurlarından ayrılabilmesi gerekli.
+Bu temsil öğreniminin derin öğrenim yöntemleri olmaksızın tıkandığı noktalardan biri, zira bu iki değişiklik unsurunu birbirinden ayıracak olanın saptanması temsile dair neredeyse insan düzeyinde bir anlamayı varsayıyor.
+Masanın üstüne vuran ışık örneğinden gidecek olursak, mevcut durumda masanın üstüne vuran ışıktan ayrıştırılabilmesi için, masayı oluşturan imgeciklerin ışık değiştikçe nasıl değer değiştirdiklerini biliyor olmamız lazım.
+Örnek izole edildiğinde yapılabilir gözükse de, gerçek dünyadaki, masanın üstünde duran başka şeyler olabileceği, ışığın örneğin doğrudan değilde başka bir objeye vurarak masaya yansıdığı vs gibi durumlar düşünüldüğünde nitelik öğreniminin unsurlar arasında bir hiyerarşi kurmaksızın, bahsettiğim soruna çözüm getirebilmesi mümkün gözükmüyor.</p>
+<p>Bu yazıyı burada noktalıyorum. Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-13/">sonraki yazı</a> giriş bölümünün son yazısı olacak. O yazıda <em>Derin Öğrenimin</em> bahsettiğim kavramlarla olan ilişkisine, ve <em>derinliğin</em> nereden geldiğine değineceğim. Son olarak da model derinliğinin ölçülmesinde kullanılan yöntemlerden kısaca bahsedeceğim.</p>
+<p>Sağlıcakla,</p>
+<p>Kaan</p>
+<!-- Sayfa 5 deep learning bölümünde kaldın devam et oradan -->
+<div class="section" id="terimler">
+<h2><a class="toc-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id7">Terimler</a></h2>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id1">[1]</a></td>
+<td>Temsil Öğrenimi: Ham verinin temsilinde özelliği ayrıştıracak niteliği elle oluşturmaktansa, makinenin bu nitelikleri oluşturması süreci.</td>
+</tr></tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id2">[2]</a></td>
+<td>Otomatik Kodlayıcılar: Genelde Kodlayıcı ve Çözücüden oluşan, temsilden nitelikli temsiller türetmeye ve türetilen temsillerden önceki hallerine dönmeye yarayan algoritmaların genel adı.</td>
+</tr></tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-2/#id3">[3]</a></td>
+<td>Değişiklik unsurları: Bu unsurlar, gözlemlenenin gözlemlendiği halini oluşturduğu kabul edilen etmenler. Örneğin bir araba plakasının değişiklik unsurları, siyahlık, beyazlık, köşeli olmak, düz çizgili olmak, eğrilere sahip olmak, vs gibidir.</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/" class="u-url">Yapay Zeka ve Derin Öğrenime Giriş - 1.1</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Doğu Kaan Eraslan</span></p>
+            <p class="dateline"><a href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-05-26T02:13:15+02:00" title="2017-05-26 02:13">2017-05-26 02:13</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#disqus_thread" data-disqus-identifier="cache/posts/yapay-zeka-ve-derin-ogrenime-giris-1.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Merhaba arkadaşlar,</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#terimler" id="id12">Terimler</a></li>
+<li><a class="reference internal" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#notlar" id="id13">Notlar</a></li>
+</ul>
+</div>
+<p>Bu yapay zeka ve derin öğrenim ile ilgili yazmaya başladığım serinin ilk bölümü. Temel olarak kullandığım kaynak <a class="citation-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#deeplearning2016" id="id1">[DeepLearning2016]</a>. Bu bölümde:</p>
+<pre class="literal-block">
+- Yapay zeka çalışmaları nedir ?
+- Hangi sorunlara cevap vermeye çalışmaktadır ?
+- İçindeki çalışma alanları nelerdir ?
+</pre>
+<p>Gibi sorulara değineceğim. Sonraki yazılarda daha teknik konulara yer yer algoritmalara da gireceğim. Bu yazıda bahsettiğim konular, referans verdiğim kaynağın 1. bölümüne tekabül etmektedir.</p>
+<p>Yapay zeka esasen fark etme ve tanımlama sorunsalı üzerinden okunabilecek bir alan. Bir şeyleri 5 duyudan ve onları sentetize eden bir beyinden yoksun bir varlığa fark ettirme sorunsalı. Fark etmenin gerçekleşmesi içinde yapılması gerekense, fark edilecek şeyin duyusal içerikten bağımsız bir biçimde tanımlanması.</p>
+<p>Bilgisayarlar genel olarak, soyut kuralları takip etme işinde bizden daha iyiler. Bunun güzel bir örneği, bizden daha hızlı matematik işlemi yapabiliyor olmalarında, bir başka örneği yine bizden daha iyi satranç oynuyor olmalarında. Counter Strike vs gibi oyunlarla ilgilenen arkadaşların, internet kafede hedef botu kullanan adamı dövmesindeki sebepte yine bilgisayarın verili kuralları bizden daha iyi uygulayabiliyor olmasında.</p>
+<p>Ancak bilgisayarlar 5 duyu gerektiren işlerde açık ara kötüler. Örneğin soru sorana cevap verme, karşıdan karşıya geçerken gelen arabayı görüp durma vs gibi işleri beceremiyorlar, zira bu işler çok fazla farklı türden veriyi birbiriyle ilişkilendirmiş olarak zihnimizde barındırmamız sayesinde mümkün oluyor. Biz bu işleri otomatik yapıyoruz ve aslında ne kadar karmaşık bir ilişkiler ağının ürünü olduğunun genelde farkında değiliz. Çok fark etmeye başladığımız zaman da deliriyoruz zaten, ancak şu da bir gerçek ki bilgisayarın günlük hayatımızı gerçekten kolaylaştırabilmesi, büyük oranda bu cins işleri yapabilmesine bağlı. Yani siz dizi izlerken makinenin, akşam yemeği, ev temizliği, hatta ofis işlerinizin belirli bir bölümü gibi işlevleri gerçekleştirebilmesi için, bu 5 duyu gerektiren işlerde de sonuç alabilmeleri gerekiyor.</p>
+<p>İşte yapay zeka çalışmaları makinenin bu işleri yapabilmesini sağlayacak yöntemleri araştırıyor.
+Denen yöntemlerden biri, makinenin dünyaya ilişkin bilmesi gereken her şeyi kodlamaya çalışmak, ki buna yapay zekaya bilgi temelli yaklaşım <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id8" id="id2">[1]</a> deniyor. Siz bilgileri anlamsal içerikten yoksun bir dille ifade etmeye çalışıyorsunuz. Bilgisayarda genel mantık çerçevesinde dizayn edilmiş çıkarım kurallarını kullanarak, kendisine gelen bilgiden çıkarımlar yapıyor. Bu çok tutmadı, zira varolanı anlamdan yoksun bir dille ifade etmek hem bizim çok iyi yapamadığımız bir şey, hem de çok ağır işleyen bir süreç.</p>
+<p>Her şeyin el ile kodlanması gerektiği sistemlerde karşılaşılan güçlükler,bizi makinelerin ham haldeki veriden kendilerinin tekrar eden kalıpları çıkarsamasını sağlayacak sistemler yaratmaya yöneltti. Bu minvalden gelen çalışmalara da genel adıyla makine öğrenimi <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id9" id="id3">[2]</a> alanında yapılan çalışmalar deniyor. Bu alanda yürütülen çalışmaların günlük hayattaki etkileri daha gözlemlenebilir durumda. Örneğin Naive Bayes algoritmasını kullanarak sahte e-postaları ayırt edebiliyoruz, ya da Doğrusal Bağlanımları kullanarak elimizdeki malzeme stoklarını ne zaman yenilememiz gerektiğine dair akıl yürütmeler yapabiliyoruz, veya Netflix gibi büyük şirketler çok basit K-Ortalamalar Kümesi gibi gruplama algoritmalarıyla sizin hangi filmlerden hoşlanabileceğiniz size sunuyorlar <a class="citation-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#algoritmalar" id="id4">[Algoritmalar]</a>.</p>
+<p>Bu yaklaşım iyi hoş ama önemli bir sorunu var, o da verinin temsil <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id10" id="id5">[3]</a> edilmesi gerekliliği. Yukarıda bahsettiğim algoritmaların işleyebilmesi için, verinin belirli işlemlerden geçmesi gerekiyor. Bu çok basit bir biçimde bir metni boşlukları kullanarak, kelimelere ayırmak olabileceği gibi, kelimelerin belge içindeki sıklığı kere kelimelerin içinde görüldüğü belge sayısının kesri, boyutlarından oluşan uzunluğu standartlaştırılmış belge yöneyleriyle kosünüs benzerliği hesapları yapmak gibi görece daha karmaşık işlemleri de kapsayabiliyor <a class="citation-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#tf-idf" id="id6">[TF-IDF]</a>. İşlem görmüş ham veri içerisinde dikkate alınan her bir parçaya nitelik <a class="footnote-reference" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id11" id="id7">[4]</a> deniyor. Yani ham veriye dair makinenin çıkarımlar yapabilmesini istiyorsanız onu bir nitelikler bütününe dönüştürmeniz lazım.</p>
+<p>Üzerinde çalıştığınız problemin gerektirdiği verilerin hangi özelliğinin çözüme ilişkin olduğunu ve bu özelliğin ne şekilde bir niteliğe dönüştürebileceğini saptamanız gerekiyor. Bu bir hayli meşakatli bir iş. Örneğin, elinizde 100 bin tane kırmızı ışıkta geçen araba resmi var. Bu arabalara ceza kesilebilmesi için, plakalarının fotoğraflarda ayrıştırılabilmesi gerekiyor. Bilgisayar için arabanın tamponu ile plakası arasında bir fark yok. İkisi de imgecik. Örneği ilgili terimlerle ifade edersek:</p>
+<pre class="literal-block">
+- Problem: Işıktan geçen araba resminden plaka alma
+- Özellik: Plaka: Beyaz bir dikdörtgen, üstünde siyahla yazılmış rakamlar ve sayılar var, bazılarında tire işareti de oluyor.
+- Temsil: İmgecikler.
+</pre>
+<p>Çözüm ne peki ? Temsilden özelliği türetmemizi sağlayacak nitelikleri ayrıştırmakta. Bunu nasıl yapacağız ? İşte makine öğreniminin temel sıkıntısı burada yatıyor.</p>
+<p>Bu yazıyı burada noktalıyorum, zira ara vermek için güzel bir nokta.
+Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-2/">sonraki yazımda</a> <em>Temsil Öğrenimi</em> ya da diğer bir adıyla <em>Nitelik Öğrenimini</em> açıklamaya çalışacağım.
+Çok katmanlı temsil gruplamalarından, değişiklik unsurlarından ve bunların öğrenimdeki rollerinden bahsedeceğim. Üçüncü yazımdaysa <em>Derin Öğrenimin</em> bu bahsettiğim kavramlarla olan ilişkisine, ve <em>derinliğin</em> nereden geldiğine değineceğim.</p>
+<p>Sağlıcakla,</p>
+<p>Kaan</p>
+<div class="section" id="terimler">
+<h2><a class="toc-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id12">Terimler</a></h2>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id2">[1]</a></td>
+<td>Bilgi Temelli Yaklaşım: Makinenin dünyaya ilişkin bilmesi gereken her şeyi elle kodlamaya çalışmak.</td>
+</tr></tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id3">[2]</a></td>
+<td>Makine Öğrenimi: Makinenin ham veriden tekrar eden kalıplar çıkarsaması.</td>
+</tr></tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id5">[3]</a></td>
+<td>Temsil: Verinin sayısal ortamdaki hali.</td>
+</tr></tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id11" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id7">[4]</a></td>
+<td>Nitelik: Temsilde bir özelliği ayrıştırmaya yarayan ölçülebilir yapı.</td>
+</tr></tbody>
+</table>
+</div>
+<div class="section" id="notlar">
+<h2><a class="toc-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id13">Notlar</a></h2>
+<table class="docutils citation" frame="void" id="deeplearning2016" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id1">[DeepLearning2016]</a></td>
+<td>Goodfellow I.,Y. Bengio, Deep Learning, Cambridge, 2016.</td>
+</tr></tbody>
+</table>
+<table class="docutils citation" frame="void" id="algoritmalar" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id4">[Algoritmalar]</a></td>
+<td>Bahsettiğim algoritmaları açıklayan yazılar da yayımlayacağım.</td>
+</tr></tbody>
+</table>
+<table class="docutils citation" frame="void" id="tf-idf" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href="posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id6">[TF-IDF]</a></td>
+<td>Kabaca tarifini yaptığım algoritmanın adı genellikle arama motorlarında kullanılan bir sıralama algoritması. İlk bölümü ts-tbs, açılımı, terim sıklığı-ters belge sıklığı algoritması (ingilizcesi t(erm) f(requency)-i(nverse) d(ocument) f(requency)), ikinci bölümüyse, kosünüs benzerliği. Bu ikisi arama motorlarındaki 'buna benzer sayfaları göster' gibi işlemlerin gerçekleşmesini sağlıyor. Bu algoritmayı açıklayan yazıları da ileride paylaşacağım.</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+    </div>
+    </article>
+</div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="." rel="prev">Daha yeni yazılar</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="yapayzeka-eski-metinler";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2017         <a href="mailto:kaaneraslan@gmail.com">Kaan Eraslan</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+    
+    
+            <script src="assets/js/all-nocdn.js"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style
+    addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><!-- fancy dates --><script>
+    moment.locale("tr");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

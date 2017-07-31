@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (Doğu Kaan Eraslan tarafından yazılanlar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link type="application/rss+xml" href="https://d-k-e.github.io/yapayzeka-eski-metinler/authors/dogu-kaan-eraslan.xml" rel="self"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Jun 2017 22:11:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Yapay Zeka ve Derin Öğrenime Giriş - 1.1</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/</link><dc:creator>Doğu Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba arkadaşlar,&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (Doğu Kaan Eraslan tarafından yazılanlar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link rel="self" type="application/rss+xml" href="https://d-k-e.github.io/yapayzeka-eski-metinler/authors/dogu-kaan-eraslan.xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Mon, 31 Jul 2017 15:01:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Yapay Zeka ve Derin Öğrenime Giriş - 1.1</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/</link><dc:creator>Doğu Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba arkadaşlar,&lt;/p&gt;
+&lt;div class="contents topic" id="contents"&gt;
+&lt;p class="topic-title first"&gt;Contents&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/#terimler" id="id12"&gt;Terimler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/#notlar" id="id13"&gt;Notlar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;p&gt;Bu yapay zeka ve derin öğrenim ile ilgili yazmaya başladığım serinin ilk bölümü. Temel olarak kullandığım kaynak &lt;a class="citation-reference" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/#deeplearning2016" id="id1"&gt;[DeepLearning2016]&lt;/a&gt;. Bu bölümde:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 - Yapay zeka çalışmaları nedir ?
@@ -27,7 +34,7 @@ Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-esk
 &lt;p&gt;Sağlıcakla,&lt;/p&gt;
 &lt;p&gt;Kaan&lt;/p&gt;
 &lt;div class="section" id="terimler"&gt;
-&lt;h2&gt;Terimler&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id12"&gt;Terimler&lt;/a&gt;&lt;/h2&gt;
 &lt;table class="docutils footnote" frame="void" id="id8" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
@@ -54,7 +61,7 @@ Bir &lt;a class="reference external" href="https://d-k-e.github.io/yapayzeka-esk
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;div class="section" id="notlar"&gt;
-&lt;h2&gt;Notlar&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/#id13"&gt;Notlar&lt;/a&gt;&lt;/h2&gt;
 &lt;table class="docutils citation" frame="void" id="deeplearning2016" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;

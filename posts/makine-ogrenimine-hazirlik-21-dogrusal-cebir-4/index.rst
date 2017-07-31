@@ -9,6 +9,9 @@
 
 Merhaba Arkadaşlar
 
+.. contents::
+
+
 Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısı.
 Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir `önceki yazımda <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/>`_ özellikle doğrusal sınıflayıcıların temeli niteliğindeki :math:`Ak=u` denklemini çözmeye yarayan matematiksel kavramlar olan ters dizey ve birim dizeyini açıklamıştım.
@@ -82,7 +85,7 @@ Verdiğimiz örnekler ışığında, bir doğrunun denklemi şu olacaktır:
 Doğru denklem sistemi ise birden fazla doğrudan oluşan ve aynı değişken yöneyini kullanandır.
 Değişken yöneyinden kastım, yukarıdaki örnekteki "k" gibi, doğru denklemine değişkenlerini veren yöney.
 Bu sistemler genelde :math:`Ak=u` şeklinde ifade edilirler.
-Dikkat edilmesi gereken noktaysa, eğer :math:`A^{mxp}` ve :math:`k^{1xp}` ise :math:`u^{1xm}` olacaktır.
+Dikkat edilmesi gereken noktaysa, eğer :math:`A^{mxp}` ve :math:`k^{1xp}` ise :math:`u^{1xp}` olacaktır.
 Bu genellemeyi açık yazacak olursak:
 
 .. math::

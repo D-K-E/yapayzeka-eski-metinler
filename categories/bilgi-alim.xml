@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Yapay Zeka, Derin Öğrenim ve Eski Metinler Üzerine Notlar (bilgi-alım ile ilgili yazılar)</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://d-k-e.github.io/yapayzeka-eski-metinler/categories/bilgi-alim.xml"></atom:link><language>tr</language><copyright>Contents © 2017 &lt;a href="mailto:kaaneraslan@gmail.com"&gt;Kaan Eraslan&lt;/a&gt; </copyright><lastBuildDate>Mon, 31 Jul 2017 14:56:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Dillerarası Bilgi Alım Teknikleri Üzerine Notlar - 1</title><link>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/</link><dc:creator>Kaan Eraslan</dc:creator><description>&lt;div&gt;&lt;p&gt;Merhaba Arkadaşlar,&lt;/p&gt;
+&lt;div class="contents topic" id="contents"&gt;
+&lt;p class="topic-title first"&gt;Contents&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/#bilgi-alimda-karsilasilan-sorunlar" id="id1"&gt;Bilgi Alımda Karşılaşılan Sorunlar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/#bilgi-alim-yontemlerinin-unsurlari" id="id2"&gt;Bilgi Alım Yöntemlerinin Unsurları&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;Bu yazı dizisinde dillerarası bilgi alım tekniklerine değineceğim. Kullandığım temel kaynak: Nie, Jian-Yun, Cross-Language Information Retrieval, Synthesis Lectures in Human Language Technologies, 8 (2010).
+Internette kendisini bulmak mümkün.&lt;/p&gt;
+&lt;p&gt;Önce konuya bir giriş niteliğinde olması için genel bilgi alım yöntemlerinin uygulama alanları, karşılaşılan sorunlar ve bu sorunlara cevap niteliğinde gelen modellerden bahsedeceğim.&lt;/p&gt;
+&lt;div class="section" id="bilgi-alimda-karsilasilan-sorunlar"&gt;
+&lt;h2&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/#bilgi-alimda-karsilasilan-sorunlar"&gt;Bilgi Alımda Karşılaşılan Sorunlar&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Bilgi alım yöntemleri, adı üstünde, ulaşmak istediğiniz bilgiyi size sunmaya çalışır.
+Sayısal ortamda gerçekleştirilen bir bilgi alım sürecinin kabaca iki ana unsuru var:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Bilgi ihtiyacını temsil eden&lt;/li&gt;
+&lt;li&gt;Bilgi ihtiyacına cevap veren&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bu ikisinin ne olduğu ve aralarındaki ilişkinin nasıl kurulduğu, daha doğrusu ne olduğuna bağlı olarak nasıl kurulduğu, bilgi alımda yöntemlerinin temel uygulama alanlarını ve ilgilendiği sorunları oluşturuyor.&lt;/p&gt;
+&lt;p&gt;Bir bilgi alım problemi örneği verelim:&lt;/p&gt;
+&lt;p&gt;Diyelim sevdiğiniz bir müzisyenin örneğin Emiltan Erten'in ya da Müşfik Can Müftüoğlunun bir parçasını dinlemek istediniz.
+Ya da tatildesiniz, örneğin Kaş'ta, ve dalış yapmak istiyorsunuz, sizinle dalan hocanın adı aklınızda, Anıl Bozkırlı, tekne de aklınızda naturablue, ama teknenin kalkış saatlerini hatırlamıyorsunuz.
+Elinizde parçanın adı var, müzisyenin adı var. İşte bunar bilgi ihtiyacınızı temsil edenler, dinlemek istediğiniz parçaysa bilgi ihtiyacınıza cevap veren, ya da teknenin saatleri bilgi ihtiyacınıza cevap veren.&lt;/p&gt;
+&lt;p&gt;Daha aykırı bir örnek verelim:&lt;/p&gt;
+&lt;p&gt;Bir şarkı bestelediniz, çok tuttu.
+Öyle ki başka insanlar sizden telif almadan sağda solda parçanızı çalmaya ve hatta kendi parçalarıymış gibi pazarlamaya başladılar.
+Siz bu insanları dava etmek istiyorsunuz. Bu senaryoda bilgi ihtiyacını temsil eden sizin parçanız, bilgi ihtiyacına cevap verense diğer insanların parçaları.
+Bu senaryoda gerçekleşecek olan şey şu. Bir arama motoruna kendi parçanızı yükleyeceksiniz, o da size sizin parçalarınıza benzer parçaların listesini verecek.&lt;/p&gt;
+&lt;p&gt;Geneli itibariyle bilgi alım süreçleri ve metodları her ne kadar metin dışındaki aracılara da uygulanabiliyor olsa da, genel uygulama alanı metindir, yani genelde bilgi ihtiyacını temsil eden ve ona cevap veren uzunluğu değişebilir olmak kaydıyla bir karakter zinciridir.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bilgi-alim-yontemlerinin-unsurlari"&gt;
+&lt;h2&gt;&lt;a class="reference internal" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/#bilgi-alim-yontemlerinin-unsurlari"&gt;Bilgi Alım Yöntemlerinin Unsurları&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Kabaca bir bilgi alım sürecinde etkin olan beş unsur vardır:&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;Belge derlemi&lt;/dt&gt;
+&lt;dd&gt;Belge derlemi genellikle bilgi ihtiacına cevap vermesi beklenen belgelerin toplamından oluşur. Bu örneğin bir arama motoru için, internetteki sayfalardır.&lt;/dd&gt;
+&lt;dt&gt;Sorgu&lt;/dt&gt;
+&lt;dd&gt;Bu bir kelime de olabilir, bir belge de, bir cümle de. Bilgi ihtiyacını arayan failin bilgi ihtiyacına verene ulaşmak için kullandığı aracıdır. Örneğin, ulaşmak istediğiniz sayfanın çıkması için arama motoruna yazdığınız kelimeler.&lt;/dd&gt;
+&lt;dt&gt;Dizinleme&lt;/dt&gt;
+&lt;dd&gt;Bu belge ve sorgu için belge bir süreçtir. Genellikle belgenin ve sorgunun temsil şeklinin değiştirilmesi sayesinde olur. Örneğin, girdiğiniz sorguyu, girerken kullandığınız kelimelerin sıklığı ve sırası olarak temsil edebilirsiniz, bu derleminizdeki belgeler içinde geçerli.&lt;/dd&gt;
+&lt;dt&gt;Benzerlik Notu&lt;/dt&gt;
+&lt;dd&gt;Sorgu ve belge arasındaki benzerliğin ne kadar olduğunu hesaplamaya yarayan algoritmalar sonucunda ortaya çıkan nottur. Genellikle, bilgi ihtiyacına cevap verenlerin sıraya konmasında kullanılır.&lt;/dd&gt;
+&lt;dt&gt;Geri Bildirim&lt;/dt&gt;
+&lt;dd&gt;Bilgi ihtiyacının karşılanması adına sunduğunuz belgelerin ne kadar ilgili olduğuna dair kullanıcıların yaptığı geri dönüştür. Pratikte kullanıcılar nadiren böyle bir sürece dahil olurlar. Bu yüzden genelde &lt;em&gt;yalancı ilgililik geri bildirimleri&lt;/em&gt; kullanırlar. Bu da tıklanan tepedeki belgelerin daha ilgili olduğunu varsaymak şeklinde gerçekleşir.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Bu yazıyı burada bitiriyorum, zira bundan sonra gelen konu bilgi alım modelleri ve başlı başına bir yazı olmayı hak ediyor.&lt;/p&gt;
+&lt;p&gt;Sağlıcakla,&lt;/p&gt;
+&lt;p&gt;Kaan&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>bilgi-alım</category><category>mathjax</category><category>yapay-zeka</category><guid>https://d-k-e.github.io/yapayzeka-eski-metinler/posts/dillerarasi-bilgi-alim-teknikleri-uzerine-notlar-1/</guid><pubDate>Mon, 17 Jul 2017 12:48:38 GMT</pubDate></item></channel></rss>

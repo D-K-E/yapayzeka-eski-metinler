@@ -11,6 +11,9 @@
 Xph Türkçe - Daiva Yazıtı
 --------------------------
 
+.. contents::
+
+
 Bu yazı `eski blogumdan <http://antikdillerdenbazilari.blogspot.fr/2015/10/xph-turkce-daiva-yazt.html>`_ alıntıdır. Ufak tefek formatla ilgili düzenlemeler dışında içeriğe hiç dokunulmamıştır.
 
 

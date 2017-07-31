@@ -15,8 +15,18 @@
 <meta property="og:title" content="Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 3: Birim Dizeyi Ters Diz">
 <meta property="og:url" content="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-3/">
 <meta property="og:description" content="Merhaba Arkadaşlar,
+
+Contents
+
+Birim Dizeyi
+Ters Dizey
+Notlar
+
+
+
+
 Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısıyla karşınızdayım.
-Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların">
+Bu yazı dizisini makine öğreniminde ve daha sonrasında de">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-06-09T03:39:11+02:00">
 <meta property="article:tag" content="dizey">
@@ -81,13 +91,24 @@ Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde kar
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
         </script><div>
 <p>Merhaba Arkadaşlar,</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#birim-dizeyi" id="id7">Birim Dizeyi</a></li>
+<li>
+<a class="reference internal" href="#ters-dizey" id="id8">Ters Dizey</a><ul>
+<li><a class="reference internal" href="#notlar" id="id9">Notlar</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısıyla karşınızdayım.
 Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/">önceki yazımda</a> makine öğrenimi algoritmalarının sıklıkla kullandığı işlemleri dile getirmiştim.
 Eğer makine öğrenimine yeni başlıyorsanız, bu yazı dizisinin <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/">ilk bölümünden</a> başlamanızı tavsiye ederim.
 Eğer çok çok yeniyseniz ve "Makine Öğrenimi Nedir, Derin Öğrenim Nedir ?", gibi sorulara cevap bulmaya geldiyseniz, bunun için üç bölümlük bu konulara değinen <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/">ilk yazı dizisini</a> tavsiye ederim.</p>
 <p>Bu yazımda aslında bir önceki yazıda vermiş olduğum <span class="math">\(Ak=u\)</span> denklemine değineceğim.
-Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler">dizey</a>; <span class="math">\(k{\in}{\mathbb{R}^m}\)</span>, k <em>bilinmeyen</em> bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler">yöney</a>; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.</p>
+Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler">dizey</a>; <span class="math">\(k{\in}{\mathbb{R}^p}\)</span>, k <em>bilinmeyen</em> bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler">yöney</a>; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.</p>
 <p>Bu denklemin çözümü için inceleyeceğimiz konu başlıkları şunlar:</p>
 <ul class="simple">
 <li>Birim Dizeyi</li>
@@ -215,7 +236,7 @@ Eklemek istediğiniz bir şey varsa, ya da anlamadığınız bir şey varsa, yor
 <p>Sağlıcakla,</p>
 <p>Kaan</p>
 <div class="section" id="notlar">
-<h3>Notlar</h3>
+<h3><a class="toc-backref" href="#id9">Notlar</a></h3>
 <table class="docutils footnote" frame="void" id="id4" rules="none">
 <colgroup>
 <col class="label">

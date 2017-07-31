@@ -9,6 +9,9 @@
 
 Merhaba Arkadaşlar,
 
+.. contents::
+
+
 Makine Öğrenimine Hazırlık yazı dizisinin bir başka yazısıyla karşınızdayım.
 Bu yazı dizisini makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir `önceki yazımda <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/>`_ makine öğrenimi algoritmalarının sıklıkla kullandığı işlemleri dile getirmiştim.
@@ -16,7 +19,7 @@ Eğer makine öğrenimine yeni başlıyorsanız, bu yazı dizisinin `ilk bölüm
 Eğer çok çok yeniyseniz ve "Makine Öğrenimi Nedir, Derin Öğrenim Nedir ?", gibi sorulara cevap bulmaya geldiyseniz, bunun için üç bölümlük bu konulara değinen `ilk yazı dizisini <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/yapay-zeka-ve-derin-ogrenime-giris-1/>`_ tavsiye ederim.
 
 Bu yazımda aslında bir önceki yazıda vermiş olduğum :math:`Ak=u` denklemine değineceğim.
-Denklemde :math:`A{\in}{\mathbb{R}}^{mxp}`, A bir `dizey <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler>`_; :math:`k{\in}{\mathbb{R}^m}`, k *bilinmeyen* bir `yöney <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler>`_; :math:`u{\in}{\mathbb{R}^p}`, u *bilinen* bir yöneydir.
+Denklemde :math:`A{\in}{\mathbb{R}}^{mxp}`, A bir `dizey <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler>`_; :math:`k{\in}{\mathbb{R}^p}`, k *bilinmeyen* bir `yöney <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler>`_; :math:`u{\in}{\mathbb{R}^p}`, u *bilinen* bir yöneydir.
 
 Bu denklemin çözümü için inceleyeceğimiz konu başlıkları şunlar:
 

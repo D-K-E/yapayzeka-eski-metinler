@@ -14,6 +14,9 @@ Bu yazı daha önceki blogumdan alıntıdır.
 ################################
 
 
+.. contents::
+
+
 Porten ve Yardeni, TAD A6.7'den uyarlanmıştır / Reproduced from Porten and Yardeni TAD A6.7
 
 Aşağıdaki resim asıl yazının neye benzediğini örnekleme amacıyla konulmuştur, filolojik içeriği aynı olmakla beraber papirüsün fiziksel görünümüyle alakası yoktur.

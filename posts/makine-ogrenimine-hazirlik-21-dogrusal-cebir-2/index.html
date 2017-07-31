@@ -15,8 +15,23 @@
 <meta property="og:title" content="Makine Öğrenimine Hazırlık 2.1 Doğrusal Cebir 2: Sık Kullanılan İşleml">
 <meta property="og:url" content="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-2/">
 <meta property="og:description" content="Merhaba Arkadaşlar,
-Bir önceki yazımda, makine öğrenimi ve derin öğrenimde sık kullanılan algoritmalarda geçen matematiksel kavramların kısa bir özetini vermiştim.
-Yine o yazıda belirttiğim gibi, bu y">
+
+Contents
+
+Yöney İşlemleri
+Yöney Çaprazlama
+Yöney Çarpımı
+
+
+Dizey İşlemleri
+Dizey Toplamı
+Dizey Çaprazlama
+Dizey Çarpımı
+
+
+
+
+Bir önceki yazımda, makine öğrenimi ve derin öğrenimde ">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-06-03T02:06:51+02:00">
 <meta property="article:tag" content="dizey">
@@ -84,6 +99,24 @@ Yine o yazıda belirttiğim gibi, bu y">
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
         </script><div>
 <p>Merhaba Arkadaşlar,</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li>
+<a class="reference internal" href="#yoney-islemleri" id="id1">Yöney İşlemleri</a><ul>
+<li><a class="reference internal" href="#yoney-caprazlama" id="id2">Yöney Çaprazlama</a></li>
+<li><a class="reference internal" href="#yoney-carpimi" id="id3">Yöney Çarpımı</a></li>
+</ul>
+</li>
+<li>
+<a class="reference internal" href="#dizey-islemleri" id="id4">Dizey İşlemleri</a><ul>
+<li><a class="reference internal" href="#dizey-toplami" id="id5">Dizey Toplamı</a></li>
+<li><a class="reference internal" href="#dizey-caprazlama" id="id6">Dizey Çaprazlama</a></li>
+<li><a class="reference internal" href="#dizey-carpimi" id="id7">Dizey Çarpımı</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>Bir <a class="reference external" href="https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/">önceki yazımda</a>, makine öğrenimi ve derin öğrenimde sık kullanılan algoritmalarda geçen matematiksel kavramların kısa bir özetini vermiştim.
 Yine o yazıda belirttiğim gibi, bu yazıyı o kavramlarla yapılan işlemlere ayıracağım. Örnekleri bol tutmaya özen göstereceğim.</p>
 <div class="section" id="yoney-islemleri">
@@ -302,7 +335,7 @@ A {\times} 2 = \left[
 Dizey çarpımının çaprazlanması ise şunu verir <span class="math">\((AR)^T=A^TR^T\)</span></p>
 <p>Şimdilik bu kadar yeter.
 Bundan sonraki yazımda, şu denklemin çözülmesi için gereken işlemleri inceleyeceğim <span class="math">\(Ak=u\)</span>.
-Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir dizey; <span class="math">\(k{\in}{\mathbb{R}^m}\)</span>, k <em>bilinmeyen</em> bir yöney; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.
+Denklemde <span class="math">\(A{\in}{\mathbb{R}}^{mxp}\)</span>, A bir dizey; <span class="math">\(k{\in}{\mathbb{R}^p}\)</span>, k <em>bilinmeyen</em> bir yöney; <span class="math">\(u{\in}{\mathbb{R}^p}\)</span>, u <em>bilinen</em> bir yöneydir.
 Neden bu denklemle uğraşacağız sorusunun cevabı ise basit.
 Bu denklem aslında doğrusal sınıflandırıcının kullandığı ana şemayı oluşturur.
 Doğrusal sınıflandırıcı da makine öğreniminde, ve özellikle derin öğrenimde bir hayli kullanılan bir algoritma.

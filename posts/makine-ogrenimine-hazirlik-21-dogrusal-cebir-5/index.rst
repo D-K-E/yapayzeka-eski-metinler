@@ -9,6 +9,9 @@
 
 Merhaba Arkadaşlar,
 
+.. contents::
+
+
 Makine Öğrenimine Hazırlık yazı dizisinin doğrusal bağımlılık ile ilgili son yazısıyla karşınızdayım
 Bildiğiniz gibi bu yazı dizisini aslında makine öğreniminde ve daha sonrasında derin öğrenimde karşımıza çıkacak algoritmaların matematiksel temellerini anlayabilmemiz için yazıyorum.
 Bir `önceki yazımda <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-4/>`_ doğrusal bağımlılık konusunun anlaşılabilmesi için gerekli olan doğru denklemi ve doğru sistemi konularını ele almıştım.
@@ -38,7 +41,7 @@ Ve en nihayetinde
 -------------------
 
 Bir doğru sistemini ifade eden denklemi düşünelim, :math:`Ak=u`.
-Denklemde :math:`A{\in}{\mathbb{R}}^{mxp}`, A bir `dizey <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler>`_; :math:`k{\in}{\mathbb{R}^m}`, k *bilinmeyen* bir `yöney <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler>`_; :math:`u{\in}{\mathbb{R}^p}`, u *bilinen* bir yöneydir.
+Denklemde :math:`A{\in}{\mathbb{R}}^{mxp}`, A bir `dizey <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#dizeyler>`_; :math:`k{\in}{\mathbb{R}^p}`, k *bilinmeyen* bir `yöney <https://d-k-e.github.io/yapayzeka-eski-metinler/posts/makine-ogrenimine-hazirlik-21-dogrusal-cebir-1/#yoneyler>`_; :math:`u{\in}{\mathbb{R}^p}`, u *bilinen* bir yöneydir.
 
 Doğrusal bileşim dediğimiz işlem aslında bir yöneyin bir dizey ile çarpılması eyleminin adıdır.
 Matematiksel ifadesi şu şekilde:
